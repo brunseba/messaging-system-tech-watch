@@ -3,12 +3,6 @@ site_description: A comprehensive guide to help business units choose the right 
 site_author: Business Technology Team
 site_url: https://messaging-system-guide.com
 
-# Project information
-project_name: Messaging System Tech Watch
-project_version: 1.0.0
-project_license: MIT
-project_license_url: https://github.com/your-org/messaging-system-guide/blob/main/LICENSE
-
 theme:
   name: material
   palette:
@@ -85,6 +79,7 @@ extra:
   version:
     provider: mike
     default: latest
+    current: 1.0.0
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/your-org/messaging-system-guide
@@ -93,8 +88,14 @@ extra:
   status:
     new: Recently added
     deprecated: Deprecated
+  license:
+    name: MIT License
+    url: https://github.com/your-org/messaging-system-guide/blob/main/LICENSE
+  project:
+    name: Messaging System Tech Watch
+    version: 1.0.0
 
-copyright: Copyright &copy; 2024 Business Technology Team
+copyright: Copyright &copy; 2025 Business Technology Team | Licensed under MIT License
 
 # Repository information
 repo_url: https://github.com/your-org/messaging-system-guide

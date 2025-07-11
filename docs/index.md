@@ -3,6 +3,9 @@
 !!! info "Purpose"
     This guide helps business units systematically choose the right messaging system based on their specific requirements, technical constraints, and business goals.
 
+!!! note "Version Information"
+    **Version:** 1.0.0 | **License:** MIT | **Last Updated:** January 2025
+
 ## Overview
 
 Selecting the right messaging system is crucial for modern distributed applications. This guide provides a comprehensive framework to evaluate messaging solutions based on both functional and non-functional requirements.
@@ -93,5 +96,11 @@ mindmap
 Ready to begin? Start with our [Requirements Analysis](requirements/functional-vs-non-functional.md) to understand your needs, then use our [Decision Tree](decision-framework/decision-tree.md) for guided selection.
 
 ---
+
+## About This Guide
+
+| **Version** | **License** | **Last Updated** | **Contributors** |
+|-------------|-------------|------------------|------------------|
+| 1.0.0 | [MIT License](https://github.com/your-org/messaging-system-guide/blob/main/LICENSE) | January 2025 | Business Technology Team |
 
 *This guide is designed to be practical and actionable. Each section builds upon the previous one to provide a comprehensive selection framework.*
