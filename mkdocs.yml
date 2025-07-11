@@ -3,6 +3,12 @@ site_description: A comprehensive guide to help business units choose the right 
 site_author: Business Technology Team
 site_url: https://messaging-system-guide.com
 
+# Project information
+project_name: Messaging System Tech Watch
+project_version: 1.0.0
+project_license: MIT
+project_license_url: https://github.com/your-org/messaging-system-guide/blob/main/LICENSE
+
 theme:
   name: material
   palette:
