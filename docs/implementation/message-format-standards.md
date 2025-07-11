@@ -96,6 +96,190 @@ message EventData {
 - **Disadvantages**: Not human-readable, limited schema validation
 - **Best Use Cases**: High-performance applications, mobile applications
 
+## Industry Standards for Event-Driven Architectures
+
+### CloudEvents
+
+**[CloudEvents](https://cloudevents.io/)** is a CNCF (Cloud Native Computing Foundation) specification that provides a standardized way to describe event data in a common format. It enables interoperability across different cloud providers and messaging systems.
+
+#### Key Features
+- **Vendor Neutrality**: Works across different cloud providers and messaging systems
+- **Standardized Metadata**: Common set of attributes for all events
+- **Multiple Encodings**: JSON, Avro, Protobuf, and XML support
+- **HTTP and Message Binding**: Support for HTTP webhooks and message brokers
+
+#### CloudEvents Specification
+
+**Required Attributes:**
+- `specversion`: CloudEvents specification version
+- `type`: Event type (e.g., "com.example.user.created")
+- `source`: Event source (e.g., "https://example.com/user-service")
+- `id`: Unique event identifier
+
+**Optional Attributes:**
+- `time`: Event timestamp
+- `subject`: Event subject
+- `datacontenttype`: Data content type (e.g., "application/json")
+- `data`: Event payload
+
+#### CloudEvents Example
+
+```json
+{
+  "specversion": "1.0",
+  "type": "com.example.user.login",
+  "source": "https://example.com/user-service",
+  "id": "12345",
+  "time": "2025-01-11T17:00:00Z",
+  "subject": "user/user123",
+  "datacontenttype": "application/json",
+  "data": {
+    "userId": "user123",
+    "loginMethod": "oauth",
+    "source": "mobile_app"
+  }
+}
+```
+
+#### CloudEvents Benefits
+- **Interoperability**: Consistent event format across different systems
+- **Tooling**: Rich ecosystem of tools and libraries
+- **Cloud Integration**: Native support in major cloud platforms
+- **Standardization**: Industry-wide adoption and standardization
+
+### AsyncAPI
+
+**[AsyncAPI](https://www.asyncapi.com/)** is an open-source specification for defining and documenting event-driven APIs. It's the equivalent of OpenAPI for asynchronous messaging.
+
+#### Key Features
+- **API Documentation**: Comprehensive documentation for async APIs
+- **Code Generation**: Generate client libraries and server stubs
+- **Validation**: Validate message schemas and API definitions
+- **Tooling Ecosystem**: Rich set of tools and integrations
+
+#### AsyncAPI Example
+
+```yaml
+asyncapi: 2.6.0
+info:
+  title: User Service API
+  version: 1.0.0
+  description: User management events
+
+channels:
+  user/login:
+    publish:
+      message:
+        $ref: '#/components/messages/UserLogin'
+
+components:
+  messages:
+    UserLogin:
+      payload:
+        type: object
+        properties:
+          userId:
+            type: string
+            format: uuid
+          loginMethod:
+            type: string
+            enum: [oauth, password, sso]
+          timestamp:
+            type: string
+            format: date-time
+```
+
+### Open Telemetry
+
+**[OpenTelemetry](https://opentelemetry.io/)** provides observability standards for distributed systems, including message tracing and correlation.
+
+#### Key Features
+- **Distributed Tracing**: Track messages across system boundaries
+- **Correlation IDs**: Link related events and messages
+- **Metrics and Logs**: Comprehensive observability data
+- **Vendor Neutral**: Works with multiple observability platforms
+
+#### OpenTelemetry Message Headers
+
+```json
+{
+  "traceparent": "00-4bf92f3577b34da6a3ce929d0e0e4736-00f067aa0ba902b7-01",
+  "tracestate": "rojo=00f067aa0ba902b7,congo=t61rcWkgMzE",
+  "baggage": "userId=user123,service=user-service"
+}
+```
+
+### JSON Schema
+
+**[JSON Schema](https://json-schema.org/)** is a vocabulary that allows you to annotate and validate JSON documents.
+
+#### Key Features
+- **Validation**: Validate JSON data structure and content
+- **Documentation**: Self-documenting schemas
+- **Code Generation**: Generate types and validation code
+- **Tooling**: Extensive ecosystem of tools
+
+#### JSON Schema Example
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/user-event.schema.json",
+  "title": "User Event",
+  "description": "A user activity event",
+  "type": "object",
+  "properties": {
+    "userId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique user identifier"
+    },
+    "event": {
+      "type": "string",
+      "enum": ["login", "logout", "purchase"],
+      "description": "Type of user activity"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Event occurrence time"
+    }
+  },
+  "required": ["userId", "event", "timestamp"]
+}
+```
+
+## Standards Adoption by Messaging Systems
+
+### CloudEvents Support Matrix
+
+| Messaging System | CloudEvents Support | Implementation | Notes |
+|------------------|-------------------|----------------|-------|
+| **Apache Kafka** | Yes | Kafka Connect, Schema Registry | Native integration via connectors |
+| **Apache Pulsar** | Yes | Built-in functions | Native CloudEvents support |
+| **AWS EventBridge** | Yes | Native support | AWS native CloudEvents implementation |
+| **Google Cloud Pub/Sub** | Yes | Native support | Google Cloud native support |
+| **Azure Event Grid** | Yes | Native support | Microsoft Azure native support |
+| **RabbitMQ** | Partial | Third-party libraries | Community-driven implementations |
+| **NATS** | Yes | Libraries available | Community support |
+| **Redis** | Partial | Application-level | Manual implementation required |
+| **IBM MQ** | Partial | Custom implementation | Enterprise integration patterns |
+| **Solace** | Yes | Event mesh integration | Enterprise-grade support |
+
+### AsyncAPI Support Matrix
+
+| Messaging System | AsyncAPI Support | Documentation | Code Generation |
+|------------------|------------------|---------------|------------------|
+| **Apache Kafka** | Yes | Full support | Yes |
+| **Apache Pulsar** | Yes | Full support | Yes |
+| **RabbitMQ** | Yes | Full support | Yes |
+| **NATS** | Yes | Full support | Yes |
+| **MQTT** | Yes | Full support | Yes |
+| **WebSockets** | Yes | Full support | Yes |
+| **AWS SQS/SNS** | Partial | Basic support | Limited |
+| **Google Pub/Sub** | Partial | Basic support | Limited |
+| **Azure Service Bus** | Partial | Basic support | Limited |
+
 ## Schema Registry
 
 ### Purpose and Benefits

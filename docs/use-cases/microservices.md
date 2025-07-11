@@ -15,7 +15,7 @@ Microservices architecture relies heavily on messaging systems to enable seamles
 Microservices typically use message brokers to handle inter-service communication.
 
 ```mermaid
-graph TD
+graph TD 
     A[User Service] -->|Event| MB[Message Broker]
     B[Order Service] -->|Event| MB
     C[Payment Service] -->|Event| MB

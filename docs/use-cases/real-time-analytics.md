@@ -13,7 +13,7 @@ Real-time analytics involves processing and analyzing data as it becomes availab
 Real-time analytics often involves streaming data to a processing engine.
 
 ```mermaid
-graph TD
+graph TD 
     P[Producers] --> |Data Streams| B[Message Broker]
     B --> |Stream| E[Stream Processing Engine]
     E --> |Results| D[Data Lake]

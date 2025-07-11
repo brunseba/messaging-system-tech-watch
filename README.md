@@ -1,6 +1,6 @@
-# Messaging System Selection Guide
+# Messaging System Tech Watch
 
-A comprehensive guide to help business units choose the right messaging system based on their requirements.
+A comprehensive technical documentation and evaluation guide for messaging systems including Apache Kafka, RabbitMQ, Apache Pulsar, NATS, Redis, and more.
 
 ## 🚀 Quick Start
 
@@ -13,8 +13,8 @@ A comprehensive guide to help business units choose the right messaging system b
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-org/messaging-system-guide.git
-   cd messaging-system-guide
+   git clone https://github.com/brunseba/messaging-system-tech-watch.git
+   cd messaging-system-tech-watch
    ```
 
 2. **Create a virtual environment**
@@ -146,5 +146,16 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 For support and questions:
 - Open an issue in the GitHub repository
-- Check the documentation at [messaging-system-guide.com](https://messaging-system-guide.com)
+- Check the documentation at [https://brunseba.github.io/messaging-system-tech-watch](https://brunseba.github.io/messaging-system-tech-watch)
 - Contact the Business Technology Team
+
+## 📋 Version
+
+Current version: 2.1.0
+
+### Recent Updates
+- Added CloudEvents and AsyncAPI standards documentation
+- Enhanced Kubernetes operator deployment guides with CRD details
+- Expanded RabbitMQ Messaging Topology Operator coverage
+- Added Mermaid.js diagrams for CRD relationships
+- Improved message format standards documentation

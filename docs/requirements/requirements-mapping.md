@@ -39,37 +39,55 @@ This document provides a comprehensive mapping of functional and non-functional 
 ### Example 1: E-commerce Platform
 
 **Functional Requirements**:
+
 - Message Delivery: Order processing → **Apache Kafka** (exactly-once delivery)
+
 - Integration: Multiple payment gateways → **REST APIs + Message queues**
+
 - Persistence: Order history → **Kafka with long retention**
 
 **Non-Functional Requirements**:
+
 - Scalability: Black Friday traffic → **Kafka with auto-scaling**
+
 - Latency: Real-time inventory updates → **< 100ms acceptable**
+
 - Reliability: 99.9% order processing → **Multi-zone deployment**
 
 ### Example 2: IoT Sensor Network
 
 **Functional Requirements**:
+
 - Message Delivery: Sensor data → **MQTT** (lightweight protocol)
+
 - Integration: Cloud analytics → **MQTT to Kafka bridge**
+
 - Routing: Geographic filtering → **Topic-based routing**
 
 **Non-Functional Requirements**:
+
 - Throughput: 100K sensors → **MQTT + Kafka backend**
+
 - Latency: Alert processing → **< 1 second acceptable**
+
 - Cost: Budget-conscious → **Open-source solutions**
 
 ### Example 3: Financial Trading System
 
 **Functional Requirements**:
+
 - Message Delivery: Trade execution → **Solace** (guaranteed delivery)
+
 - Authentication: Regulatory compliance → **Multi-factor authentication**
+
 - Monitoring: Real-time dashboards → **Built-in monitoring tools**
 
 **Non-Functional Requirements**:
+
 - Latency: High-frequency trading → **< 1ms required**
+
 - Reliability: Zero tolerance for failures → **99.999% uptime**
+
 - Compliance: Financial regulations → **SOX, MiFID II compliance**
 
 ## Requirements Prioritization Framework

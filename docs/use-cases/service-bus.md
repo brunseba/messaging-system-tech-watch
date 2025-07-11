@@ -17,7 +17,7 @@ A Service Bus is a messaging infrastructure that acts as an intermediary between
 Connect disparate applications across the organization without tight coupling.
 
 ```mermaid
-graph TD
+graph TD 
     A[CRM System] -->|Customer Data| SB[Service Bus]
     B[ERP System] -->|Order Data| SB
     C[HR System] -->|Employee Data| SB

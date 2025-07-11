@@ -31,6 +31,179 @@ For modern cloud-native deployments, **Kubernetes operators are the default targ
 | **MQTT** | Mosquitto Operator | Eclipse | **Level 2** | ❌ **Exception** | kubectl | Basic deployment, limited features |
 | **AWS SQS/SNS** | AWS Controllers for Kubernetes (ACK) | AWS | **Level 3** | ⚠️ **Exception** | Helm/kubectl | Basic resource management, IAM integration |
 
+### Kubernetes Operator CRD Objects with Mermaid.js Schemas
+
+Each Kubernetes operator provides specific Custom Resource Definitions (CRDs) that define the desired state of the messaging systems. Below is a list of CRDs available for various messaging operators, along with Mermaid.js schemas to visualize dependencies and properties:
+
+#### Apache Kafka (Strimzi)
+Mermaid.js Schema:
+```mermaid
+graph TD; 
+  Kafka -->|manages| KafkaConnect;
+  Kafka -->|manages| KafkaTopic;
+  Kafka -->|manages| KafkaUser;
+  Kafka -->|manages| KafkaMirrorMaker;
+  Kafka -->|manages| KafkaMirrorMaker2;
+  Kafka -->|manages| KafkaBridge;
+  Kafka -->|manages| KafkaConnector;
+  
+  Kafka -->|configures| KafkaProps["replicas<br/>version<br/>listeners<br/>config<br/>storage<br/>resources<br/>jvmOptions<br/>logging"];
+  KafkaConnect -->|configures| KCProps["replicas<br/>version<br/>bootstrapServers<br/>config<br/>resources<br/>authentication<br/>tls"];
+  KafkaTopic -->|configures| KTProps["partitions<br/>replicas<br/>config<br/>topicName"];
+  KafkaUser -->|configures| KUProps["authentication<br/>authorization<br/>quotas<br/>template"];
+  KafkaMirrorMaker -->|configures| KMMProps["replicas<br/>consumer<br/>producer<br/>whitelist"];
+  KafkaMirrorMaker2 -->|configures| KMM2Props["replicas<br/>clusters<br/>mirrors<br/>connectCluster"];
+  KafkaBridge -->|configures| KBProps["replicas<br/>bootstrapServers<br/>http<br/>cors"];
+  KafkaConnector -->|configures| KCOProps["class<br/>config<br/>tasksMax<br/>pause"];
+```
+
+- **Kafka**: Defines a complete Kafka cluster with brokers, Zookeeper, and entity operator
+- **KafkaConnect**: Configuration for Kafka Connect clusters for streaming data integration
+- **KafkaTopic**: Manages Kafka topics with partitions and replication settings
+- **KafkaUser**: Manages Kafka user resources with authentication and authorization
+- **KafkaMirrorMaker**: Manages Kafka MirrorMaker for cluster replication
+- **KafkaMirrorMaker2**: Manages Kafka MirrorMaker 2.0 for advanced replication
+- **KafkaBridge**: Manages Kafka Bridge for HTTP-based access
+- **KafkaConnector**: Manages individual Kafka Connect connectors
+
+#### Apache Kafka (Confluent)
+Mermaid.js Schema:
+```mermaid
+graph TD;
+  ConfluentPlatform -->|includes| SchemaRegistry;
+  ConfluentPlatform -->|includes| KafkaTopic;
+  ConfluentPlatform -->|includes| KafkaRestProxy;
+  ConfluentPlatform -->|includes| Connect;
+  ConfluentPlatform -->|includes| KsqlDB;
+  ConfluentPlatform -->|includes| ControlCenter;
+  
+  ConfluentPlatform -->|configures| CPProps["kafka<br/>zookeeper<br/>schemaRegistry<br/>connect<br/>ksqldb<br/>controlCenter<br/>dependencies"];
+  SchemaRegistry -->|configures| SRProps["replicas<br/>image<br/>authentication<br/>authorization<br/>tls<br/>dependencies"];
+  KafkaTopic -->|configures| KTProps["partitions<br/>replicas<br/>configs<br/>kafkaClusterRef"];
+  KafkaRestProxy -->|configures| KRPProps["replicas<br/>image<br/>kafkaClusterRef<br/>schemaRegistryRef"];
+  Connect -->|configures| CProps["replicas<br/>image<br/>kafkaClusterRef<br/>schemaRegistryRef<br/>dependencies"];
+  KsqlDB -->|configures| KSProps["replicas<br/>image<br/>kafkaClusterRef<br/>schemaRegistryRef<br/>dependencies"];
+  ControlCenter -->|configures| CCProps["replicas<br/>image<br/>kafkaClusterRef<br/>schemaRegistryRef<br/>dependencies"];
+```
+
+- **ConfluentPlatform**: Comprehensive management of Confluent components including Kafka, Schema Registry, Connect, and ksqlDB
+- **SchemaRegistry**: Defines schema registry deployments with authentication and authorization
+- **KafkaTopic**: Manages topics with advanced configurations and cluster references
+- **KafkaRestProxy**: Manages Kafka REST Proxy for HTTP-based access
+- **Connect**: Manages Kafka Connect clusters for data integration
+- **KsqlDB**: Manages ksqlDB for stream processing
+- **ControlCenter**: Manages Confluent Control Center for monitoring and management
+
+#### RabbitMQ
+Mermaid.js Schema:
+```mermaid
+graph TD;
+  RabbitmqCluster -->|manages| User;
+  RabbitmqCluster -->|manages| Vhost;
+  RabbitmqCluster -->|manages| Queue;
+  RabbitmqCluster -->|manages| Exchange;
+  RabbitmqCluster -->|manages| Binding;
+  RabbitmqCluster -->|manages| Policy;
+  RabbitmqCluster -->|manages| Permission;
+  RabbitmqCluster -->|manages| SchemaReplication;
+  RabbitmqCluster -->|manages| Shovel;
+  RabbitmqCluster -->|manages| Federation;
+  RabbitmqCluster -->|manages| TopicOperator;
+  RabbitmqCluster -->|manages| Operator;
+  
+  RabbitmqCluster -->|configures| RCProps["replicas<br/>image<br/>service<br/>persistence<br/>resources<br/>rabbitmq<br/>tls<br/>override"];
+  User -->|configures| UProps["username<br/>password<br/>passwordHash<br/>tags<br/>rabbitmqClusterReference"];
+  Vhost -->|configures| VProps["name<br/>defaultQueueType<br/>tags<br/>tracing<br/>rabbitmqClusterReference"];
+  Queue -->|configures| QProps["name<br/>vhost<br/>type<br/>durable<br/>autoDelete<br/>arguments<br/>rabbitmqClusterReference"];
+  Exchange -->|configures| EProps["name<br/>vhost<br/>type<br/>durable<br/>autoDelete<br/>arguments<br/>rabbitmqClusterReference"];
+  Binding -->|configures| BProps["source<br/>destination<br/>destinationType<br/>routingKey<br/>arguments<br/>vhost<br/>rabbitmqClusterReference"];
+  Policy -->|configures| PProps["name<br/>vhost<br/>pattern<br/>applyTo<br/>definition<br/>priority<br/>rabbitmqClusterReference"];
+  Permission -->|configures| PermProps["user<br/>vhost<br/>permissions<br/>rabbitmqClusterReference"];
+  SchemaReplication -->|configures| SRProps["name<br/>endpoints<br/>upstreamSet<br/>ackMode<br/>rabbitmqClusterReference"];
+  Shovel -->|configures| ShProps["name<br/>vhost<br/>uriSecret<br/>sourceQueue<br/>destQueue<br/>rabbitmqClusterReference"];
+  Federation -->|configures| FProps["name<br/>vhost<br/>uriSecret<br/>expires<br/>messageTTL<br/>rabbitmqClusterReference"];
+  TopicOperator -->|configures| TOProps["name<br/>vhost<br/>config<br/>bindings<br/>rabbitmqClusterReference"];
+  Operator -->|configures| OpProps["name<br/>config<br/>permissions<br/>rabbitmqClusterReference"];
+```
+
+- **RabbitmqCluster**: Manages RabbitMQ clusters with high availability and clustering
+- **User**: Configures RabbitMQ users with authentication and authorization
+- **Vhost**: Manages virtual hosts for multi-tenancy
+- **Queue**: Defines queues with durability and configuration options
+- **Exchange**: Manages exchanges for message routing
+- **Binding**: Creates bindings between exchanges and queues
+- **Policy**: Defines policies for queues and exchanges
+- **Permission**: Manages user permissions for vhosts
+- **SchemaReplication**: Configures schema replication for distributed setups
+- **Shovel**: Manages shovel plugins for message transfer
+- **Federation**: Configures federation for distributed RabbitMQ
+- **TopicOperator**: Provides topic management capabilities
+- **Operator**: General RabbitMQ management operator including Messaging Topology Operator
+
+#### Apache Pulsar
+Mermaid.js Schema:
+```mermaid
+graph TD;
+  PulsarCluster -->|manages| PulsarTenant;
+  PulsarTenant -->|includes| PulsarNamespace;
+  PulsarCluster -->|configures| Properties1[Property1, Property2];
+  PulsarTenant -->|configures| Properties2[Property3, Property4];
+  PulsarNamespace -->|configures| Properties3[Property5, Property6];
+```
+
+- **PulsarCluster**: Comprehensive cluster management
+- **PulsarTenant**: Multi-tenancy setup
+- **PulsarNamespace**: Defines namespaces within tenants
+
+#### NATS
+Mermaid.js Schema:
+```mermaid
+graph TD;
+  NatsCluster -->|manages| NatsServiceRole;
+  NatsCluster -->|configures| Properties1[Property1, Property2];
+  NatsServiceRole -->|configures| Properties2[Property3, Property4];
+```
+
+- **NatsCluster**: Manages NATS cluster resources
+- **NatsServiceRole**: Defines roles and policies for NATS
+
+#### Redis Enterprise
+Mermaid.js Schema:
+```mermaid
+graph TD;
+  RedisEnterpriseCluster -->|configures| Properties1[Property1, Property2, Property3];
+```
+
+- **RedisEnterpriseCluster**: Management of Redis Enterprise clusters
+
+#### IBM MQ
+Mermaid.js Schema:
+```mermaid
+graph TD;
+  MQQueueManager -->|configures| Properties1[Property1, Property2];
+```
+
+- **MQQueueManager**: Manages queue manager instances
+
+#### Solace
+Mermaid.js Schema:
+```mermaid
+graph TD;
+  SolacePubSub -->|configures| Properties1[Property1, Property2, Property3];
+```
+
+- **SolacePubSub**: Configuration of Solace PubSub+ features
+
+#### MQTT (EMQX Operator)
+Mermaid.js Schema:
+```mermaid
+graph TD;
+  EMQX -->|configures| Properties1[Property1, Property2, Property3, Property4];
+```
+
+- **EMQX**: Manages EMQX deployments with clustering and persistence
+
+
 ### Capability Levels Explained
 
 - **Level 1 - Basic Install**: Basic deployment and configuration

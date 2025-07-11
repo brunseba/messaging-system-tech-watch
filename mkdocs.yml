@@ -1,7 +1,7 @@
 site_name: Messaging System Selection Guide
 site_description: A comprehensive guide to help business units choose the right messaging system based on their requirements
 site_author: Business Technology Team
-site_url: https://messaging-system-guide.com
+site_url: https://brunseba.github.io/messaging-system-tech-watch
 
 theme:
   name: material
@@ -82,7 +82,7 @@ extra:
     current: 2.1.0
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/your-org/messaging-system-guide
+      link: https://github.com/brunseba/messaging-system-tech-watch
       name: GitHub Repository
   generator: false
   status:
@@ -90,7 +90,7 @@ extra:
     deprecated: Deprecated
   license:
     name: MIT License
-    url: https://github.com/your-org/messaging-system-guide/blob/main/LICENSE
+    url: https://github.com/brunseba/messaging-system-tech-watch/blob/main/LICENSE
   project:
     name: Messaging System Tech Watch
     version: 2.1.0
@@ -98,8 +98,8 @@ extra:
 copyright: Copyright &copy; 2025 Business Technology Team | Licensed under MIT License
 
 # Repository information
-repo_url: https://github.com/your-org/messaging-system-guide
-repo_name: messaging-system-guide
+repo_url: https://github.com/brunseba/messaging-system-tech-watch
+repo_name: messaging-system-tech-watch
 edit_uri: edit/main/docs/
 
 nav:
