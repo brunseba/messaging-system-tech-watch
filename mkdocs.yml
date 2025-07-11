@@ -107,6 +107,7 @@ nav:
   - Requirements Analysis:
     - Functional vs Non-Functional: requirements/functional-vs-non-functional.md
     - Requirements Mapping: requirements/requirements-mapping.md
+    - Requirements Assessment Template: requirements/requirements-assessment-template.md
   - Decision Framework:
     - Decision Tree: decision-framework/decision-tree.md
     - Selection Criteria: decision-framework/selection-criteria.md

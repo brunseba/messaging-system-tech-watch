@@ -12,13 +12,13 @@
         <meta name="author" content="Business Technology Team">
       
       
-        <link rel="canonical" href="https://messaging-system-guide.com/requirements/requirements-mapping/">
+        <link rel="canonical" href="https://messaging-system-guide.com/requirements/requirements-assessment-template/">
       
       
-        <link rel="prev" href="../functional-vs-non-functional/">
+        <link rel="prev" href="../requirements-mapping/">
       
       
-        <link rel="next" href="../requirements-assessment-template/">
+        <link rel="next" href="../../decision-framework/decision-tree/">
       
       
       <link rel="icon" href="../../assets/favicon.ico">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Requirements Mapping - Messaging System Selection Guide</title>
+        <title>Requirements Assessment Template - Messaging System Selection Guide</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#requirements-mapping-guide" class="md-skip">
+        <a href="#requirements-assessment-template" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Requirements Mapping
+              Requirements Assessment Template
             
           </span>
         </div>
@@ -529,6 +529,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../requirements-mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Requirements Mapping
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -546,7 +569,7 @@
   
   
   <span class="md-ellipsis">
-    Requirements Mapping
+    Requirements Assessment Template
     
   </span>
   
@@ -559,7 +582,7 @@
   
   
   <span class="md-ellipsis">
-    Requirements Mapping
+    Requirements Assessment Template
     
   </span>
   
@@ -582,28 +605,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mapping-to-system-architectures-and-products" class="md-nav__link">
+  <a href="#project-information" class="md-nav__link">
     <span class="md-ellipsis">
-      Mapping to System Architectures and Products
+      Project Information
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Mapping to System Architectures and Products">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executive-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executive Summary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Executive Summary">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#functional-requirements-mapping" class="md-nav__link">
+  <a href="#business-context" class="md-nav__link">
     <span class="md-ellipsis">
-      Functional Requirements Mapping
+      Business Context
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#non-functional-requirements-mapping" class="md-nav__link">
+  <a href="#high-level-requirements-summary" class="md-nav__link">
     <span class="md-ellipsis">
-      Non-Functional Requirements Mapping
+      High-Level Requirements Summary
     </span>
   </a>
   
@@ -615,37 +647,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#detailed-mapping-examples" class="md-nav__link">
+  <a href="#functional-requirements-assessment" class="md-nav__link">
     <span class="md-ellipsis">
-      Detailed Mapping Examples
+      Functional Requirements Assessment
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Detailed Mapping Examples">
+    <nav class="md-nav" aria-label="Functional Requirements Assessment">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-1-e-commerce-platform" class="md-nav__link">
+  <a href="#1-message-delivery-requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Example 1: E-commerce Platform
+      1. Message Delivery Requirements
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example-2-iot-sensor-network" class="md-nav__link">
+  <a href="#2-messaging-patterns" class="md-nav__link">
     <span class="md-ellipsis">
-      Example 2: IoT Sensor Network
+      2. Messaging Patterns
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example-3-financial-trading-system" class="md-nav__link">
+  <a href="#3-integration-requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Example 3: Financial Trading System
+      3. Integration Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-message-routing-and-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Message Routing and Filtering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-security-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Security Requirements
     </span>
   </a>
   
@@ -657,67 +707,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#requirements-prioritization-framework" class="md-nav__link">
+  <a href="#non-functional-requirements-assessment" class="md-nav__link">
     <span class="md-ellipsis">
-      Requirements Prioritization Framework
+      Non-Functional Requirements Assessment
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Requirements Prioritization Framework">
+    <nav class="md-nav" aria-label="Non-Functional Requirements Assessment">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#priority-matrix" class="md-nav__link">
+  <a href="#1-performance-requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Priority Matrix
+      1. Performance Requirements
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#trade-off-analysis" class="md-nav__link">
+  <a href="#2-scalability-requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Trade-off Analysis
+      2. Scalability Requirements
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Trade-off Analysis">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#common-trade-offs" class="md-nav__link">
+  <a href="#3-reliability-and-availability" class="md-nav__link">
     <span class="md-ellipsis">
-      Common Trade-offs:
+      3. Reliability and Availability
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#solution-recommendation-matrix" class="md-nav__link">
-    <span class="md-ellipsis">
-      Solution Recommendation Matrix
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Solution Recommendation Matrix">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#based-on-primary-requirements" class="md-nav__link">
+  <a href="#4-compliance-and-regulatory-requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Based on Primary Requirements
+      4. Compliance and Regulatory Requirements
     </span>
   </a>
   
@@ -729,46 +758,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation-roadmap" class="md-nav__link">
+  <a href="#technical-constraints-and-preferences" class="md-nav__link">
     <span class="md-ellipsis">
-      Implementation Roadmap
+      Technical Constraints and Preferences
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Implementation Roadmap">
+    <nav class="md-nav" aria-label="Technical Constraints and Preferences">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#phase-1-requirements-gathering-weeks-1-2" class="md-nav__link">
+  <a href="#1-technology-stack" class="md-nav__link">
     <span class="md-ellipsis">
-      Phase 1: Requirements Gathering (Weeks 1-2)
+      1. Technology Stack
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#phase-2-solution-evaluation-weeks-3-4" class="md-nav__link">
+  <a href="#2-deployment-preferences" class="md-nav__link">
     <span class="md-ellipsis">
-      Phase 2: Solution Evaluation (Weeks 3-4)
+      2. Deployment Preferences
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#phase-3-decision-and-planning-week-5" class="md-nav__link">
+  <a href="#3-operational-requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Phase 3: Decision and Planning (Week 5)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#phase-4-implementation-weeks-6-12" class="md-nav__link">
-    <span class="md-ellipsis">
-      Phase 4: Implementation (Weeks 6-12)
+      3. Operational Requirements
     </span>
   </a>
   
@@ -780,9 +800,150 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#cost-considerations" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Cost Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cost Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-budget-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Budget Constraints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cost-optimization-preferences" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Cost Optimization Preferences
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#risk-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Assessment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Risk Assessment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-technical-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Technical Risks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-business-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Business Risks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution-evaluation-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solution Evaluation Criteria
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Solution Evaluation Criteria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-evaluation-weights" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Evaluation Weights
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-success-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Success Metrics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended Next Steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recommended Next Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-immediate-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Immediate Actions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-evaluation-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Evaluation Phase
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-decision-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Decision Phase
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-and-comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes and Comments
     </span>
   </a>
   
@@ -792,29 +953,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../requirements-assessment-template/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Requirements Assessment Template
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1718,28 +1856,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mapping-to-system-architectures-and-products" class="md-nav__link">
+  <a href="#project-information" class="md-nav__link">
     <span class="md-ellipsis">
-      Mapping to System Architectures and Products
+      Project Information
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Mapping to System Architectures and Products">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executive-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executive Summary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Executive Summary">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#functional-requirements-mapping" class="md-nav__link">
+  <a href="#business-context" class="md-nav__link">
     <span class="md-ellipsis">
-      Functional Requirements Mapping
+      Business Context
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#non-functional-requirements-mapping" class="md-nav__link">
+  <a href="#high-level-requirements-summary" class="md-nav__link">
     <span class="md-ellipsis">
-      Non-Functional Requirements Mapping
+      High-Level Requirements Summary
     </span>
   </a>
   
@@ -1751,37 +1898,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#detailed-mapping-examples" class="md-nav__link">
+  <a href="#functional-requirements-assessment" class="md-nav__link">
     <span class="md-ellipsis">
-      Detailed Mapping Examples
+      Functional Requirements Assessment
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Detailed Mapping Examples">
+    <nav class="md-nav" aria-label="Functional Requirements Assessment">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-1-e-commerce-platform" class="md-nav__link">
+  <a href="#1-message-delivery-requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Example 1: E-commerce Platform
+      1. Message Delivery Requirements
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example-2-iot-sensor-network" class="md-nav__link">
+  <a href="#2-messaging-patterns" class="md-nav__link">
     <span class="md-ellipsis">
-      Example 2: IoT Sensor Network
+      2. Messaging Patterns
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example-3-financial-trading-system" class="md-nav__link">
+  <a href="#3-integration-requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Example 3: Financial Trading System
+      3. Integration Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-message-routing-and-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Message Routing and Filtering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-security-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Security Requirements
     </span>
   </a>
   
@@ -1793,67 +1958,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#requirements-prioritization-framework" class="md-nav__link">
+  <a href="#non-functional-requirements-assessment" class="md-nav__link">
     <span class="md-ellipsis">
-      Requirements Prioritization Framework
+      Non-Functional Requirements Assessment
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Requirements Prioritization Framework">
+    <nav class="md-nav" aria-label="Non-Functional Requirements Assessment">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#priority-matrix" class="md-nav__link">
+  <a href="#1-performance-requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Priority Matrix
+      1. Performance Requirements
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#trade-off-analysis" class="md-nav__link">
+  <a href="#2-scalability-requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Trade-off Analysis
+      2. Scalability Requirements
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Trade-off Analysis">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#common-trade-offs" class="md-nav__link">
+  <a href="#3-reliability-and-availability" class="md-nav__link">
     <span class="md-ellipsis">
-      Common Trade-offs:
+      3. Reliability and Availability
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#solution-recommendation-matrix" class="md-nav__link">
-    <span class="md-ellipsis">
-      Solution Recommendation Matrix
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Solution Recommendation Matrix">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#based-on-primary-requirements" class="md-nav__link">
+  <a href="#4-compliance-and-regulatory-requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Based on Primary Requirements
+      4. Compliance and Regulatory Requirements
     </span>
   </a>
   
@@ -1865,46 +2009,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation-roadmap" class="md-nav__link">
+  <a href="#technical-constraints-and-preferences" class="md-nav__link">
     <span class="md-ellipsis">
-      Implementation Roadmap
+      Technical Constraints and Preferences
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Implementation Roadmap">
+    <nav class="md-nav" aria-label="Technical Constraints and Preferences">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#phase-1-requirements-gathering-weeks-1-2" class="md-nav__link">
+  <a href="#1-technology-stack" class="md-nav__link">
     <span class="md-ellipsis">
-      Phase 1: Requirements Gathering (Weeks 1-2)
+      1. Technology Stack
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#phase-2-solution-evaluation-weeks-3-4" class="md-nav__link">
+  <a href="#2-deployment-preferences" class="md-nav__link">
     <span class="md-ellipsis">
-      Phase 2: Solution Evaluation (Weeks 3-4)
+      2. Deployment Preferences
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#phase-3-decision-and-planning-week-5" class="md-nav__link">
+  <a href="#3-operational-requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Phase 3: Decision and Planning (Week 5)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#phase-4-implementation-weeks-6-12" class="md-nav__link">
-    <span class="md-ellipsis">
-      Phase 4: Implementation (Weeks 6-12)
+      3. Operational Requirements
     </span>
   </a>
   
@@ -1916,9 +2051,150 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#cost-considerations" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Cost Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cost Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-budget-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Budget Constraints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cost-optimization-preferences" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Cost Optimization Preferences
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#risk-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Assessment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Risk Assessment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-technical-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Technical Risks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-business-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Business Risks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution-evaluation-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solution Evaluation Criteria
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Solution Evaluation Criteria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-evaluation-weights" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Evaluation Weights
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-success-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Success Metrics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended Next Steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recommended Next Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-immediate-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Immediate Actions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-evaluation-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Evaluation Phase
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-decision-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Decision Phase
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-and-comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes and Comments
     </span>
   </a>
   
@@ -1943,413 +2219,948 @@
   
 
 
-<h1 id="requirements-mapping-guide">Requirements Mapping Guide<a class="headerlink" href="#requirements-mapping-guide" title="Permanent link">&para;</a></h1>
-<p>This document provides a comprehensive mapping of functional and non-functional requirements to the features and criteria used in messaging system comparisons. It includes detailed examples, trade-offs, and guidance for prioritizing requirements.</p>
-<h2 id="mapping-to-system-architectures-and-products">Mapping to System Architectures and Products<a class="headerlink" href="#mapping-to-system-architectures-and-products" title="Permanent link">&para;</a></h2>
-<h3 id="functional-requirements-mapping">Functional Requirements Mapping<a class="headerlink" href="#functional-requirements-mapping" title="Permanent link">&para;</a></h3>
+<h1 id="requirements-assessment-template">Requirements Assessment Template<a class="headerlink" href="#requirements-assessment-template" title="Permanent link">&para;</a></h1>
+<p>This template provides a structured approach to gathering and documenting requirements for messaging system selection. Use this as a checklist and documentation tool for your project.</p>
+<h2 id="project-information">Project Information<a class="headerlink" href="#project-information" title="Permanent link">&para;</a></h2>
+<p><strong>Project Name</strong>: <strong><em>_</em></strong><strong><em>_</em></strong><em><br />
+<strong>Date</strong>: <strong><em>_</em></strong><strong><em>_</em></strong></em><br />
+<strong>Prepared by</strong>: <strong><em>_</em></strong><strong><em>_</em></strong><em><br />
+<strong>Stakeholders</strong>: <strong><em>_</em></strong><strong><em>_</em></strong></em>  </p>
+<h2 id="executive-summary">Executive Summary<a class="headerlink" href="#executive-summary" title="Permanent link">&para;</a></h2>
+<h3 id="business-context">Business Context<a class="headerlink" href="#business-context" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Project Objectives</strong>: </li>
+<li><strong>Success Criteria</strong>: </li>
+<li><strong>Timeline</strong>: </li>
+<li><strong>Budget Range</strong>: </li>
+</ul>
+<h3 id="high-level-requirements-summary">High-Level Requirements Summary<a class="headerlink" href="#high-level-requirements-summary" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Primary Use Case</strong>: </li>
+<li><strong>Expected Message Volume</strong>: </li>
+<li><strong>Critical Success Factors</strong>: </li>
+<li><strong>Major Constraints</strong>: </li>
+</ul>
+<h2 id="functional-requirements-assessment">Functional Requirements Assessment<a class="headerlink" href="#functional-requirements-assessment" title="Permanent link">&para;</a></h2>
+<h3 id="1-message-delivery-requirements">1. Message Delivery Requirements<a class="headerlink" href="#1-message-delivery-requirements" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
 <th>Requirement</th>
-<th>Example Scenarios</th>
-<th>Messaging Systems</th>
-<th>Trade-offs</th>
-<th>Priority Assessment</th>
+<th>Priority (1-5)</th>
+<th>Details</th>
+<th>Success Criteria</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Message Delivery</strong></td>
-<td>E-commerce order processing</td>
-<td>All systems</td>
-<td>Guaranteed vs. best-effort delivery</td>
-<td><strong>High</strong> for critical business operations</td>
+<td><strong>Delivery Guarantee</strong></td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td>At-most-once / At-least-once / Exactly-once</td>
+<td>% delivery success rate</td>
 </tr>
 <tr>
-<td><strong>Messaging Patterns</strong></td>
-<td>Microservices communication</td>
-<td>Kafka (streaming), RabbitMQ (queuing)</td>
-<td>Flexibility vs. complexity</td>
-<td><strong>Medium</strong> - depends on architecture</td>
+<td><strong>Message Ordering</strong></td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td>Global / Partition / No ordering required</td>
+<td>Ordering requirements</td>
 </tr>
 <tr>
-<td><strong>Integration</strong></td>
-<td>IoT sensor data collection</td>
-<td>MQTT (devices), Kafka (backend)</td>
-<td>Protocol support vs. performance</td>
-<td><strong>High</strong> for heterogeneous environments</td>
+<td><strong>Message Persistence</strong></td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td>Temporary / Durable / Archival</td>
+<td>Retention period</td>
 </tr>
 <tr>
-<td><strong>Message Routing</strong></td>
-<td>Content-based filtering</td>
-<td>RabbitMQ, Apache Pulsar</td>
-<td>Routing complexity vs. performance</td>
-<td><strong>Medium</strong> - depends on use case</td>
-</tr>
-<tr>
-<td><strong>Persistence</strong></td>
-<td>Audit trail requirements</td>
-<td>Kafka, IBM MQ</td>
-<td>Storage costs vs. compliance</td>
-<td><strong>Variable</strong> - depends on regulations</td>
-</tr>
-<tr>
-<td><strong>Error Handling</strong></td>
-<td>Payment processing</td>
-<td>Solace, IBM MQ</td>
-<td>Automatic vs. manual recovery</td>
-<td><strong>High</strong> for mission-critical systems</td>
-</tr>
-<tr>
-<td><strong>Authentication</strong></td>
-<td>Financial transactions</td>
-<td>All enterprise systems</td>
-<td>Security vs. performance</td>
-<td><strong>High</strong> for sensitive data</td>
-</tr>
-<tr>
-<td><strong>Monitoring</strong></td>
-<td>System health tracking</td>
-<td>Kafka, Pulsar (built-in)</td>
-<td>Visibility vs. overhead</td>
-<td><strong>Medium</strong> - essential for production</td>
-</tr>
-<tr>
-<td><strong>Administration</strong></td>
-<td>Multi-tenant management</td>
-<td>Cloud services, enterprise solutions</td>
-<td>Ease of use vs. control</td>
-<td><strong>Medium</strong> - depends on team expertise</td>
+<td><strong>Dead Letter Handling</strong></td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td>Automatic / Manual / Not required</td>
+<td>Error handling strategy</td>
 </tr>
 </tbody>
 </table>
-<h3 id="non-functional-requirements-mapping">Non-Functional Requirements Mapping<a class="headerlink" href="#non-functional-requirements-mapping" title="Permanent link">&para;</a></h3>
+<h3 id="2-messaging-patterns">2. Messaging Patterns<a class="headerlink" href="#2-messaging-patterns" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Requirement</th>
-<th>Measurement</th>
-<th>Best Solutions</th>
-<th>Trade-offs</th>
-<th>Business Impact</th>
+<th>Pattern</th>
+<th>Required</th>
+<th>Priority</th>
+<th>Use Case</th>
+<th>Volume</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td><strong>Point-to-Point</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Publish-Subscribe</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Request-Reply</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Streaming</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Fan-out</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Broadcast</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-integration-requirements">3. Integration Requirements<a class="headerlink" href="#3-integration-requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Integration Type</th>
+<th>Required</th>
+<th>Priority</th>
+<th>Details</th>
+<th>Protocols</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>REST APIs</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Legacy Systems</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Cloud Services</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Mobile Applications</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>IoT Devices</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Third-party Services</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-message-routing-and-filtering">4. Message Routing and Filtering<a class="headerlink" href="#4-message-routing-and-filtering" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>Required</th>
+<th>Priority</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Content-based Routing</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Header-based Routing</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Geographic Routing</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Load Balancing</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Message Transformation</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-security-requirements">5. Security Requirements<a class="headerlink" href="#5-security-requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Security Feature</th>
+<th>Required</th>
+<th>Priority</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Authentication</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Authorization</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Message Encryption</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Transport Security</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Audit Logging</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Multi-factor Authentication</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="non-functional-requirements-assessment">Non-Functional Requirements Assessment<a class="headerlink" href="#non-functional-requirements-assessment" title="Permanent link">&para;</a></h2>
+<h3 id="1-performance-requirements">1. Performance Requirements<a class="headerlink" href="#1-performance-requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Current</th>
+<th>Target</th>
+<th>Peak</th>
+<th>Measurement Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Messages per Second</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Response Time</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>End-to-end Latency</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Concurrent Users</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Data Volume per Day</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-scalability-requirements">2. Scalability Requirements<a class="headerlink" href="#2-scalability-requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Current</th>
+<th>6 Months</th>
+<th>1 Year</th>
+<th>3 Years</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Message Volume</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Users/Consumers</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Geographic Regions</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Data Storage</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Processing Power</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-reliability-and-availability">3. Reliability and Availability<a class="headerlink" href="#3-reliability-and-availability" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Target</th>
+<th>Current</th>
+<th>Acceptable</th>
+<th>Critical</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>System Uptime</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Message Delivery Success Rate</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Recovery Time Objective (RTO)</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Recovery Point Objective (RPO)</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Mean Time Between Failures (MTBF)</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Mean Time To Recovery (MTTR)</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-compliance-and-regulatory-requirements">4. Compliance and Regulatory Requirements<a class="headerlink" href="#4-compliance-and-regulatory-requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Regulation</th>
+<th>Applicable</th>
+<th>Priority</th>
+<th>Requirements</th>
+<th>Validation Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GDPR</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>HIPAA</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SOX</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>PCI-DSS</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ISO 27001</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Industry-specific</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="technical-constraints-and-preferences">Technical Constraints and Preferences<a class="headerlink" href="#technical-constraints-and-preferences" title="Permanent link">&para;</a></h2>
+<h3 id="1-technology-stack">1. Technology Stack<a class="headerlink" href="#1-technology-stack" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Current</th>
+<th>Preferred</th>
+<th>Constraints</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Programming Languages</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Frameworks</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Databases</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Cloud Platform</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Container Platform</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Monitoring Tools</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-deployment-preferences">2. Deployment Preferences<a class="headerlink" href="#2-deployment-preferences" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Preference</th>
+<th>Selection</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Deployment Model</strong></td>
+<td>☐ Cloud ☐ On-premise ☐ Hybrid</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Managed vs. Self-hosted</strong></td>
+<td>☐ Managed ☐ Self-hosted ☐ Mixed</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Multi-cloud Strategy</strong></td>
+<td>☐ Yes ☐ No ☐ Future consideration</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Disaster Recovery</strong></td>
+<td>☐ Active-Active ☐ Active-Passive ☐ Backup only</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-operational-requirements">3. Operational Requirements<a class="headerlink" href="#3-operational-requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Current Capability</th>
+<th>Target</th>
+<th>Gap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>24/7 Monitoring</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ Yes ☐ No</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Automated Deployment</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ Yes ☐ No</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Log Management</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ Yes ☐ No</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Performance Monitoring</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ Yes ☐ No</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Incident Response</strong></td>
+<td>☐ Yes ☐ No</td>
+<td>☐ Yes ☐ No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="cost-considerations">Cost Considerations<a class="headerlink" href="#cost-considerations" title="Permanent link">&para;</a></h2>
+<h3 id="1-budget-constraints">1. Budget Constraints<a class="headerlink" href="#1-budget-constraints" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Cost Component</th>
+<th>Current</th>
+<th>Budget</th>
+<th>3-Year Projection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Initial Implementation</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Annual Licensing</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Infrastructure</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Personnel</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Training</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Support</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Total Cost of Ownership</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-cost-optimization-preferences">2. Cost Optimization Preferences<a class="headerlink" href="#2-cost-optimization-preferences" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Preference</th>
+<th>Priority</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Open Source Solutions</strong></td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Pay-as-you-go Pricing</strong></td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Reserved Capacity</strong></td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Multi-year Contracts</strong></td>
+<td>☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="risk-assessment">Risk Assessment<a class="headerlink" href="#risk-assessment" title="Permanent link">&para;</a></h2>
+<h3 id="1-technical-risks">1. Technical Risks<a class="headerlink" href="#1-technical-risks" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Impact (1-5)</th>
+<th>Probability (1-5)</th>
+<th>Mitigation Strategy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vendor Lock-in</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Technology Obsolescence</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Scalability Limits</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Security Vulnerabilities</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Integration Complexity</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Performance Degradation</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-business-risks">2. Business Risks<a class="headerlink" href="#2-business-risks" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Impact (1-5)</th>
+<th>Probability (1-5)</th>
+<th>Mitigation Strategy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cost Overruns</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Timeline Delays</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Vendor Failure</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Compliance Violations</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Customer Impact</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Competitive Disadvantage</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="solution-evaluation-criteria">Solution Evaluation Criteria<a class="headerlink" href="#solution-evaluation-criteria" title="Permanent link">&para;</a></h2>
+<h3 id="1-evaluation-weights">1. Evaluation Weights<a class="headerlink" href="#1-evaluation-weights" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Weight (%)</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Functional Fit</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td><strong>Scalability</strong></td>
-<td>10K → 1M users</td>
-<td>Kafka, Pulsar, AWS SQS</td>
-<td>Cost vs. performance</td>
-<td><strong>High</strong> - affects growth capacity</td>
-</tr>
-<tr>
-<td><strong>Latency</strong></td>
-<td>&lt; 10ms response</td>
-<td>Solace, NATS</td>
-<td>Latency vs. throughput</td>
-<td><strong>Variable</strong> - critical for real-time</td>
-</tr>
-<tr>
-<td><strong>Throughput</strong></td>
-<td>1M+ messages/sec</td>
-<td>Kafka, Pulsar</td>
-<td>Throughput vs. resource usage</td>
-<td><strong>High</strong> - affects system capacity</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Reliability</strong></td>
-<td>99.99% success</td>
-<td>Enterprise solutions</td>
-<td>Reliability vs. cost</td>
-<td><strong>High</strong> - affects customer trust</td>
-</tr>
-<tr>
-<td><strong>Availability</strong></td>
-<td>99.9% uptime</td>
-<td>Cloud services, clustered solutions</td>
-<td>Availability vs. complexity</td>
-<td><strong>High</strong> - affects service continuity</td>
-</tr>
-<tr>
-<td><strong>Durability</strong></td>
-<td>Zero data loss</td>
-<td>Kafka, IBM MQ</td>
-<td>Durability vs. performance</td>
-<td><strong>Variable</strong> - depends on data criticality</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Security</strong></td>
-<td>AES-256 encryption</td>
-<td>All enterprise systems</td>
-<td>Security vs. performance</td>
-<td><strong>High</strong> - regulatory requirement</td>
-</tr>
-<tr>
-<td><strong>Maintainability</strong></td>
-<td>Zero-downtime updates</td>
-<td>Cloud services, containerized solutions</td>
-<td>Maintainability vs. control</td>
-<td><strong>Medium</strong> - affects operational costs</td>
-</tr>
-<tr>
-<td><strong>Portability</strong></td>
-<td>Multi-cloud deployment</td>
-<td>Open-source solutions</td>
-<td>Portability vs. optimization</td>
-<td><strong>Medium</strong> - strategic flexibility</td>
-</tr>
-<tr>
-<td><strong>Compliance</strong></td>
-<td>GDPR, HIPAA</td>
-<td>Enterprise solutions</td>
-<td>Compliance vs. complexity</td>
-<td><strong>High</strong> - legal requirement</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Cost</strong></td>
-<td>Budget constraints</td>
-<td>Open-source, cloud services</td>
-<td>Cost vs. features</td>
-<td><strong>High</strong> - affects project viability</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Vendor Stability</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Community Support</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Ease of Use</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td>100%</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<h2 id="detailed-mapping-examples">Detailed Mapping Examples<a class="headerlink" href="#detailed-mapping-examples" title="Permanent link">&para;</a></h2>
-<h3 id="example-1-e-commerce-platform">Example 1: E-commerce Platform<a class="headerlink" href="#example-1-e-commerce-platform" title="Permanent link">&para;</a></h3>
-<p><strong>Functional Requirements</strong>:
-- Message Delivery: Order processing → <strong>Apache Kafka</strong> (exactly-once delivery)
-- Integration: Multiple payment gateways → <strong>REST APIs + Message queues</strong>
-- Persistence: Order history → <strong>Kafka with long retention</strong></p>
-<p><strong>Non-Functional Requirements</strong>:
-- Scalability: Black Friday traffic → <strong>Kafka with auto-scaling</strong>
-- Latency: Real-time inventory updates → <strong>&lt; 100ms acceptable</strong>
-- Reliability: 99.9% order processing → <strong>Multi-zone deployment</strong></p>
-<h3 id="example-2-iot-sensor-network">Example 2: IoT Sensor Network<a class="headerlink" href="#example-2-iot-sensor-network" title="Permanent link">&para;</a></h3>
-<p><strong>Functional Requirements</strong>:
-- Message Delivery: Sensor data → <strong>MQTT</strong> (lightweight protocol)
-- Integration: Cloud analytics → <strong>MQTT to Kafka bridge</strong>
-- Routing: Geographic filtering → <strong>Topic-based routing</strong></p>
-<p><strong>Non-Functional Requirements</strong>:
-- Throughput: 100K sensors → <strong>MQTT + Kafka backend</strong>
-- Latency: Alert processing → <strong>&lt; 1 second acceptable</strong>
-- Cost: Budget-conscious → <strong>Open-source solutions</strong></p>
-<h3 id="example-3-financial-trading-system">Example 3: Financial Trading System<a class="headerlink" href="#example-3-financial-trading-system" title="Permanent link">&para;</a></h3>
-<p><strong>Functional Requirements</strong>:
-- Message Delivery: Trade execution → <strong>Solace</strong> (guaranteed delivery)
-- Authentication: Regulatory compliance → <strong>Multi-factor authentication</strong>
-- Monitoring: Real-time dashboards → <strong>Built-in monitoring tools</strong></p>
-<p><strong>Non-Functional Requirements</strong>:
-- Latency: High-frequency trading → <strong>&lt; 1ms required</strong>
-- Reliability: Zero tolerance for failures → <strong>99.999% uptime</strong>
-- Compliance: Financial regulations → <strong>SOX, MiFID II compliance</strong></p>
-<h2 id="requirements-prioritization-framework">Requirements Prioritization Framework<a class="headerlink" href="#requirements-prioritization-framework" title="Permanent link">&para;</a></h2>
-<h3 id="priority-matrix">Priority Matrix<a class="headerlink" href="#priority-matrix" title="Permanent link">&para;</a></h3>
+<h3 id="2-success-metrics">2. Success Metrics<a class="headerlink" href="#2-success-metrics" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Requirement Category</th>
-<th>Business Impact</th>
-<th>Technical Complexity</th>
-<th>Implementation Cost</th>
-<th>Priority Score</th>
+<th>Metric</th>
+<th>Target</th>
+<th>Measurement Method</th>
+<th>Frequency</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Message Delivery</strong></td>
-<td>High (9)</td>
-<td>Medium (5)</td>
-<td>Medium (5)</td>
-<td><strong>High (19)</strong></td>
+<td><strong>Message Processing Rate</strong></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td><strong>Scalability</strong></td>
-<td>High (9)</td>
-<td>High (8)</td>
-<td>High (8)</td>
-<td><strong>High (25)</strong></td>
+<td><strong>System Uptime</strong></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td><strong>Security</strong></td>
-<td>High (9)</td>
-<td>Medium (6)</td>
-<td>Medium (6)</td>
-<td><strong>High (21)</strong></td>
+<td><strong>Response Time</strong></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td><strong>Latency</strong></td>
-<td>Variable (7)</td>
-<td>High (8)</td>
-<td>High (7)</td>
-<td><strong>Medium (22)</strong></td>
+<td><strong>Cost per Message</strong></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td><strong>Cost</strong></td>
-<td>High (9)</td>
-<td>Low (3)</td>
-<td>High (9)</td>
-<td><strong>High (21)</strong></td>
+<td><strong>Implementation Time</strong></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td><strong>Integration</strong></td>
-<td>Medium (6)</td>
-<td>Medium (5)</td>
-<td>Medium (5)</td>
-<td><strong>Medium (16)</strong></td>
-</tr>
-<tr>
-<td><strong>Compliance</strong></td>
-<td>Variable (8)</td>
-<td>Medium (6)</td>
-<td>Medium (6)</td>
-<td><strong>Medium (20)</strong></td>
-</tr>
-<tr>
-<td><strong>Portability</strong></td>
-<td>Low (4)</td>
-<td>Medium (5)</td>
-<td>Medium (5)</td>
-<td><strong>Low (14)</strong></td>
+<td><strong>User Satisfaction</strong></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<h3 id="trade-off-analysis">Trade-off Analysis<a class="headerlink" href="#trade-off-analysis" title="Permanent link">&para;</a></h3>
-<h4 id="common-trade-offs">Common Trade-offs:<a class="headerlink" href="#common-trade-offs" title="Permanent link">&para;</a></h4>
-<ol>
-<li><strong>Performance vs. Cost</strong></li>
-<li>High-performance solutions (Solace, IBM MQ) cost more</li>
-<li>Budget solutions (open-source) require more operational overhead</li>
-<li>
-<p><strong>Recommendation</strong>: Balance based on business criticality</p>
-</li>
-<li>
-<p><strong>Reliability vs. Complexity</strong></p>
-</li>
-<li>Highly reliable systems require complex configurations</li>
-<li>Simple systems may not meet reliability requirements</li>
-<li>
-<p><strong>Recommendation</strong>: Start simple, add complexity as needed</p>
-</li>
-<li>
-<p><strong>Scalability vs. Resource Usage</strong></p>
-</li>
-<li>Scalable systems consume more resources</li>
-<li>Resource-efficient systems may not scale well</li>
-<li>
-<p><strong>Recommendation</strong>: Plan for growth, optimize later</p>
-</li>
-<li>
-<p><strong>Security vs. Performance</strong></p>
-</li>
-<li>Strong security adds latency and complexity</li>
-<li>Performance optimization may compromise security</li>
-<li>
-<p><strong>Recommendation</strong>: Security is non-negotiable, optimize within constraints</p>
-</li>
-<li>
-<p><strong>Flexibility vs. Performance</strong></p>
-</li>
-<li>Flexible systems support multiple patterns but may be slower</li>
-<li>Specialized systems are faster but less adaptable</li>
-<li><strong>Recommendation</strong>: Choose based on long-term architecture goals</li>
-</ol>
-<h2 id="solution-recommendation-matrix">Solution Recommendation Matrix<a class="headerlink" href="#solution-recommendation-matrix" title="Permanent link">&para;</a></h2>
-<h3 id="based-on-primary-requirements">Based on Primary Requirements<a class="headerlink" href="#based-on-primary-requirements" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Primary Requirement</th>
-<th>Recommended Solutions</th>
-<th>Alternative Options</th>
-<th>Avoid</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Ultra-low Latency</strong></td>
-<td>Solace, Custom UDP</td>
-<td>NATS, Redis</td>
-<td>Kafka, RabbitMQ</td>
-</tr>
-<tr>
-<td><strong>High Throughput</strong></td>
-<td>Apache Kafka, Pulsar</td>
-<td>AWS Kinesis</td>
-<td>RabbitMQ, MQTT</td>
-</tr>
-<tr>
-<td><strong>Simplicity</strong></td>
-<td>AWS SQS, RabbitMQ</td>
-<td>Redis, NATS</td>
-<td>Kafka, Solace</td>
-</tr>
-<tr>
-<td><strong>Cost Optimization</strong></td>
-<td>Open-source solutions</td>
-<td>Cloud services</td>
-<td>Enterprise solutions</td>
-</tr>
-<tr>
-<td><strong>Enterprise Features</strong></td>
-<td>IBM MQ, Solace</td>
-<td>Confluent Platform</td>
-<td>Basic open-source</td>
-</tr>
-<tr>
-<td><strong>Multi-protocol</strong></td>
-<td>Apache Pulsar</td>
-<td>RabbitMQ</td>
-<td>Single-protocol solutions</td>
-</tr>
-<tr>
-<td><strong>IoT/Edge</strong></td>
-<td>MQTT, NATS</td>
-<td>CoAP</td>
-<td>Heavy enterprise solutions</td>
-</tr>
-<tr>
-<td><strong>Financial Services</strong></td>
-<td>Solace, IBM MQ</td>
-<td>Kafka with guarantees</td>
-<td>Best-effort systems</td>
-</tr>
-</tbody>
-</table>
-<h2 id="implementation-roadmap">Implementation Roadmap<a class="headerlink" href="#implementation-roadmap" title="Permanent link">&para;</a></h2>
-<h3 id="phase-1-requirements-gathering-weeks-1-2">Phase 1: Requirements Gathering (Weeks 1-2)<a class="headerlink" href="#phase-1-requirements-gathering-weeks-1-2" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Define functional requirements with stakeholders</li>
-<li>Identify non-functional requirements and constraints</li>
-<li>Prioritize requirements using the framework above</li>
+<h2 id="recommended-next-steps">Recommended Next Steps<a class="headerlink" href="#recommended-next-steps" title="Permanent link">&para;</a></h2>
+<h3 id="1-immediate-actions">1. Immediate Actions<a class="headerlink" href="#1-immediate-actions" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Validate requirements with stakeholders</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Prioritize requirements based on business impact</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Identify proof-of-concept scenarios</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Shortlist 2-3 candidate solutions</li>
 </ul>
-<h3 id="phase-2-solution-evaluation-weeks-3-4">Phase 2: Solution Evaluation (Weeks 3-4)<a class="headerlink" href="#phase-2-solution-evaluation-weeks-3-4" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Map requirements to potential solutions</li>
-<li>Conduct proof-of-concept for top 2-3 solutions</li>
-<li>Analyze trade-offs and total cost of ownership</li>
+<h3 id="2-evaluation-phase">2. Evaluation Phase<a class="headerlink" href="#2-evaluation-phase" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Conduct technical proof-of-concept</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Perform cost-benefit analysis</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Validate performance benchmarks</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Assess vendor support and roadmap</li>
 </ul>
-<h3 id="phase-3-decision-and-planning-week-5">Phase 3: Decision and Planning (Week 5)<a class="headerlink" href="#phase-3-decision-and-planning-week-5" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Make final selection based on requirements matrix</li>
-<li>Plan implementation approach and migration strategy</li>
-<li>Establish success metrics and monitoring approach</li>
+<h3 id="3-decision-phase">3. Decision Phase<a class="headerlink" href="#3-decision-phase" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Create evaluation scorecard</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Present findings to stakeholders</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Make final selection</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Plan implementation roadmap</li>
 </ul>
-<h3 id="phase-4-implementation-weeks-6-12">Phase 4: Implementation (Weeks 6-12)<a class="headerlink" href="#phase-4-implementation-weeks-6-12" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Deploy selected solution in staging environment</li>
-<li>Conduct thorough testing and performance validation</li>
-<li>Plan production rollout and monitoring setup</li>
-</ul>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>This comprehensive mapping guide helps organizations systematically evaluate messaging system requirements and select the most appropriate solution. The key is to:</p>
-<ol>
-<li><strong>Clearly define requirements</strong> with specific metrics and scenarios</li>
-<li><strong>Prioritize based on business impact</strong> and technical constraints</li>
-<li><strong>Consider trade-offs</strong> between different quality attributes</li>
-<li><strong>Use proof-of-concept</strong> to validate assumptions</li>
-<li><strong>Plan for evolution</strong> as requirements change over time</li>
-</ol>
-<p>Use this framework to make informed decisions that align with your organization's specific needs and constraints.</p>
+<h2 id="notes-and-comments">Notes and Comments<a class="headerlink" href="#notes-and-comments" title="Permanent link">&para;</a></h2>
+<p><strong>Additional Requirements</strong>:</p>
+<hr />
+<p><strong>Assumptions</strong>:</p>
+<hr />
+<p><strong>Dependencies</strong>:</p>
+<hr />
+<p><strong>Constraints</strong>:</p>
+<hr />
+<p><strong>Stakeholder Feedback</strong>:</p>
+<hr />
+<hr />
+<p><strong>Document Status</strong>: ☐ Draft ☐ Review ☐ Approved ☐ Final<br />
+<strong>Last Updated</strong>: <strong><em>_</em></strong><strong><em>_</em></strong><em><br />
+<strong>Next Review Date</strong>: <strong><em>_</em></strong><strong><em>_</em></strong></em></p>
 
 
 

@@ -608,6 +608,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requirements-assessment-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Requirements Assessment Template
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1545,32 +1568,155 @@
 <h1 id="functional-vs-non-functional-requirements">Functional vs Non-Functional Requirements<a class="headerlink" href="#functional-vs-non-functional-requirements" title="Permanent link">&para;</a></h1>
 <p>This section helps distinguish between functional and non-functional requirements to aid in the selection of an appropriate messaging system.</p>
 <h2 id="functional-requirements">Functional Requirements<a class="headerlink" href="#functional-requirements" title="Permanent link">&para;</a></h2>
-<p>Functional requirements describe the specific behaviors, features, and functions a messaging system must provide. Key aspects include:</p>
+<p>Functional requirements describe the specific behaviors, features, and functions a messaging system must provide. They are the foundational capabilities enabling the system to operate as intended. Key aspects include:</p>
 <ul>
-<li><strong>Message Delivery</strong>: Ensure messages are delivered from sender to recipient(s).</li>
-<li><strong>Supported Messaging Patterns</strong>: Include support for Pub-Sub, Request-Reply, Fanout, Push-Pull, etc.</li>
-<li><strong>Integration</strong>: Ability to connect with specified applications, APIs, or protocols (e.g., AMQP, MQTT).</li>
-<li><strong>Message Routing</strong>: Support for routing rules and filtering.</li>
-<li><strong>Persistence</strong>: Option to store messages for later retrieval.</li>
-<li><strong>Error Handling</strong>: Mechanisms for failed message deliveries.</li>
-<li><strong>User Authentication</strong>: Ensure only authorized users or systems can send/receive messages.</li>
-<li><strong>Monitoring and Logging</strong>: Ability to track message flow and system events.</li>
-<li><strong>Administration Tools</strong>: Interfaces for managing queues, topics, and users.</li>
+<li><strong>Message Delivery</strong></li>
+<li><em>Scenario</em>: A retail platform ensuring orders are received and processed by fulfillment centers.</li>
+<li>
+<p><em>Key Questions</em>: Are messages guaranteed to be delivered? What happens if delivery fails?</p>
+</li>
+<li>
+<p><strong>Supported Messaging Patterns</strong></p>
+</li>
+<li><em>Scenario</em>: A financial service using request-reply for transaction validations.</li>
+<li>
+<p><em>Key Questions</em>: Which messaging patterns are crucial? Do they align with business processes?</p>
+</li>
+<li>
+<p><strong>Integration</strong></p>
+</li>
+<li><em>Scenario</em>: An IoT system connecting sensors to analytics platforms.</li>
+<li>
+<p><em>Key Questions</em>: What protocols are necessary for seamless integration? Are there existing API dependencies?</p>
+</li>
+<li>
+<p><strong>Message Routing</strong></p>
+</li>
+<li><em>Scenario</em>: A media company distributing live sports feed to multiple outlets.</li>
+<li>
+<p><em>Key Questions</em>: How are messages routed within the network? Is content-based filtering needed?</p>
+</li>
+<li>
+<p><strong>Persistence</strong></p>
+</li>
+<li><em>Scenario</em>: A critical alert system retaining messages until acknowledgment.</li>
+<li>
+<p><em>Key Questions</em>: How long must messages be stored? What backup mechanisms exist?</p>
+</li>
+<li>
+<p><strong>Error Handling</strong></p>
+</li>
+<li><em>Scenario</em>: A logistics system retrying failed deliveries automatically.</li>
+<li>
+<p><em>Key Questions</em>: Are retries automatic or manual? How are failures logged and reviewed?</p>
+</li>
+<li>
+<p><strong>User Authentication</strong></p>
+</li>
+<li><em>Scenario</em>: A secure messaging platform authorizing financial transactions.</li>
+<li>
+<p><em>Key Questions</em>: What authentication methods are supported? Are there multi-factor options?</p>
+</li>
+<li>
+<p><strong>Monitoring and Logging</strong></p>
+</li>
+<li><em>Scenario</em>: A network provider tracking data transfer rates and message lags.</li>
+<li>
+<p><em>Key Questions</em>: What metrics are tracked in real-time? How are logs accessed and analyzed?</p>
+</li>
+<li>
+<p><strong>Administration Tools</strong></p>
+</li>
+<li><em>Scenario</em>: An enterprise IT team managing access control policies and system alerts.</li>
+<li><em>Key Questions</em>: How intuitive are the management interfaces? What controls are available for admins?</li>
 </ul>
 <h2 id="non-functional-requirements">Non-Functional Requirements<a class="headerlink" href="#non-functional-requirements" title="Permanent link">&para;</a></h2>
-<p>Non-functional requirements specify the quality attributes, performance, and constraints of the system:</p>
+<p>Non-functional requirements specify the quality attributes, performance, and constraints of the system, often defining how it achieves the intended functionality. They are critical for ensuring user satisfaction and operational efficiency:</p>
 <ul>
-<li><strong>Scalability</strong>: Handle increasing loads without performance degradation.</li>
-<li><strong>Latency</strong>: Deliver messages within a defined time frame.</li>
-<li><strong>Throughput</strong>: Process a minimum number of messages per second.</li>
-<li><strong>Reliability</strong>: Guarantees about message delivery.</li>
-<li><strong>Availability</strong>: System uptime requirements.</li>
-<li><strong>Durability</strong>: Assurance that messages are not lost in case of failures.</li>
-<li><strong>Security</strong>: Encryption of messages in transit and at rest; access controls.</li>
-<li><strong>Maintainability</strong>: Ease of updates and modifications.</li>
-<li><strong>Portability</strong>: Ability to deploy on different platforms.</li>
-<li><strong>Compliance</strong>: Adherence to industry standards or regulations.</li>
-<li><strong>Cost Constraints</strong>: Budget for implementation and operation.</li>
+<li><strong>Scalability</strong></li>
+<li><em>Metric</em>: Ability to scale horizontally, supporting growth from 10,000 to 1 million users.</li>
+<li><em>Benchmark</em>: Kubernetes deployment achieving automatic scaling.</li>
+<li>
+<p><em>Decision Guide</em>: Assess horizontal vs. vertical scaling based on expected growth.</p>
+</li>
+<li>
+<p><strong>Latency</strong></p>
+</li>
+<li><em>Metric</em>: Average message delay not exceeding 50ms.</li>
+<li><em>Benchmark</em>: Low-latency networks for high-frequency trading.</li>
+<li>
+<p><em>Decision Guide</em>: Prioritize for real-time systems and adjust commitment accordingly.</p>
+</li>
+<li>
+<p><strong>Throughput</strong></p>
+</li>
+<li><em>Metric</em>: Capability to handle up to 1 million messages per second.</li>
+<li><em>Benchmark</em>: Stress test results under peak load conditions.</li>
+<li>
+<p><em>Decision Guide</em>: Align with expected message volume during peak times.</p>
+</li>
+<li>
+<p><strong>Reliability</strong></p>
+</li>
+<li><em>Metric</em>: 99.999% success rate with failover mechanisms.</li>
+<li><em>Benchmark</em>: Dual data centers enabling active-active clustering.</li>
+<li>
+<p><em>Decision Guide</em>: Implement failover strategies matching service continuity needs.</p>
+</li>
+<li>
+<p><strong>Availability</strong></p>
+</li>
+<li><em>Metric</em>: 99.99% uptime with automated recovery processes.</li>
+<li><em>Benchmark</em>: Real-world uptime SLAs from leading cloud providers.</li>
+<li>
+<p><em>Decision Guide</em>: Evaluate single-region vs. multi-region deployments.</p>
+</li>
+<li>
+<p><strong>Durability</strong></p>
+</li>
+<li><em>Metric</em>: Data loss not exceeding 1 in 1 billion transactions.</li>
+<li><em>Benchmark</em>: Redundant storage solutions with automatic replication.</li>
+<li>
+<p><em>Decision Guide</em>: Necessary for systems requiring permanent message storage.</p>
+</li>
+<li>
+<p><strong>Security</strong></p>
+</li>
+<li><em>Metric</em>: AES-256 encryption for all data transfers.</li>
+<li><em>Benchmark</em>: Compliance with ISO 27001/27017 standards.</li>
+<li>
+<p><em>Decision Guide</em>: Mandated for industries dealing with sensitive data.</p>
+</li>
+<li>
+<p><strong>Maintainability</strong></p>
+</li>
+<li><em>Metric</em>: Ability to deploy updates with zero downtime.</li>
+<li><em>Benchmark</em>: Use of CI/CD pipelines for seamless integrations.</li>
+<li>
+<p><em>Decision Guide</em>: Requires high reliability and frequent updates.</p>
+</li>
+<li>
+<p><strong>Portability</strong></p>
+</li>
+<li><em>Metric</em>: Deployment possible across AWS, Azure, and GCP.</li>
+<li><em>Benchmark</em>: Use of containers for consistent deployment experience.</li>
+<li>
+<p><em>Decision Guide</em>: Considerations for multi-cloud strategy or hybrid environments.</p>
+</li>
+<li>
+<p><strong>Compliance</strong></p>
+</li>
+<li><em>Metric</em>: Complete alignment with regulatory standards like GDPR and HIPAA.</li>
+<li><em>Benchmark</em>: Regular compliance audits and certifications.</li>
+<li>
+<p><em>Decision Guide</em>: Essential for legal and regulatory adherence.</p>
+</li>
+<li>
+<p><strong>Cost Constraints</strong></p>
+</li>
+<li><em>Metric</em>: Total cost under predetermined budget constraints.</li>
+<li><em>Benchmark</em>: Cost optimization strategies balancing quality and investment.</li>
+<li><em>Decision Guide</em>: Decision influenced heavily by operational budgets and cost-benefit analyses.</li>
 </ul>
 
 
