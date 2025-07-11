@@ -1,0 +1,117 @@
+site_name: Messaging System Selection Guide
+site_description: A comprehensive guide to help business units choose the right messaging system based on their requirements
+site_author: Business Technology Team
+site_url: https://messaging-system-guide.com
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+    - header.autohide
+  favicon: assets/favicon.ico
+  logo: assets/logo.png
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search:
+      lang: en
+  - mermaid2:
+      arguments:
+        theme: auto
+        themeVariables:
+          primaryColor: '#2196F3'
+          primaryTextColor: '#ffffff'
+
+extra:
+  version:
+    provider: mike
+    default: latest
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/your-org/messaging-system-guide
+      name: GitHub Repository
+  generator: false
+  status:
+    new: Recently added
+    deprecated: Deprecated
+
+copyright: Copyright &copy; 2024 Business Technology Team
+
+# Repository information
+repo_url: https://github.com/your-org/messaging-system-guide
+repo_name: messaging-system-guide
+edit_uri: edit/main/docs/
+
+nav:
+  - Home: index.md
+  - Requirements Analysis:
+    - Functional vs Non-Functional: requirements/functional-vs-non-functional.md
+    - Requirements Mapping: requirements/requirements-mapping.md
+  - Decision Framework:
+    - Decision Tree: decision-framework/decision-tree.md
+    - Selection Criteria: decision-framework/selection-criteria.md
+  - Messaging Solutions:
+    - Architecture Overview: solutions/architecture-overview.md
+    - Product Comparison: solutions/product-comparison.md
+    - Developer Guide: solutions/developer-guide.md
+  - Implementation:
+    - Deployment Guide: implementation/deployment-guide.md
+    - Best Practices: implementation/best-practices.md
+  - Use Cases:
+    - Enterprise Integration: use-cases/enterprise-integration.md
+    - IoT Messaging: use-cases/iot-messaging.md
+    - Microservices: use-cases/microservices.md
+    - Real-time Analytics: use-cases/real-time-analytics.md

@@ -1,0 +1,24 @@
+# MkDocs core and theme
+mkdocs>=1.5.3
+mkdocs-material>=9.4.0
+
+# Mermaid support for diagrams
+mkdocs-mermaid2-plugin>=1.1.0
+
+# Python Markdown Extensions
+pymdown-extensions>=10.3.0
+
+# Version management (optional)
+mike>=2.0.0
+
+# Optional: Enhanced plugins (uncomment as needed)
+# mkdocs-git-revision-date-localized-plugin>=1.2.0
+# mkdocs-git-committers-plugin-2>=2.2.0
+# mkdocs-awesome-pages-plugin>=2.9.0
+# mkdocs-minify-plugin>=0.7.0
+# mkdocs-redirects>=1.2.0
+# mkdocs-pdf-export-plugin>=0.5.10
+# mkdocs-localsearch>=0.3.0
+# mkdocs-google-analytics>=0.1.0
+# pillow>=10.0.0
+# cairosvg>=2.7.0
