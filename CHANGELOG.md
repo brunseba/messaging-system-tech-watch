@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.1] - 2025-01-11
+
+### Added
+- Version and license information throughout the documentation
+- MIT License file for the project
+- Version footer in the main documentation page
+- Project versioning in MkDocs configuration
+- License reference in site footer
+
+### Changed
+- Updated copyright year to 2025
+- Enhanced main documentation page with version information table
+- Improved MkDocs configuration with proper versioning
+
+### Fixed
+- Removed generated site directory from version control
+- Cleaned up MkDocs configuration warnings
+- Fixed build process to exclude generated files
+
 ## [v1.0.0] - 2025-01-11
 
 ### Added

@@ -79,7 +79,7 @@ extra:
   version:
     provider: mike
     default: latest
-    current: 1.0.0
+    current: 1.0.1
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/your-org/messaging-system-guide
@@ -93,7 +93,7 @@ extra:
     url: https://github.com/your-org/messaging-system-guide/blob/main/LICENSE
   project:
     name: Messaging System Tech Watch
-    version: 1.0.0
+    version: 1.0.1
 
 copyright: Copyright &copy; 2025 Business Technology Team | Licensed under MIT License
 
