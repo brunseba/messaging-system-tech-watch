@@ -243,15 +243,139 @@ EOF
 3. **Connect Clients**: Use SDKs for client integration.
 4. **Security Enhancement**: Apply TLS and user authentications.
 
-## Verification & Testing
-- **Run Unit Tests**: Ensure functionality through dedicated tests.
-- **Load Testing**: Use tools like Apache JMeter.
-- **Monitoring**: Implement monitoring tools to check health and metrics.
+## Kubernetes Operator Monitoring
 
-## Troubleshooting Tips
-- **Log Analysis**: Check server logs for error patterns.
-- **Configuration Refinement**: Tune performance settings as needed.
-- **Network Diagnostics**: Ensure network connectivity and proper DNS resolution.
+### Prometheus Integration
+
+Most operators provide Prometheus metrics out of the box:
+
+```yaml
+# Example ServiceMonitor for Kafka
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: kafka-metrics
+  namespace: kafka
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: kafka
+  endpoints:
+  - port: tcp-prometheus
+    interval: 30s
+    path: /metrics
+```
+
+### Key Metrics to Monitor
+
+| Messaging System | Key Metrics | Alert Thresholds |
+|------------------|-------------|------------------|
+| **Kafka** | kafka_server_replicamanager_underreplicated_partitions | > 0 |
+| **RabbitMQ** | rabbitmq_queue_messages_ready | > 10000 |
+| **Redis** | redis_memory_used_bytes | > 80% of limit |
+| **NATS** | nats_jetstream_stream_messages | Monitor growth rate |
+| **Pulsar** | pulsar_storage_size | > 90% of capacity |
+
+### Grafana Dashboards
+
+Recommended dashboard IDs:
+- **Kafka**: 7589 (Strimzi Kafka Dashboard)
+- **RabbitMQ**: 10991 (RabbitMQ Cluster)
+- **Redis**: 11835 (Redis Enterprise)
+- **NATS**: 12279 (NATS JetStream)
+
+## Kubernetes Operator Troubleshooting
+
+### Common Issues and Solutions
+
+#### Operator Pod Issues
+```bash
+# Check operator status
+kubectl get pods -n <operator-namespace>
+kubectl logs -n <operator-namespace> <operator-pod>
+
+# Check operator events
+kubectl get events -n <operator-namespace> --sort-by=.metadata.creationTimestamp
+```
+
+#### Resource Creation Issues
+```bash
+# Check custom resource status
+kubectl describe kafka my-cluster -n kafka
+kubectl get kafka my-cluster -o yaml
+
+# Check operator logs for specific resource
+kubectl logs -n kafka deployment/strimzi-cluster-operator | grep my-cluster
+```
+
+#### Storage Issues
+```bash
+# Check PVC status
+kubectl get pvc -n <namespace>
+kubectl describe pvc <pvc-name> -n <namespace>
+
+# Check storage class
+kubectl get storageclass
+```
+
+#### Networking Issues
+```bash
+# Check service status
+kubectl get svc -n <namespace>
+kubectl describe svc <service-name> -n <namespace>
+
+# Test connectivity
+kubectl run test-pod --image=busybox --rm -it -- nslookup <service-name>.<namespace>.svc.cluster.local
+```
+
+### Best Practices for Operator Management
+
+1. **Resource Limits**: Always set appropriate resource limits
+2. **Monitoring**: Implement comprehensive monitoring from day one
+3. **Backup Strategy**: Configure automated backups for stateful components
+4. **Upgrade Testing**: Test operator upgrades in non-production environments
+5. **Documentation**: Maintain runbooks for common operational tasks
+
+## Verification & Testing
+
+### Kubernetes-Specific Testing
+```bash
+# Test Kafka connectivity
+kubectl run kafka-test --image=quay.io/strimzi/kafka:latest-kafka-3.6.0 --rm -it -- \
+  bin/kafka-console-producer.sh --bootstrap-server my-cluster-kafka-bootstrap:9092 --topic test-topic
+
+# Test RabbitMQ connectivity
+kubectl run rabbitmq-test --image=rabbitmq:3.12-management --rm -it -- \
+  rabbitmqctl -n rabbit@hello-world-server-0.hello-world-nodes.rabbitmq-system status
+
+# Test Redis connectivity
+kubectl run redis-test --image=redis:7-alpine --rm -it -- \
+  redis-cli -h rec-ui.redis-enterprise ping
+```
+
+### Load Testing with Operators
+- **Kafka**: Use kafka-producer-perf-test.sh and kafka-consumer-perf-test.sh
+- **RabbitMQ**: Use rabbitmq-perf-test tool
+- **Redis**: Use redis-benchmark
+- **NATS**: Use nats bench utility
+
+## Traditional Deployment Troubleshooting
+
+### Log Analysis
+- **Kafka**: Check server logs for error patterns
+- **RabbitMQ**: Monitor management UI and logs
+- **Redis**: Check redis-server logs
+- **NATS**: Monitor server logs and metrics
+
+### Configuration Refinement
+- Tune performance settings based on workload
+- Adjust memory and CPU allocations
+- Configure appropriate replication factors
+
+### Network Diagnostics
+- Ensure proper DNS resolution
+- Check firewall rules and security groups
+- Verify load balancer configurations
 
 ## Deployment Best Practices
 - Maintain version control for configurations.
