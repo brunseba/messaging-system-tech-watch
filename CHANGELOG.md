@@ -87,4 +87,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Solace
 - TIBCO EMS
 
+[v1.0.1]: https://github.com/your-org/messaging-system-guide/releases/tag/v1.0.1
 [v1.0.0]: https://github.com/your-org/messaging-system-guide/releases/tag/v1.0.0
