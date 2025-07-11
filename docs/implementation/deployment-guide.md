@@ -10,9 +10,204 @@ Before deploying any messaging solution, make sure to:
 2. **Select Platform**: Choose between on-premises or cloud deployment.
 3. **Resource Planning**: Allocate necessary compute, network, and storage resources.
 
-## Deployment Steps
+## Default Operating Model: Kubernetes Operators
 
-### Apache Kafka
+For modern cloud-native deployments, **Kubernetes operators are the default target operating model**. They provide declarative, automated management of messaging systems with advanced capabilities like auto-scaling, rolling updates, and disaster recovery.
+
+### Kubernetes Operators Capability Matrix
+
+| Messaging System | Operator Name | Maintainer | Capability Level | Default/Exception | Installation Method | Key Features |
+|------------------|---------------|------------|------------------|-------------------|---------------------|---------------|
+| **Apache Kafka** | Strimzi | Red Hat/Community | **Level 5** | ✅ **Default** | Helm/OLM | Auto-scaling, rolling updates, monitoring, security |
+| **Apache Kafka** | Confluent for Kubernetes | Confluent | **Level 5** | ✅ **Default** | Helm/Operator | Enterprise features, RBAC, schema registry |
+| **RabbitMQ** | RabbitMQ Cluster Operator | VMware/Pivotal | **Level 4** | ✅ **Default** | Helm/kubectl | Clustering, TLS, monitoring, backup |
+| **Apache Pulsar** | Pulsar Operator | StreamNative | **Level 4** | ✅ **Default** | Helm/kubectl | Multi-tenant, geo-replication, auto-scaling |
+| **NATS** | NATS Operator | Synadia | **Level 4** | ✅ **Default** | Helm/kubectl | JetStream, clustering, monitoring |
+| **Redis** | Redis Enterprise Operator | Redis Labs | **Level 5** | ✅ **Default** | Helm/OLM | Active-active, scaling, backup, monitoring |
+| **Redis** | Redis Operator | Opstree | **Level 3** | ⚠️ **Exception** | Helm/kubectl | Basic clustering, sentinel, monitoring |
+| **IBM MQ** | IBM MQ Operator | IBM | **Level 4** | ✅ **Default** | OLM/Helm | Enterprise features, HA, security |
+| **Solace** | Solace PubSub+ Operator | Solace | **Level 4** | ✅ **Default** | Helm/kubectl | HA, monitoring, DMR, scaling |
+| **MQTT** | EMQX Operator | EMQX | **Level 4** | ✅ **Default** | Helm/kubectl | Clustering, persistence, monitoring |
+| **MQTT** | Mosquitto Operator | Eclipse | **Level 2** | ❌ **Exception** | kubectl | Basic deployment, limited features |
+| **AWS SQS/SNS** | AWS Controllers for Kubernetes (ACK) | AWS | **Level 3** | ⚠️ **Exception** | Helm/kubectl | Basic resource management, IAM integration |
+
+### Capability Levels Explained
+
+- **Level 1 - Basic Install**: Basic deployment and configuration
+- **Level 2 - Seamless Upgrades**: Automated upgrades and patches
+- **Level 3 - Full Lifecycle**: Backup, failure recovery, scaling
+- **Level 4 - Deep Insights**: Metrics, alerts, log processing, workload analysis
+- **Level 5 - Auto Pilot**: Auto-scaling, tuning, anomaly detection, capacity planning
+
+### Operating Model Classification
+
+- ✅ **Default**: Operators with Level 4+ capabilities, production-ready, actively maintained
+- ⚠️ **Exception**: Operators with Level 3 capabilities, require additional tooling
+- ❌ **Exception**: Operators with Level 1-2 capabilities, not recommended for production
+
+### Deployment Preference Order
+
+1. **Default Operators** (Level 4-5): Use these for production deployments
+2. **Exception Operators** (Level 3): Use only when default operators are not available
+3. **Manual Deployment**: Use only for development/testing environments
+
+## Kubernetes Deployment Examples
+
+### Apache Kafka with Strimzi Operator
+
+```bash
+# Install Strimzi operator
+kubectl create namespace kafka
+kubectl apply -f 'https://strimzi.io/install/latest?namespace=kafka' -n kafka
+
+# Deploy Kafka cluster
+kubectl apply -f - <<EOF
+apiVersion: kafka.strimzi.io/v1beta2
+kind: Kafka
+metadata:
+  name: my-cluster
+  namespace: kafka
+spec:
+  kafka:
+    version: 3.6.0
+    replicas: 3
+    listeners:
+      - name: plain
+        port: 9092
+        type: internal
+        tls: false
+      - name: tls
+        port: 9093
+        type: internal
+        tls: true
+    config:
+      offsets.topic.replication.factor: 3
+      transaction.state.log.replication.factor: 3
+      transaction.state.log.min.isr: 2
+      default.replication.factor: 3
+      min.insync.replicas: 2
+    storage:
+      type: persistent-claim
+      size: 100Gi
+      deleteClaim: false
+  zookeeper:
+    replicas: 3
+    storage:
+      type: persistent-claim
+      size: 100Gi
+      deleteClaim: false
+  entityOperator:
+    topicOperator: {}
+    userOperator: {}
+EOF
+```
+
+### RabbitMQ with Cluster Operator
+
+```bash
+# Install RabbitMQ Cluster Operator
+kubectl apply -f https://github.com/rabbitmq/cluster-operator/releases/latest/download/cluster-operator.yml
+
+# Deploy RabbitMQ cluster
+kubectl apply -f - <<EOF
+apiVersion: rabbitmq.com/v1beta1
+kind: RabbitmqCluster
+metadata:
+  name: hello-world
+  namespace: rabbitmq-system
+spec:
+  replicas: 3
+  resources:
+    requests:
+      cpu: 256m
+      memory: 1Gi
+    limits:
+      cpu: 256m
+      memory: 1Gi
+  rabbitmq:
+    additionalConfig: |
+      cluster_formation.peer_discovery_backend = rabbit_peer_discovery_k8s
+      cluster_formation.k8s.host = kubernetes.default.svc.cluster.local
+      cluster_formation.node_cleanup.interval = 30
+      cluster_formation.node_cleanup.only_log_warning = true
+      cluster_partition_handling = autoheal
+      queue_master_locator = min-masters
+      loopback_users.guest = false
+  persistence:
+    storageClassName: fast-ssd
+    storage: 20Gi
+EOF
+```
+
+### Redis with Redis Enterprise Operator
+
+```bash
+# Install Redis Enterprise Operator
+kubectl apply -f https://raw.githubusercontent.com/RedisLabs/redis-enterprise-k8s-docs/master/bundle.yaml
+
+# Deploy Redis Enterprise Cluster
+kubectl apply -f - <<EOF
+apiVersion: app.redislabs.com/v1
+kind: RedisEnterpriseCluster
+metadata:
+  name: rec
+  namespace: redis-enterprise
+spec:
+  nodes: 3
+  persistentSpec:
+    enabled: true
+    volumeSize: 10Gi
+    storageClassName: fast-ssd
+  redisEnterpriseNodeResources:
+    limits:
+      cpu: 2000m
+      memory: 4Gi
+    requests:
+      cpu: 2000m
+      memory: 4Gi
+  redisEnterpriseImageSpec:
+    imagePullPolicy: IfNotPresent
+EOF
+```
+
+### NATS with NATS Operator
+
+```bash
+# Install NATS Operator
+kubectl apply -f https://raw.githubusercontent.com/nats-io/k8s/master/setup/nats-operator-prereqs.yaml
+kubectl apply -f https://raw.githubusercontent.com/nats-io/k8s/master/setup/nats-operator-deploy.yaml
+
+# Deploy NATS Cluster
+kubectl apply -f - <<EOF
+apiVersion: nats.io/v1alpha2
+kind: NatsCluster
+metadata:
+  name: nats-cluster
+  namespace: nats-io
+spec:
+  size: 3
+  version: "2.10.7"
+  serverImage: "nats:2.10.7-alpine"
+  pod:
+    resources:
+      requests:
+        cpu: 100m
+        memory: 128Mi
+      limits:
+        cpu: 200m
+        memory: 256Mi
+  natsConfig:
+    jetstream:
+      enabled: true
+      fileStorage:
+        size: 10Gi
+        storageClassName: fast-ssd
+EOF
+```
+
+## Traditional Deployment Steps (Exception Cases)
+
+### Apache Kafka (Non-Kubernetes)
 1. **Install Zookeeper**: Needed for Kafka's distributed environment.
 2. **Download Kafka**: Get the latest stable release.
 3. **Configure Server**: Set up `server.properties` for your environment.
