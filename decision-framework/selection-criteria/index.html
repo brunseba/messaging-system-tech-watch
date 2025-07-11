@@ -1,0 +1,3243 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive guide to help business units choose the right messaging system based on their requirements">
+      
+      
+        <meta name="author" content="Business Technology Team">
+      
+      
+        <link rel="canonical" href="https://brunseba.github.io/messaging-system-tech-watch/decision-framework/selection-criteria/">
+      
+      
+        <link rel="prev" href="../decision-tree/">
+      
+      
+        <link rel="next" href="../../solutions/architecture-overview/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Selection Criteria - Messaging System Selection Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#selection-criteria-for-messaging-systems" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Messaging System Selection Guide" class="md-header__button md-logo" aria-label="Messaging System Selection Guide" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Messaging System Selection Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Selection Criteria
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/brunseba/messaging-system-tech-watch" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    messaging-system-tech-watch
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../requirements/functional-vs-non-functional/" class="md-tabs__link">
+          
+  
+  
+  Requirements Analysis
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../decision-tree/" class="md-tabs__link">
+          
+  
+  
+  Decision Framework
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../solutions/architecture-overview/" class="md-tabs__link">
+          
+  
+  
+  Messaging Solutions
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../implementation/deployment-guide/" class="md-tabs__link">
+          
+  
+  
+  Implementation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../messaging-systems/apache-kafka/" class="md-tabs__link">
+          
+  
+  
+  Messaging Systems Covered
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../use-cases/enterprise-integration/" class="md-tabs__link">
+          
+  
+  
+  Use Cases
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/glossary/" class="md-tabs__link">
+          
+  
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Messaging System Selection Guide" class="md-nav__button md-logo" aria-label="Messaging System Selection Guide" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Messaging System Selection Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/brunseba/messaging-system-tech-watch" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    messaging-system-tech-watch
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Requirements Analysis
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Requirements Analysis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requirements/functional-vs-non-functional/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Functional vs Non-Functional
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requirements/requirements-mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Requirements Mapping
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requirements/requirements-assessment-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Requirements Assessment Template
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Decision Framework
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Decision Framework
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../decision-tree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Decision Tree
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Selection Criteria
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Selection Criteria
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#target-personas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Target Personas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Target Personas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#business-decision-makers" class="md-nav__link">
+    <span class="md-ellipsis">
+      👨‍💼 Business Decision Makers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-architects" class="md-nav__link">
+    <span class="md-ellipsis">
+      👩‍💻 Technical Architects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#devops-engineers" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 DevOps Engineers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-engineers" class="md-nav__link">
+    <span class="md-ellipsis">
+      👨‍🔬 Data Engineers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprehensive-selection-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprehensive Selection Criteria
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comprehensive Selection Criteria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-architecture-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Architecture Fit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-scalability-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Scalability Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-latency-and-throughput" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Latency and Throughput
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-integration-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Integration Capabilities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-reliability-and-durability" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Reliability and Durability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-security-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Security Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-deployment-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Deployment Options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-cost-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Cost Considerations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-ecosystem-and-community" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Ecosystem and Community
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-maintenance-and-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Maintenance and Support
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#persona-specific-decision-guides" class="md-nav__link">
+    <span class="md-ellipsis">
+      Persona-Specific Decision Guides
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Persona-Specific Decision Guides">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#business-decision-makers-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      👨‍💼 Business Decision Maker's Checklist
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="👨‍💼 Business Decision Maker&#39;s Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-strategic-business-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Strategic Business Impact
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-financial-decision-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Financial Decision Matrix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-risk-assessment-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Risk Assessment Framework
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-time-to-market-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Time-to-Market Optimization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-total-cost-of-ownership-tco-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Total Cost of Ownership (TCO) Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-business-readiness-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Business Readiness Assessment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-business-decision-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Business Decision Tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-vendor-evaluation-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Vendor Evaluation Criteria
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-architects-decision-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      👩‍💻 Technical Architect's Decision Matrix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#devops-engineers-operational-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 DevOps Engineer's Operational Guide
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-engineers-technical-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      👨‍🔬 Data Engineer's Technical Guide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-case-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case Scenarios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use Case Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-e-commerce-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 1: E-commerce Platform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-iot-sensor-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 2: IoT Sensor Network
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-financial-trading-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 3: Financial Trading System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-4-microservices-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 4: Microservices Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-5-cloud-native-startup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 5: Cloud-Native Startup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-framework-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision Framework Summary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Decision Framework Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-selection-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Selection Guide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#risk-mitigation-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Mitigation Strategies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Risk Mitigation Strategies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technical-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Risks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business Risks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Messaging Solutions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Messaging Solutions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/architecture-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecture Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/product-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Product Comparison
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/developer-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Developer Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Implementation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Implementation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/deployment-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deployment Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/best-practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Best Practices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/message-format-standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Message Format Standards
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Messaging Systems Covered
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Messaging Systems Covered
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../messaging-systems/apache-kafka/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Apache Kafka
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../messaging-systems/rabbitmq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RabbitMQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../messaging-systems/apache-pulsar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Apache Pulsar
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../messaging-systems/nats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NATS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../messaging-systems/redis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Redis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../messaging-systems/mqtt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MQTT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../messaging-systems/aws-sqs-sns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AWS SQS/SNS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../messaging-systems/ibm-mq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IBM MQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../messaging-systems/solace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Solace
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Use Cases
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Use Cases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/enterprise-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Enterprise Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/service-bus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Service Bus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/iot-messaging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IoT Messaging
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/microservices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Microservices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/real-time-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Real-time Analytics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/product-links/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Product Links
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#target-personas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Target Personas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Target Personas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#business-decision-makers" class="md-nav__link">
+    <span class="md-ellipsis">
+      👨‍💼 Business Decision Makers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-architects" class="md-nav__link">
+    <span class="md-ellipsis">
+      👩‍💻 Technical Architects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#devops-engineers" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 DevOps Engineers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-engineers" class="md-nav__link">
+    <span class="md-ellipsis">
+      👨‍🔬 Data Engineers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprehensive-selection-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprehensive Selection Criteria
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comprehensive Selection Criteria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-architecture-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Architecture Fit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-scalability-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Scalability Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-latency-and-throughput" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Latency and Throughput
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-integration-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Integration Capabilities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-reliability-and-durability" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Reliability and Durability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-security-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Security Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-deployment-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Deployment Options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-cost-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Cost Considerations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-ecosystem-and-community" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Ecosystem and Community
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-maintenance-and-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Maintenance and Support
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#persona-specific-decision-guides" class="md-nav__link">
+    <span class="md-ellipsis">
+      Persona-Specific Decision Guides
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Persona-Specific Decision Guides">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#business-decision-makers-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      👨‍💼 Business Decision Maker's Checklist
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="👨‍💼 Business Decision Maker&#39;s Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-strategic-business-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Strategic Business Impact
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-financial-decision-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Financial Decision Matrix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-risk-assessment-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Risk Assessment Framework
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-time-to-market-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Time-to-Market Optimization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-total-cost-of-ownership-tco-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Total Cost of Ownership (TCO) Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-business-readiness-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Business Readiness Assessment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-business-decision-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Business Decision Tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-vendor-evaluation-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Vendor Evaluation Criteria
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-architects-decision-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      👩‍💻 Technical Architect's Decision Matrix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#devops-engineers-operational-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 DevOps Engineer's Operational Guide
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-engineers-technical-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      👨‍🔬 Data Engineer's Technical Guide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-case-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Case Scenarios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use Case Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-e-commerce-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 1: E-commerce Platform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-iot-sensor-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 2: IoT Sensor Network
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-financial-trading-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 3: Financial Trading System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-4-microservices-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 4: Microservices Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-5-cloud-native-startup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 5: Cloud-Native Startup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-framework-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision Framework Summary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Decision Framework Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-selection-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Selection Guide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#risk-mitigation-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Mitigation Strategies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Risk Mitigation Strategies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technical-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Risks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business Risks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="selection-criteria-for-messaging-systems">Selection Criteria for Messaging Systems<a class="headerlink" href="#selection-criteria-for-messaging-systems" title="Permanent link">&para;</a></h1>
+<p>This document provides comprehensive guidance for selecting the right messaging system based on your role, use case, and organizational needs. Each criterion includes specific considerations for different personas and scenarios.</p>
+<h2 id="target-personas">Target Personas<a class="headerlink" href="#target-personas" title="Permanent link">&para;</a></h2>
+<h3 id="business-decision-makers">👨‍💼 <strong>Business Decision Makers</strong><a class="headerlink" href="#business-decision-makers" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Focus on: Cost, vendor support, compliance, time-to-market</li>
+<li>Key concerns: ROI, risk mitigation, strategic alignment</li>
+</ul>
+<h3 id="technical-architects">👩‍💻 <strong>Technical Architects</strong><a class="headerlink" href="#technical-architects" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Focus on: Scalability, integration, performance, reliability</li>
+<li>Key concerns: Technical debt, future-proofing, system complexity</li>
+</ul>
+<h3 id="devops-engineers">🔧 <strong>DevOps Engineers</strong><a class="headerlink" href="#devops-engineers" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Focus on: Deployment, monitoring, maintenance, automation</li>
+<li>Key concerns: Operational overhead, observability, incident response</li>
+</ul>
+<h3 id="data-engineers">👨‍🔬 <strong>Data Engineers</strong><a class="headerlink" href="#data-engineers" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Focus on: Throughput, data integrity, schema management, streaming</li>
+<li>Key concerns: Data pipeline reliability, processing guarantees</li>
+</ul>
+<h2 id="comprehensive-selection-criteria">Comprehensive Selection Criteria<a class="headerlink" href="#comprehensive-selection-criteria" title="Permanent link">&para;</a></h2>
+<h3 id="1-architecture-fit">1. <strong>Architecture Fit</strong><a class="headerlink" href="#1-architecture-fit" title="Permanent link">&para;</a></h3>
+<p><strong>Importance</strong>: Critical for technical success</p>
+<p><strong>Evaluation Questions</strong>:
+- Does the system support your required messaging patterns?
+- Can it handle your data flow architecture?
+- Does it integrate with your existing tech stack?</p>
+<p><strong>Messaging Pattern Support</strong>:
+- <strong>Point-to-Point</strong>: RabbitMQ, AWS SQS, IBM MQ
+- <strong>Publish-Subscribe</strong>: Apache Kafka, Apache Pulsar, Redis
+- <strong>Request-Reply</strong>: RabbitMQ, NATS, Solace
+- <strong>Streaming</strong>: Apache Kafka, Apache Pulsar, AWS Kinesis</p>
+<h3 id="2-scalability-requirements">2. <strong>Scalability Requirements</strong><a class="headerlink" href="#2-scalability-requirements" title="Permanent link">&para;</a></h3>
+<p><strong>Importance</strong>: Critical for long-term success</p>
+<p><strong>Evaluation Matrix</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Scale Level</th>
+<th>Messages/sec</th>
+<th>Recommended Systems</th>
+<th>Considerations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Small (&lt; 1K/sec)</td>
+<td>&lt; 1,000</td>
+<td>RabbitMQ, NATS, Redis</td>
+<td>Simple setup, lower cost</td>
+</tr>
+<tr>
+<td>Medium (1K-100K/sec)</td>
+<td>1,000-100,000</td>
+<td>Apache Kafka, Apache Pulsar</td>
+<td>Moderate complexity</td>
+</tr>
+<tr>
+<td>Large (&gt; 100K/sec)</td>
+<td>&gt; 100,000</td>
+<td>Apache Kafka, Apache Pulsar, Solace</td>
+<td>High complexity, specialized skills</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-latency-and-throughput">3. <strong>Latency and Throughput</strong><a class="headerlink" href="#3-latency-and-throughput" title="Permanent link">&para;</a></h3>
+<p><strong>Importance</strong>: Critical for real-time applications</p>
+<p><strong>Performance Tiers</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Latency Requirement</th>
+<th>Recommended Systems</th>
+<th>Use Cases</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ultra-low (&lt; 1ms)</td>
+<td>Solace, Custom UDP</td>
+<td>High-frequency trading, gaming</td>
+</tr>
+<tr>
+<td>Low (1-10ms)</td>
+<td>Apache Kafka, NATS</td>
+<td>Real-time analytics, IoT</td>
+</tr>
+<tr>
+<td>Medium (10-100ms)</td>
+<td>RabbitMQ, Apache Pulsar</td>
+<td>Web applications, microservices</td>
+</tr>
+<tr>
+<td>High (&gt; 100ms)</td>
+<td>AWS SQS, IBM MQ</td>
+<td>Batch processing, notifications</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-integration-capabilities">4. <strong>Integration Capabilities</strong><a class="headerlink" href="#4-integration-capabilities" title="Permanent link">&para;</a></h3>
+<p><strong>Importance</strong>: Critical for enterprise adoption</p>
+<p><strong>Integration Assessment</strong>:
+- <strong>Language Support</strong>: Java, .NET, Python, Node.js, Go
+- <strong>Protocol Support</strong>: AMQP, MQTT, HTTP, WebSockets
+- <strong>API Compatibility</strong>: REST, GraphQL, gRPC
+- <strong>Ecosystem Integration</strong>: Kubernetes, Docker, CI/CD tools</p>
+<h3 id="5-reliability-and-durability">5. <strong>Reliability and Durability</strong><a class="headerlink" href="#5-reliability-and-durability" title="Permanent link">&para;</a></h3>
+<p><strong>Importance</strong>: Critical for mission-critical applications</p>
+<p><strong>Reliability Levels</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Availability Requirement</th>
+<th>Recommended Systems</th>
+<th>Features Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>99.9% (8.76 hours/year)</td>
+<td>RabbitMQ, NATS</td>
+<td>Basic clustering</td>
+</tr>
+<tr>
+<td>99.95% (4.38 hours/year)</td>
+<td>Apache Kafka, Apache Pulsar</td>
+<td>Multi-zone deployment</td>
+</tr>
+<tr>
+<td>99.99% (52.56 min/year)</td>
+<td>Solace, IBM MQ</td>
+<td>Active-active clustering</td>
+</tr>
+<tr>
+<td>99.999% (5.26 min/year)</td>
+<td>Enterprise solutions</td>
+<td>Disaster recovery, geo-replication</td>
+</tr>
+</tbody>
+</table>
+<h3 id="6-security-requirements">6. <strong>Security Requirements</strong><a class="headerlink" href="#6-security-requirements" title="Permanent link">&para;</a></h3>
+<p><strong>Importance</strong>: Critical for regulated industries</p>
+<p><strong>Security Features Matrix</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Security Feature</th>
+<th>Apache Kafka</th>
+<th>RabbitMQ</th>
+<th>Apache Pulsar</th>
+<th>AWS SQS</th>
+<th>IBM MQ</th>
+<th>Solace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SSL/TLS Encryption</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>SASL Authentication</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>OAuth 2.0</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>RBAC</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Message Encryption</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Audit Logging</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h3 id="7-deployment-options">7. <strong>Deployment Options</strong><a class="headerlink" href="#7-deployment-options" title="Permanent link">&para;</a></h3>
+<p><strong>Importance</strong>: Critical for operational strategy</p>
+<p><strong>Deployment Models</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Pros</th>
+<th>Cons</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cloud-Native</strong></td>
+<td>Managed, scalable, reduced ops</td>
+<td>Vendor lock-in, ongoing costs</td>
+<td>Startups, rapid growth</td>
+</tr>
+<tr>
+<td><strong>On-Premise</strong></td>
+<td>Full control, one-time cost</td>
+<td>High ops overhead, scaling challenges</td>
+<td>Regulated industries, large enterprises</td>
+</tr>
+<tr>
+<td><strong>Hybrid</strong></td>
+<td>Flexibility, gradual migration</td>
+<td>Complex management, integration challenges</td>
+<td>Enterprises with mixed requirements</td>
+</tr>
+</tbody>
+</table>
+<h3 id="8-cost-considerations">8. <strong>Cost Considerations</strong><a class="headerlink" href="#8-cost-considerations" title="Permanent link">&para;</a></h3>
+<p><strong>Importance</strong>: Critical for business viability</p>
+<p><strong>Cost Components</strong>:
+- <strong>Licensing</strong>: Open source vs. commercial
+- <strong>Infrastructure</strong>: Compute, storage, network
+- <strong>Personnel</strong>: Development, operations, maintenance
+- <strong>Training</strong>: Team education and certification</p>
+<p><strong>Cost Comparison (Monthly for 1M messages/day)</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Solution</th>
+<th>License</th>
+<th>Infrastructure</th>
+<th>Personnel</th>
+<th>Total Est.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apache Kafka (Self-hosted)</td>
+<td>Free</td>
+<td>$500-2000</td>
+<td>$3000-8000</td>
+<td>$3500-10000</td>
+</tr>
+<tr>
+<td>Confluent Cloud</td>
+<td>$0.10/GB</td>
+<td>Included</td>
+<td>$1000-3000</td>
+<td>$1500-4000</td>
+</tr>
+<tr>
+<td>AWS SQS</td>
+<td>$0.40/1M req</td>
+<td>Included</td>
+<td>$1000-3000</td>
+<td>$1400-3400</td>
+</tr>
+<tr>
+<td>RabbitMQ (Self-hosted)</td>
+<td>Free</td>
+<td>$200-800</td>
+<td>$2000-5000</td>
+<td>$2200-5800</td>
+</tr>
+<tr>
+<td>Solace Cloud</td>
+<td>$0.50/1M msg</td>
+<td>Included</td>
+<td>$1000-3000</td>
+<td>$1500-3500</td>
+</tr>
+</tbody>
+</table>
+<h3 id="9-ecosystem-and-community">9. <strong>Ecosystem and Community</strong><a class="headerlink" href="#9-ecosystem-and-community" title="Permanent link">&para;</a></h3>
+<p><strong>Importance</strong>: Important for long-term success</p>
+<p><strong>Community Strength Indicators</strong>:
+- <strong>GitHub Stars</strong>: Popularity and adoption
+- <strong>Stack Overflow Questions</strong>: Community support
+- <strong>Conference Presence</strong>: Industry engagement
+- <strong>Third-party Integrations</strong>: Ecosystem maturity</p>
+<h3 id="10-maintenance-and-support">10. <strong>Maintenance and Support</strong><a class="headerlink" href="#10-maintenance-and-support" title="Permanent link">&para;</a></h3>
+<p><strong>Importance</strong>: Critical for production systems</p>
+<p><strong>Support Options</strong>:
+- <strong>Community Support</strong>: Forums, documentation, GitHub issues
+- <strong>Professional Services</strong>: Consulting, training, migration
+- <strong>Enterprise Support</strong>: 24/7 support, SLA guarantees
+- <strong>Managed Services</strong>: Fully managed, automated operations</p>
+<h2 id="persona-specific-decision-guides">Persona-Specific Decision Guides<a class="headerlink" href="#persona-specific-decision-guides" title="Permanent link">&para;</a></h2>
+<h3 id="business-decision-makers-checklist">👨‍💼 Business Decision Maker's Checklist<a class="headerlink" href="#business-decision-makers-checklist" title="Permanent link">&para;</a></h3>
+<p><strong>Primary Concerns</strong>: Strategic alignment, ROI, cost, risk, and market competitiveness</p>
+<p><strong>Business Value Assessment Framework</strong>:</p>
+<h4 id="1-strategic-business-impact">1. <strong>Strategic Business Impact</strong><a class="headerlink" href="#1-strategic-business-impact" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Revenue Generation</strong>: Will this messaging system directly impact revenue?</li>
+<li><strong>High Impact</strong>: Real-time order processing, payment systems → <strong>Enterprise solutions (Solace, IBM MQ)</strong></li>
+<li><strong>Medium Impact</strong>: Customer notifications, inventory updates → <strong>Managed services (Confluent Cloud, AWS SQS)</strong></li>
+<li>
+<p><strong>Low Impact</strong>: Internal communications, logging → <strong>Open-source solutions (RabbitMQ, NATS)</strong></p>
+</li>
+<li>
+<p><strong>Competitive Advantage</strong>: Does this provide a competitive edge?</p>
+</li>
+<li><strong>Critical Differentiator</strong>: Ultra-low latency trading, real-time personalization → <strong>Premium solutions (Solace)</strong></li>
+<li><strong>Table Stakes</strong>: Standard e-commerce, basic analytics → <strong>Mainstream solutions (Kafka, AWS SQS)</strong></li>
+<li><strong>Internal Efficiency</strong>: Process automation, internal workflows → <strong>Cost-effective solutions (RabbitMQ)</strong></li>
+</ul>
+<h4 id="2-financial-decision-matrix">2. <strong>Financial Decision Matrix</strong><a class="headerlink" href="#2-financial-decision-matrix" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Business Scenario</th>
+<th>Budget Range</th>
+<th>ROI Timeline</th>
+<th>Recommended Solution</th>
+<th>Business Justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Startup/MVP</strong></td>
+<td>$0-$10K</td>
+<td>6-12 months</td>
+<td>AWS SQS/SNS</td>
+<td>Fast time-to-market, pay-as-you-grow</td>
+</tr>
+<tr>
+<td><strong>Growing Business</strong></td>
+<td>$10K-$50K</td>
+<td>12-18 months</td>
+<td>Confluent Cloud, RabbitMQ</td>
+<td>Scalable, managed complexity</td>
+</tr>
+<tr>
+<td><strong>Enterprise</strong></td>
+<td>$50K-$200K</td>
+<td>18-24 months</td>
+<td>Apache Kafka, Solace</td>
+<td>High performance, enterprise features</td>
+</tr>
+<tr>
+<td><strong>Mission-Critical</strong></td>
+<td>$200K+</td>
+<td>24+ months</td>
+<td>Solace, IBM MQ</td>
+<td>Maximum reliability, compliance</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-risk-assessment-framework">3. <strong>Risk Assessment Framework</strong><a class="headerlink" href="#3-risk-assessment-framework" title="Permanent link">&para;</a></h4>
+<p><strong>Business Risk Categories</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Risk Level</th>
+<th>Impact</th>
+<th>Mitigation Strategy</th>
+<th>Recommended Solutions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>High</strong></td>
+<td>Revenue loss, customer churn</td>
+<td>Enterprise support, SLA guarantees</td>
+<td>Solace, IBM MQ, Confluent Cloud</td>
+</tr>
+<tr>
+<td><strong>Medium</strong></td>
+<td>Operational disruption, delayed features</td>
+<td>Managed services, professional support</td>
+<td>AWS SQS, Azure Service Bus</td>
+</tr>
+<tr>
+<td><strong>Low</strong></td>
+<td>Minor delays, internal inefficiencies</td>
+<td>Community support, documentation</td>
+<td>RabbitMQ, NATS, Redis</td>
+</tr>
+</tbody>
+</table>
+<h4 id="4-time-to-market-optimization">4. <strong>Time-to-Market Optimization</strong><a class="headerlink" href="#4-time-to-market-optimization" title="Permanent link">&para;</a></h4>
+<p><strong>Business Urgency Levels</strong>:</p>
+<ul>
+<li><strong>Critical (&lt; 1 month)</strong>: </li>
+<li><strong>Solutions</strong>: AWS SQS/SNS, Azure Service Bus</li>
+<li><strong>Business Case</strong>: Immediate market entry, competitive response</li>
+<li>
+<p><strong>Trade-offs</strong>: Higher long-term costs for faster deployment</p>
+</li>
+<li>
+<p><strong>Important (1-3 months)</strong>:</p>
+</li>
+<li><strong>Solutions</strong>: Confluent Cloud, RabbitMQ Cloud</li>
+<li><strong>Business Case</strong>: Planned feature rollout, seasonal preparation</li>
+<li>
+<p><strong>Trade-offs</strong>: Balanced cost and capability</p>
+</li>
+<li>
+<p><strong>Standard (3-6 months)</strong>:</p>
+</li>
+<li><strong>Solutions</strong>: Self-hosted Kafka, Apache Pulsar</li>
+<li><strong>Business Case</strong>: Strategic platform development</li>
+<li><strong>Trade-offs</strong>: Lower costs, higher initial investment in skills</li>
+</ul>
+<h4 id="5-total-cost-of-ownership-tco-analysis">5. <strong>Total Cost of Ownership (TCO) Analysis</strong><a class="headerlink" href="#5-total-cost-of-ownership-tco-analysis" title="Permanent link">&para;</a></h4>
+<p><strong>3-Year TCO Comparison (for 1M messages/day)</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Solution</th>
+<th>Year 1</th>
+<th>Year 2</th>
+<th>Year 3</th>
+<th>Total TCO</th>
+<th>Business Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AWS SQS</strong></td>
+<td>$18K</td>
+<td>$22K</td>
+<td>$26K</td>
+<td>$66K</td>
+<td>Fast deployment, low ops</td>
+</tr>
+<tr>
+<td><strong>Confluent Cloud</strong></td>
+<td>$24K</td>
+<td>$28K</td>
+<td>$32K</td>
+<td>$84K</td>
+<td>Managed Kafka, enterprise features</td>
+</tr>
+<tr>
+<td><strong>Self-hosted Kafka</strong></td>
+<td>$45K</td>
+<td>$35K</td>
+<td>$35K</td>
+<td>$115K</td>
+<td>Full control, customization</td>
+</tr>
+<tr>
+<td><strong>Solace Cloud</strong></td>
+<td>$36K</td>
+<td>$42K</td>
+<td>$48K</td>
+<td>$126K</td>
+<td>Ultra-reliability, compliance</td>
+</tr>
+<tr>
+<td><strong>IBM MQ</strong></td>
+<td>$60K</td>
+<td>$65K</td>
+<td>$70K</td>
+<td>$195K</td>
+<td>Enterprise grade, legacy integration</td>
+</tr>
+</tbody>
+</table>
+<h4 id="6-business-readiness-assessment">6. <strong>Business Readiness Assessment</strong><a class="headerlink" href="#6-business-readiness-assessment" title="Permanent link">&para;</a></h4>
+<p><strong>Organizational Capabilities</strong>:</p>
+<ul>
+<li><strong>Technical Skills Available</strong>:</li>
+<li><strong>High</strong>: In-house Kafka/messaging expertise → <strong>Apache Kafka, Apache Pulsar</strong></li>
+<li><strong>Medium</strong>: General cloud/DevOps skills → <strong>Confluent Cloud, AWS SQS</strong></li>
+<li>
+<p><strong>Low</strong>: Limited technical resources → <strong>Fully managed services</strong></p>
+</li>
+<li>
+<p><strong>Operational Maturity</strong>:</p>
+</li>
+<li><strong>Advanced</strong>: 24/7 monitoring, incident response → <strong>Self-hosted solutions</strong></li>
+<li><strong>Intermediate</strong>: Business hours support → <strong>Managed services with SLA</strong></li>
+<li><strong>Basic</strong>: Limited operational capabilities → <strong>Fully managed, serverless</strong></li>
+</ul>
+<h4 id="7-business-decision-tree">7. <strong>Business Decision Tree</strong><a class="headerlink" href="#7-business-decision-tree" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Start Here: What&#39;s your primary business driver?
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    ↓
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>[Cost Minimization] → AWS SQS/SNS → Minimal upfront investment
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    ↓
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>[Growth/Scalability] → Confluent Cloud → Scales with business
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    ↓
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>[Competitive Advantage] → Apache Kafka → Performance &amp; flexibility
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    ↓
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>[Risk Mitigation] → Solace/IBM MQ → Enterprise reliability
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    ↓
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>[Innovation/Differentiation] → Apache Pulsar → Cutting-edge features
+</span></code></pre></div>
+<h4 id="8-vendor-evaluation-criteria">8. <strong>Vendor Evaluation Criteria</strong><a class="headerlink" href="#8-vendor-evaluation-criteria" title="Permanent link">&para;</a></h4>
+<p><strong>Business-Critical Factors</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Weight</th>
+<th>AWS</th>
+<th>Confluent</th>
+<th>Solace</th>
+<th>IBM</th>
+<th>Apache (OSS)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Financial Stability</strong></td>
+<td>20%</td>
+<td>10</td>
+<td>8</td>
+<td>7</td>
+<td>9</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Market Position</strong></td>
+<td>15%</td>
+<td>10</td>
+<td>9</td>
+<td>7</td>
+<td>8</td>
+<td>10</td>
+</tr>
+<tr>
+<td><strong>Support Quality</strong></td>
+<td>25%</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>9</td>
+<td>5</td>
+</tr>
+<tr>
+<td><strong>Roadmap Alignment</strong></td>
+<td>20%</td>
+<td>9</td>
+<td>9</td>
+<td>8</td>
+<td>7</td>
+<td>8</td>
+</tr>
+<tr>
+<td><strong>Cost Predictability</strong></td>
+<td>20%</td>
+<td>7</td>
+<td>8</td>
+<td>6</td>
+<td>6</td>
+<td>10</td>
+</tr>
+<tr>
+<td><strong>Total Score</strong></td>
+<td>100%</td>
+<td>8.6</td>
+<td>8.6</td>
+<td>7.6</td>
+<td>7.8</td>
+<td>7.4</td>
+</tr>
+</tbody>
+</table>
+<h3 id="technical-architects-decision-matrix">👩‍💻 Technical Architect's Decision Matrix<a class="headerlink" href="#technical-architects-decision-matrix" title="Permanent link">&para;</a></h3>
+<p><strong>Primary Concerns</strong>: Technical Debt, Future-Proofing, System Complexity</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Recommended Solution</th>
+<th>Justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>High-scale streaming</strong></td>
+<td>Apache Kafka</td>
+<td>Proven at scale, rich ecosystem</td>
+</tr>
+<tr>
+<td><strong>Multi-protocol support</strong></td>
+<td>Apache Pulsar</td>
+<td>Protocol flexibility, cloud-native</td>
+</tr>
+<tr>
+<td><strong>Simple pub-sub</strong></td>
+<td>RabbitMQ</td>
+<td>Easy to understand, quick setup</td>
+</tr>
+<tr>
+<td><strong>IoT/Edge computing</strong></td>
+<td>MQTT + NATS</td>
+<td>Lightweight, efficient for constrained devices</td>
+</tr>
+<tr>
+<td><strong>Financial services</strong></td>
+<td>Solace</td>
+<td>Ultra-low latency, enterprise features</td>
+</tr>
+<tr>
+<td><strong>AWS-native</strong></td>
+<td>AWS SQS/SNS</td>
+<td>Deep AWS integration, serverless</td>
+</tr>
+</tbody>
+</table>
+<h3 id="devops-engineers-operational-guide">🔧 DevOps Engineer's Operational Guide<a class="headerlink" href="#devops-engineers-operational-guide" title="Permanent link">&para;</a></h3>
+<p><strong>Primary Concerns</strong>: Operational Overhead, Observability, Incident Response</p>
+<p><strong>Operational Complexity Ranking</strong> (1=Simple, 5=Complex):</p>
+<table>
+<thead>
+<tr>
+<th>Solution</th>
+<th>Setup</th>
+<th>Monitoring</th>
+<th>Scaling</th>
+<th>Troubleshooting</th>
+<th>Overall</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AWS SQS/SNS</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>1.25</td>
+</tr>
+<tr>
+<td>RabbitMQ</td>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+<td>2.5</td>
+</tr>
+<tr>
+<td>Apache Kafka</td>
+<td>4</td>
+<td>3</td>
+<td>4</td>
+<td>4</td>
+<td>3.75</td>
+</tr>
+<tr>
+<td>Apache Pulsar</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+<td>3.25</td>
+</tr>
+<tr>
+<td>Solace</td>
+<td>5</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+<td>3.25</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommended Monitoring Stack</strong>:
+- <strong>Metrics</strong>: Prometheus + Grafana
+- <strong>Logging</strong>: ELK Stack or Splunk
+- <strong>Tracing</strong>: Jaeger or Zipkin
+- <strong>Alerting</strong>: PagerDuty or Opsgenie</p>
+<h3 id="data-engineers-technical-guide">👨‍🔬 Data Engineer's Technical Guide<a class="headerlink" href="#data-engineers-technical-guide" title="Permanent link">&para;</a></h3>
+<p><strong>Primary Concerns</strong>: Data Pipeline Reliability, Processing Guarantees</p>
+<p><strong>Data Processing Patterns</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Best Solutions</th>
+<th>Key Features</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Event Streaming</strong></td>
+<td>Apache Kafka, Apache Pulsar</td>
+<td>Exactly-once processing, replayability</td>
+</tr>
+<tr>
+<td><strong>Batch Processing</strong></td>
+<td>Apache Kafka + Spark, AWS SQS + Lambda</td>
+<td>High throughput, cost-effective</td>
+</tr>
+<tr>
+<td><strong>Real-time Analytics</strong></td>
+<td>Apache Kafka + Kafka Streams, Apache Pulsar + Flink</td>
+<td>Low latency, stateful processing</td>
+</tr>
+<tr>
+<td><strong>Data Integration</strong></td>
+<td>Apache Kafka + Kafka Connect, Apache Pulsar + Pulsar IO</td>
+<td>Rich connector ecosystem</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Schema Management Requirements</strong>:
+- <strong>Strong Schema Evolution</strong>: Apache Kafka + Confluent Schema Registry
+- <strong>Multi-format Support</strong>: Apache Pulsar (built-in schema registry)
+- <strong>Simple JSON Validation</strong>: RabbitMQ + application-level validation</p>
+<h2 id="use-case-scenarios">Use Case Scenarios<a class="headerlink" href="#use-case-scenarios" title="Permanent link">&para;</a></h2>
+<h3 id="scenario-1-e-commerce-platform">Scenario 1: E-commerce Platform<a class="headerlink" href="#scenario-1-e-commerce-platform" title="Permanent link">&para;</a></h3>
+<p><strong>Requirements</strong>: High availability, order processing, inventory updates</p>
+<p><strong>Recommended Solution</strong>: Apache Kafka + Confluent Schema Registry</p>
+<p><strong>Justification</strong>:
+- Event sourcing for order management
+- Schema evolution for data consistency
+- Integration with analytics and reporting
+- Proven scalability for high transaction volumes</p>
+<h3 id="scenario-2-iot-sensor-network">Scenario 2: IoT Sensor Network<a class="headerlink" href="#scenario-2-iot-sensor-network" title="Permanent link">&para;</a></h3>
+<p><strong>Requirements</strong>: Low bandwidth, battery efficiency, thousands of devices</p>
+<p><strong>Recommended Solution</strong>: MQTT + Apache Kafka (for backend processing)</p>
+<p><strong>Justification</strong>:
+- MQTT for device-to-cloud communication (lightweight)
+- Kafka for backend data processing and analytics
+- Hierarchical architecture for scalability</p>
+<h3 id="scenario-3-financial-trading-system">Scenario 3: Financial Trading System<a class="headerlink" href="#scenario-3-financial-trading-system" title="Permanent link">&para;</a></h3>
+<p><strong>Requirements</strong>: Ultra-low latency, high reliability, regulatory compliance</p>
+<p><strong>Recommended Solution</strong>: Solace PubSub+ Event Broker</p>
+<p><strong>Justification</strong>:
+- Microsecond latency capabilities
+- Enterprise-grade reliability and support
+- Built-in compliance and audit features
+- Proven in financial services industry</p>
+<h3 id="scenario-4-microservices-architecture">Scenario 4: Microservices Architecture<a class="headerlink" href="#scenario-4-microservices-architecture" title="Permanent link">&para;</a></h3>
+<p><strong>Requirements</strong>: Service decoupling, request-response, event-driven</p>
+<p><strong>Recommended Solution</strong>: RabbitMQ + Redis (for caching)</p>
+<p><strong>Justification</strong>:
+- Simple setup and maintenance
+- Good balance of features and complexity
+- Strong community support
+- Flexible routing capabilities</p>
+<h3 id="scenario-5-cloud-native-startup">Scenario 5: Cloud-Native Startup<a class="headerlink" href="#scenario-5-cloud-native-startup" title="Permanent link">&para;</a></h3>
+<p><strong>Requirements</strong>: Fast deployment, minimal ops, cost-effective</p>
+<p><strong>Recommended Solution</strong>: AWS SQS/SNS + EventBridge</p>
+<p><strong>Justification</strong>:
+- Serverless, no infrastructure management
+- Pay-as-you-go pricing model
+- Native cloud integration
+- Rapid time-to-market</p>
+<h2 id="decision-framework-summary">Decision Framework Summary<a class="headerlink" href="#decision-framework-summary" title="Permanent link">&para;</a></h2>
+<h3 id="quick-selection-guide">Quick Selection Guide<a class="headerlink" href="#quick-selection-guide" title="Permanent link">&para;</a></h3>
+<p><strong>For Business Decision Makers</strong>:
+1. Start with budget and timeline constraints
+2. Consider risk tolerance and compliance requirements
+3. Evaluate vendor support and managed service options</p>
+<p><strong>For Technical Architects</strong>:
+1. Define technical requirements and constraints
+2. Evaluate integration and scalability needs
+3. Consider long-term maintenance and evolution</p>
+<p><strong>For DevOps Engineers</strong>:
+1. Assess operational complexity and team skills
+2. Evaluate monitoring and troubleshooting capabilities
+3. Consider automation and infrastructure-as-code support</p>
+<p><strong>For Data Engineers</strong>:
+1. Define data processing patterns and requirements
+2. Evaluate schema management and evolution needs
+3. Consider integration with data processing frameworks</p>
+<h2 id="risk-mitigation-strategies">Risk Mitigation Strategies<a class="headerlink" href="#risk-mitigation-strategies" title="Permanent link">&para;</a></h2>
+<h3 id="technical-risks">Technical Risks<a class="headerlink" href="#technical-risks" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Vendor Lock-in</strong>: Use open standards and APIs</li>
+<li><strong>Single Point of Failure</strong>: Implement high availability</li>
+<li><strong>Data Loss</strong>: Ensure proper backup and replication</li>
+<li><strong>Performance Degradation</strong>: Plan for capacity and monitoring</li>
+</ul>
+<h3 id="business-risks">Business Risks<a class="headerlink" href="#business-risks" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Cost Overruns</strong>: Implement cost monitoring and alerts</li>
+<li><strong>Skill Gaps</strong>: Invest in training and documentation</li>
+<li><strong>Integration Challenges</strong>: Use proof-of-concept projects</li>
+<li><strong>Compliance Issues</strong>: Engage security and compliance teams early</li>
+</ul>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<p>Selecting the right messaging system requires balancing multiple factors across technical, operational, and business dimensions. This comprehensive guide provides frameworks for different personas to make informed decisions based on their specific needs and constraints.</p>
+<p>Key recommendations:
+- Start with your primary use case and constraints
+- Consider your team's expertise and operational capabilities
+- Evaluate long-term costs and scalability requirements
+- Use proof-of-concept projects to validate assumptions
+- Plan for monitoring, security, and compliance from the beginning</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Business Technology Team | Licensed under MIT License
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/brunseba/messaging-system-tech-watch" target="_blank" rel="noopener" title="GitHub Repository" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.path", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips", "header.autohide"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"current": "2.1.0", "default": "latest", "provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>
