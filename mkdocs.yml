@@ -117,6 +117,7 @@ nav:
   - Implementation:
     - Deployment Guide: implementation/deployment-guide.md
     - Best Practices: implementation/best-practices.md
+    - Message Format Standards: implementation/message-format-standards.md
   - Messaging Systems Covered:
     - Apache Kafka: messaging-systems/apache-kafka.md
     - RabbitMQ: messaging-systems/rabbitmq.md
