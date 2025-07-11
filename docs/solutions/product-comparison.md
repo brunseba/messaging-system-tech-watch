@@ -17,6 +17,15 @@ This document compares key features, capabilities, and trade-offs of various mes
 | IBM MQ         | Queueing, Pub-Sub, Request-Reply | High, enterprise  | Low        | High, durable       | Multiple including JMS | Self-hosted, cloud | Proprietary | Paid (license required) | Steep (enterprise-focused) | Yes (IBM Operator) | Enterprise messaging, legacy systems |
 | Redis          | Pub-Sub, Queueing (Streams/Lists) | High, cluster     | Ultra-low  | Optional (with persistence) | RESP (native), Pub-Sub, Streams | Self-hosted, cloud | BSD 3-Clause (Open Source) | Free (self-hosted); paid for managed | Easy to Moderate | Yes (Official and community) | Caching, real-time chat, lightweight messaging |
 
+## Service Bus Solutions
+
+| Product | Messaging Pattern Support | Scalability | Latency | Durability | Protocol Support | Cloud Support | Licence Type | Cost | Learning Curve | Kubernetes Operator | Typical Use Cases |
+|---------|---------------------------|-------------|---------|------------|-----------------|---------------|--------------|------|----------------|---------------------|-------------------|
+| Azure Service Bus | Queueing, Pub-Sub, Request-Reply | High, managed cloud | Moderate | High, managed | AMQP, HTTP, HTTPS | Fully managed Azure | Proprietary (Azure) | Pay-as-you-go (usage-based) | Easy (fully managed) | No (Azure managed) | Enterprise integration, hybrid cloud |
+| MuleSoft Anypoint | ESB, Request-Reply, Pub-Sub | High, enterprise | Moderate | High, durable | Multiple protocols | Hybrid cloud | Proprietary | Paid (license required) | Moderate to Steep | Yes (via CloudHub) | Enterprise service bus, API management |
+| Apache Camel | ESB, Request-Reply, Pub-Sub | High, distributed | Low | Optional | Multiple protocols | Self-hosted, cloud | Apache 2.0 (Open Source) | Free (self-hosted); paid for managed | Moderate | Yes (Camel K) | Lightweight ESB, Spring integration |
+| IBM WebSphere ESB | ESB, Request-Reply, Pub-Sub | High, enterprise | Low | High, durable | Multiple including JMS | Self-hosted, cloud | Proprietary | Paid (license required) | Steep (enterprise-focused) | Yes (IBM Operator) | Enterprise service bus, legacy integration |
+
 ## Key Insights
 
 - **Apache Kafka**: Best for real-time analytics, event streaming with strong OSS
@@ -28,6 +37,9 @@ This document compares key features, capabilities, and trade-offs of various mes
 - **AWS SQS/SNS**: Easy integration with AWS services for streamlined cloud apps
 - **IBM MQ**: Solid enterprise solutions with security and legacy integration
 - **Solace**: Excellent for low-latency and high-throughput scenarios
+- **Azure Service Bus**: Managed cloud service for enterprise integration scenarios
+- **MuleSoft Anypoint**: Comprehensive ESB with API management capabilities
+- **Apache Camel**: Lightweight, open-source ESB for Spring-based applications
 
 ## Considerations
 

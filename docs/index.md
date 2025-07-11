@@ -31,6 +31,7 @@ Selecting the right messaging system is crucial for modern distributed applicati
 
 ### 🎯 Use Cases
 - **[Enterprise Integration](use-cases/enterprise-integration.md)** - Legacy system integration patterns
+- **[Service Bus](use-cases/service-bus.md)** - IT integration and application connectivity
 - **[IoT Messaging](use-cases/iot-messaging.md)** - Device-to-cloud communication patterns
 - **[Microservices](use-cases/microservices.md)** - Service-to-service communication
 - **[Real-time Analytics](use-cases/real-time-analytics.md)** - Event streaming and data processing

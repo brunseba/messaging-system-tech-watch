@@ -119,6 +119,7 @@ nav:
     - Best Practices: implementation/best-practices.md
   - Use Cases:
     - Enterprise Integration: use-cases/enterprise-integration.md
+    - Service Bus: use-cases/service-bus.md
     - IoT Messaging: use-cases/iot-messaging.md
     - Microservices: use-cases/microservices.md
     - Real-time Analytics: use-cases/real-time-analytics.md
