@@ -117,6 +117,16 @@ nav:
   - Implementation:
     - Deployment Guide: implementation/deployment-guide.md
     - Best Practices: implementation/best-practices.md
+  - Messaging Systems Covered:
+    - Apache Kafka: messaging-systems/apache-kafka.md
+    - RabbitMQ: messaging-systems/rabbitmq.md
+    - Apache Pulsar: messaging-systems/apache-pulsar.md
+    - NATS: messaging-systems/nats.md
+    - Redis: messaging-systems/redis.md
+    - MQTT: messaging-systems/mqtt.md
+    - AWS SQS/SNS: messaging-systems/aws-sqs-sns.md
+    - IBM MQ: messaging-systems/ibm-mq.md
+    - Solace: messaging-systems/solace.md
   - Use Cases:
     - Enterprise Integration: use-cases/enterprise-integration.md
     - Service Bus: use-cases/service-bus.md
