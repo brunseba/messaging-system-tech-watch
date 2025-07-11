@@ -148,6 +148,44 @@ graph TB
 - Both backward and forward compatibility
 - Most restrictive but safest approach
 
+### Schema Registry Support Per Messaging Solution
+
+| Messaging System | Schema Registry Support | Supported Formats                            | Implementation Details                                         |
+|------------------|-------------------------|---------------------------------------------|---------------------------------------------------------------|
+| Apache Kafka     | Yes                     | Avro, JSON Schema, Protobuf                 | Confluent Schema Registry, strong integration                 |
+| RabbitMQ         | No                      | N/A                                         | Relies on application-level schema management                 |
+| Apache Pulsar    | Yes (Built-in)          | Avro, JSON, Protobuf, and Custom Schemas    | Native schema registry with automatic validation             |
+| NATS             | No                      | N/A                                         | Message format is application responsibility                  |
+| Redis            | No                      | N/A                                         | Data structure validation at application level               |
+| MQTT             | No                      | N/A                                         | Payload format defined by application                        |
+| AWS SQS/SNS      | Yes (AWS Glue)          | Avro, JSON                                  | AWS Glue Schema Registry integration                          |
+| IBM MQ           | No                      | N/A                                         | Message format validation through application logic          |
+| Solace           | Yes (API-based)         | XML, JSON, Binary                           | Schema validation through API and event mesh features        |
+
+#### Detailed Notes on Schema Registry Support
+
+**Systems with Native Schema Registry Support:**
+
+- **Apache Kafka**: Integrates seamlessly with Confluent Schema Registry. Producers and consumers can automatically serialize/deserialize messages using registered schemas. Supports schema evolution with compatibility checks.
+
+- **Apache Pulsar**: Built-in schema registry that automatically validates messages against registered schemas. Supports multiple formats and provides automatic schema evolution.
+
+- **AWS SQS/SNS**: Leverages AWS Glue Schema Registry for centralized schema management. Integrates with AWS ecosystem and provides automatic validation.
+
+- **Solace**: Provides schema validation through its event mesh platform. Supports XML schema validation and custom binary formats through API-based validation.
+
+**Systems without Native Schema Registry Support:**
+
+- **RabbitMQ**: Does not provide built-in schema registry. Applications must implement their own schema validation logic or use external solutions.
+
+- **NATS**: Focuses on simplicity and performance. Schema validation is left to application developers to implement.
+
+- **Redis**: Primarily a data structure store. Schema validation for pub/sub messages is handled at the application level.
+
+- **MQTT**: Lightweight protocol designed for IoT. Message payload format is entirely application-defined.
+
+- **IBM MQ**: Enterprise messaging system that relies on application-level message format validation and transformation.
+
 ### Popular Schema Registry Solutions
 
 #### Confluent Schema Registry
@@ -164,6 +202,79 @@ graph TB
 - **Features**: Managed service, supports Avro and JSON
 - **Compatibility**: AWS ecosystem
 - **Advantages**: Serverless, integrated with AWS services
+
+### Best Practices for Schema Registry Implementation
+
+#### For Systems with Native Schema Registry Support
+
+**Apache Kafka + Confluent Schema Registry:**
+```yaml
+# Producer configuration
+bootstrap.servers: localhost:9092
+schema.registry.url: http://localhost:8081
+key.serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+value.serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+```
+
+**Apache Pulsar:**
+```java
+// Producer with schema
+Producer<User> producer = client.newProducer(Schema.AVRO(User.class))
+    .topic("user-events")
+    .create();
+```
+
+**AWS SQS with Glue Schema Registry:**
+```yaml
+# Application configuration
+aws.glue.schemaregistry.region: us-east-1
+aws.glue.schemaregistry.registry.name: my-registry
+aws.glue.schemaregistry.avro.compression: GZIP
+```
+
+#### For Systems without Native Schema Registry Support
+
+**RabbitMQ with External Schema Validation:**
+```python
+# Python example with custom schema validation
+import jsonschema
+import json
+
+def validate_message(message, schema):
+    try:
+        jsonschema.validate(json.loads(message), schema)
+        return True
+    except jsonschema.ValidationError:
+        return False
+
+# Producer
+if validate_message(message, user_event_schema):
+    channel.basic_publish(exchange='events', routing_key='user', body=message)
+```
+
+**MQTT with Application-Level Schema Management:**
+```javascript
+// Node.js example
+const Ajv = require('ajv');
+const ajv = new Ajv();
+
+const userEventSchema = {
+  type: 'object',
+  properties: {
+    userId: { type: 'string' },
+    event: { type: 'string' },
+    timestamp: { type: 'number' }
+  },
+  required: ['userId', 'event', 'timestamp']
+};
+
+const validate = ajv.compile(userEventSchema);
+
+// Before publishing
+if (validate(message)) {
+  client.publish('user/events', JSON.stringify(message));
+}
+```
 
 ## Interoperability Best Practices
 
