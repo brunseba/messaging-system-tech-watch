@@ -123,3 +123,6 @@ nav:
     - IoT Messaging: use-cases/iot-messaging.md
     - Microservices: use-cases/microservices.md
     - Real-time Analytics: use-cases/real-time-analytics.md
+  - Reference:
+    - Glossary: reference/glossary.md
+    - Product Links: reference/product-links.md
