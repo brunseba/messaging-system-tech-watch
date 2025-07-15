@@ -17,36 +17,36 @@ All diagrams in this documentation are created using [Draw.io](https://app.diagr
 
 | File | Description | Used In |
 |------|-------------|---------|
-| **[index_diagrams.drawio](output/index_diagrams.drawio)** | Main overview diagrams | [Home](index.md) |
-| **[decision-tree_diagrams.drawio](output/decision-tree_diagrams.drawio)** | Decision tree flowcharts | [Decision Tree](decision-framework/decision-tree.md) |
-| **[architecture-overview_diagrams.drawio](output/architecture-overview_diagrams.drawio)** | Architecture patterns | [Architecture Overview](solutions/architecture-overview.md) |
-| **[message-format-standards_diagrams.drawio](output/message-format-standards_diagrams.drawio)** | Message format schemas | [Message Format Standards](implementation/message-format-standards.md) |
-| **[deployment-guide_diagrams.drawio](output/deployment-guide_diagrams.drawio)** | Deployment architectures | [Deployment Guide](implementation/deployment-guide.md) |
+| **[index_diagrams.drawio](../output/index_diagrams.drawio)** | Main overview diagrams | [Home](../index.md) |
+| **[decision-tree_diagrams.drawio](../output/decision-tree_diagrams.drawio)** | Decision tree flowcharts | [Decision Tree](../decision-framework/decision-tree.md) |
+| **[architecture-overview_diagrams.drawio](../output/architecture-overview_diagrams.drawio)** | Architecture patterns | [Architecture Overview](../solutions/architecture-overview.md) |
+| **[message-format-standards_diagrams.drawio](../output/message-format-standards_diagrams.drawio)** | Message format schemas | [Message Format Standards](../implementation/message-format-standards.md) |
+| **[deployment-guide_diagrams.drawio](../output/deployment-guide_diagrams.drawio)** | Deployment architectures | [Deployment Guide](../implementation/deployment-guide.md) |
 
 ### 🛠️ **Messaging Systems Diagrams**
 
 | File | Description | Used In |
 |------|-------------|---------|
-| **[apache-kafka_diagrams.drawio](output/apache-kafka_diagrams.drawio)** | Kafka architecture diagrams | [Apache Kafka](messaging-systems/apache-kafka.md) |
-| **[rabbitmq_diagrams.drawio](output/rabbitmq_diagrams.drawio)** | RabbitMQ architecture diagrams | [RabbitMQ](messaging-systems/rabbitmq.md) |
-| **[apache-activemq_diagrams.drawio](output/apache-activemq_diagrams.drawio)** | ActiveMQ architecture diagrams | [Apache ActiveMQ](messaging-systems/apache-activemq.md) |
-| **[apache-pulsar_diagrams.drawio](output/apache-pulsar_diagrams.drawio)** | Pulsar architecture diagrams | [Apache Pulsar](messaging-systems/apache-pulsar.md) |
-| **[nats_diagrams.drawio](output/nats_diagrams.drawio)** | NATS architecture diagrams | [NATS](messaging-systems/nats.md) |
-| **[redis_diagrams.drawio](output/redis_diagrams.drawio)** | Redis architecture diagrams | [Redis](messaging-systems/redis.md) |
-| **[mqtt_diagrams.drawio](output/mqtt_diagrams.drawio)** | MQTT protocol diagrams | [MQTT](messaging-systems/mqtt.md) |
-| **[aws-sqs-sns_diagrams.drawio](output/aws-sqs-sns_diagrams.drawio)** | AWS SQS/SNS diagrams | [AWS SQS/SNS](messaging-systems/aws-sqs-sns.md) |
-| **[ibm-mq_diagrams.drawio](output/ibm-mq_diagrams.drawio)** | IBM MQ architecture diagrams | [IBM MQ](messaging-systems/ibm-mq.md) |
-| **[solace_diagrams.drawio](output/solace_diagrams.drawio)** | Solace architecture diagrams | [Solace](messaging-systems/solace.md) |
+| **[apache-kafka_diagrams.drawio](../output/apache-kafka_diagrams.drawio)** | Kafka architecture diagrams | [Apache Kafka](../messaging-systems/apache-kafka.md) |
+| **[rabbitmq_diagrams.drawio](../output/rabbitmq_diagrams.drawio)** | RabbitMQ architecture diagrams | [RabbitMQ](../messaging-systems/rabbitmq.md) |
+| **[apache-activemq_diagrams.drawio](../output/apache-activemq_diagrams.drawio)** | ActiveMQ architecture diagrams | [Apache ActiveMQ](../messaging-systems/apache-activemq.md) |
+| **[apache-pulsar_diagrams.drawio](../output/apache-pulsar_diagrams.drawio)** | Pulsar architecture diagrams | [Apache Pulsar](../messaging-systems/apache-pulsar.md) |
+| **[nats_diagrams.drawio](../output/nats_diagrams.drawio)** | NATS architecture diagrams | [NATS](../messaging-systems/nats.md) |
+| **[redis_diagrams.drawio](../output/redis_diagrams.drawio)** | Redis architecture diagrams | [Redis](../messaging-systems/redis.md) |
+| **[mqtt_diagrams.drawio](../output/mqtt_diagrams.drawio)** | MQTT protocol diagrams | [MQTT](../messaging-systems/mqtt.md) |
+| **[aws-sqs-sns_diagrams.drawio](../output/aws-sqs-sns_diagrams.drawio)** | AWS SQS/SNS diagrams | [AWS SQS/SNS](../messaging-systems/aws-sqs-sns.md) |
+| **[ibm-mq_diagrams.drawio](../output/ibm-mq_diagrams.drawio)** | IBM MQ architecture diagrams | [IBM MQ](../messaging-systems/ibm-mq.md) |
+| **[solace_diagrams.drawio](../output/solace_diagrams.drawio)** | Solace architecture diagrams | [Solace](../messaging-systems/solace.md) |
 
 ### 🎯 **Use Case Diagrams**
 
 | File | Description | Used In |
 |------|-------------|---------|
-| **[enterprise-integration_diagrams.drawio](output/enterprise-integration_diagrams.drawio)** | Enterprise integration patterns | [Enterprise Integration](use-cases/enterprise-integration.md) |
-| **[service-bus_diagrams.drawio](output/service-bus_diagrams.drawio)** | Service bus architectures | [Service Bus](use-cases/service-bus.md) |
-| **[iot-messaging_diagrams.drawio](output/iot-messaging_diagrams.drawio)** | IoT messaging patterns | [IoT Messaging](use-cases/iot-messaging.md) |
-| **[microservices_diagrams.drawio](output/microservices_diagrams.drawio)** | Microservices communication | [Microservices](use-cases/microservices.md) |
-| **[real-time-analytics_diagrams.drawio](output/real-time-analytics_diagrams.drawio)** | Real-time analytics flows | [Real-time Analytics](use-cases/real-time-analytics.md) |
+| **[enterprise-integration_diagrams.drawio](../output/enterprise-integration_diagrams.drawio)** | Enterprise integration patterns | [Enterprise Integration](../use-cases/enterprise-integration.md) |
+| **[service-bus_diagrams.drawio](../output/service-bus_diagrams.drawio)** | Service bus architectures | [Service Bus](../use-cases/service-bus.md) |
+| **[iot-messaging_diagrams.drawio](../output/iot-messaging_diagrams.drawio)** | IoT messaging patterns | [IoT Messaging](../use-cases/iot-messaging.md) |
+| **[microservices_diagrams.drawio](../output/microservices_diagrams.drawio)** | Microservices communication | [Microservices](../use-cases/microservices.md) |
+| **[real-time-analytics_diagrams.drawio](../output/real-time-analytics_diagrams.drawio)** | Real-time analytics flows | [Real-time Analytics](../use-cases/real-time-analytics.md) |
 
 ## How to Use These Files
 
