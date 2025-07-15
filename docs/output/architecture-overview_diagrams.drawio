@@ -1,10 +1,10 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.4 Chrome/138.0.7204.97 Electron/37.2.1 Safari/537.36" version="28.0.4" pages="6">
-  <diagram id="8d02b9d1f8214280" name="Architecture Overview Graph Td">
+  <diagram id="65b9c3e851614e85" name="Architecture Overview Graph Td">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD\n    P1[Publisher 1] --&gt;|Message| T[Topic/Channel]\n    P2[Publisher 2] --&gt;|Message| T\n    T --&gt;|Message| S1[Subscriber 1]\n    T --&gt;|Message| S2[Subscriber 2]\n    T --&gt;|Message| S3[Subscriber 3]&quot;}" id="f9e9f367456943ea">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD\n    P1[Publisher 1] --&gt;|Message| T[Topic/Channel]\n    P2[Publisher 2] --&gt;|Message| T\n    T --&gt;|Message| S1[Subscriber 1]\n    T --&gt;|Message| S2[Subscriber 2]\n    T --&gt;|Message| S3[Subscriber 3]&quot;}" id="826f1266dbba4647">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>
@@ -12,12 +12,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="e3a136e81c8c4970" name="Architecture Overview Sequencediagram">
+  <diagram id="e0aaf6e177df4cd8" name="Architecture Overview Sequencediagram">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;sequenceDiagram\n    participant C as Client\n    participant S as Service\n    C-&gt;&gt;S: Request\n    S-&gt;&gt;C: Reply&quot;}" id="fd6480ca8bc544bb">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;sequenceDiagram\n    participant C as Client\n    participant S as Service\n    C-&gt;&gt;S: Request\n    S-&gt;&gt;C: Reply&quot;}" id="7e3194b981914113">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>
@@ -25,12 +25,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="3b81905d65df46fb" name="Architecture Overview Graph Td 2">
+  <diagram id="15f4e3ab66814416" name="Architecture Overview Graph Td 2">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD\n    P[Producer] --&gt;|Task| Q[Queue]\n    Q --&gt;|Task| C1[Consumer 1]\n    Q --&gt;|Task| C2[Consumer 2]\n    Q --&gt;|Task| C3[Consumer 3]&quot;}" id="6fbfab4730f24e56">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD\n    P[Producer] --&gt;|Task| Q[Queue]\n    Q --&gt;|Task| C1[Consumer 1]\n    Q --&gt;|Task| C2[Consumer 2]\n    Q --&gt;|Task| C3[Consumer 3]&quot;}" id="205f9c008b0d4ae0">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>
@@ -38,12 +38,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="9d3b1fca2a60415f" name="Architecture Overview Graph Td 3">
+  <diagram id="911f2c173cbd4ae0" name="Architecture Overview Graph Td 3">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD\n    P[Producer] --&gt;|Message| E[Fanout Exchange]\n    E --&gt;|Message| Q1[Queue 1]\n    E --&gt;|Message| Q2[Queue 2]\n    E --&gt;|Message| Q3[Queue 3]&quot;}" id="7ca73d1e20504405">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD\n    P[Producer] --&gt;|Message| E[Fanout Exchange]\n    E --&gt;|Message| Q1[Queue 1]\n    E --&gt;|Message| Q2[Queue 2]\n    E --&gt;|Message| Q3[Queue 3]&quot;}" id="5d848c2faeb64242">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>
@@ -51,12 +51,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="b5e3a7f29ffc4c63" name="Architecture Overview Graph Lr">
+  <diagram id="a5c5da60a19a460a" name="Architecture Overview Graph Lr">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph LR\n    P[Producer] --&gt;|Stream| T[Topic/Partition]\n    T --&gt;|Stream| C1[Consumer Group 1]\n    T --&gt;|Stream| C2[Consumer Group 2]&quot;}" id="4b1030cd1e024e2e">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph LR\n    P[Producer] --&gt;|Stream| T[Topic/Partition]\n    T --&gt;|Stream| C1[Consumer Group 1]\n    T --&gt;|Stream| C2[Consumer Group 2]&quot;}" id="88aefdf4e39c40d3">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>
@@ -64,12 +64,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="9289f9c6911c411f" name="Architecture Overview Graph Td 4">
+  <diagram id="017e9b03170045ec" name="Architecture Overview Graph Td 4">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD\n    subgraph \&quot;Microservices\&quot;\n        MS1[Service A] --&gt;|Request-Reply| MS2[Service B]\n        MS2 --&gt;|Event| ES[Event Store]\n    end\n    \n    subgraph \&quot;Event Processing\&quot;\n        ES --&gt;|Stream| SP[Stream Processor]\n        SP --&gt;|Notification| NS[Notification Service]\n    end\n    \n    subgraph \&quot;Task Processing\&quot;\n        MS1 --&gt;|Task| TQ[Task Queue]\n        TQ --&gt;|Task| W1[Worker 1]\n        TQ --&gt;|Task| W2[Worker 2]\n    end&quot;}" id="5768fc9aca9a41a1">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD\n    subgraph \&quot;Microservices\&quot;\n        MS1[Service A] --&gt;|Request-Reply| MS2[Service B]\n        MS2 --&gt;|Event| ES[Event Store]\n    end\n    \n    subgraph \&quot;Event Processing\&quot;\n        ES --&gt;|Stream| SP[Stream Processor]\n        SP --&gt;|Notification| NS[Notification Service]\n    end\n    \n    subgraph \&quot;Task Processing\&quot;\n        MS1 --&gt;|Task| TQ[Task Queue]\n        TQ --&gt;|Task| W1[Worker 1]\n        TQ --&gt;|Task| W2[Worker 2]\n    end&quot;}" id="cab9f373af7d4fde">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>
