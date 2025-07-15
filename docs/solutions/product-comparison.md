@@ -8,6 +8,7 @@ This document compares key features, capabilities, and trade-offs of various mes
 |----------------|-----------------------------|-------------------|-------------|-------------------|-----------------|---------------|--------------|------|----------------|---------------------|------------------|
 | Apache Kafka   | Pub-Sub, Request-Reply      | High, distributed | Low         | High, persistent logs | TCP, custom    | Self-hosted, cloud | Apache 2.0 (Open Source) | Free (self-hosted); managed service is paid | Steep (complex setup, ops) | Yes (Strimzi, Confluent) | Real-time analytics, event streaming |
 | RabbitMQ       | Queueing, Pub-Sub, Request-Reply | High, cluster   | Moderate   | High, durable queues | AMQP, MQTT, STOMP | Self-hosted, cloud | MPL 1.1 (Open Source) | Free (self-hosted); managed is paid | Moderate (docs, plugins) | Yes (Official) | Microservices, task queue |
+| ActiveMQ       | Queueing, Pub-Sub, Request-Reply | Moderate, scalable | Moderate | High, persistent    | OpenWire, AMQP, Stomp, MQTT, WebSocket | Self-hosted, cloud | Apache 2.0 (Open Source) | Free (self-hosted) | Easy to Moderate | Yes (Artemis) | Integration with diverse systems |
 | Solace         | Pub-Sub, Queueing, Request-Reply | High, distributed | Low       | High, persistent    | Multiple including MQTT | Self-hosted, cloud | Proprietary, free dev edition | Paid (enterprise, cloud) | Moderate to Steep (enterprise features) | Yes (Official) | Enterprise messaging, low latency |
 | MQTT           | Pub-Sub (IoT focus)         | Moderate, IoT     | Low         | Depends on implementation | MQTT          | Self-hosted, cloud | Open Standard (various impl.) | Free (open source impl.); paid for managed | Easy (simple protocol) | Varies by broker (e.g., EMQX, Mosquitto have operators) | IoT messaging |
 | NATS           | Pub-Sub, Request-Reply, Queueing | High, cloud-native | Ultra-low | Optional with JetStream | MQTT, WebSockets | Self-hosted, cloud | Apache 2.0 (Open Source) | Free (self-hosted); paid for managed | Easy to Moderate | Yes (Official) | Cloud-native apps, microservices |
@@ -30,6 +31,7 @@ This document compares key features, capabilities, and trade-offs of various mes
 
 - **Apache Kafka**: Best for real-time analytics, event streaming with strong OSS
 - **RabbitMQ**: Flexible and feature-rich for microservices, task queues
+- **Apache ActiveMQ**: Mature, multi-protocol broker ideal for diverse system integration
 - **Apache Pulsar**: Ideal for multi-tenancy and geo-replication
 - **NATS**: Suitable for lightweight, cloud-native applications
 - **Redis Streams**: Good for real-time data with simple setup

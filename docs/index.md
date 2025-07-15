@@ -52,6 +52,7 @@ Selecting the right messaging system is crucial for modern distributed applicati
 |----------|------|----------|-----------------|---------------|
 | **[Apache Kafka](messaging-systems/apache-kafka.md)** | Event Streaming | Real-time analytics, event sourcing | Yes (Confluent) | KRaft architecture |
 | **[RabbitMQ](messaging-systems/rabbitmq.md)** | Message Broker | Microservices, task queues | No | Enhanced data model |
+| **[Apache ActiveMQ](messaging-systems/apache-activemq.md)** | Message Broker | Integration, diverse systems | No | Multi-protocol support |
 | **[Apache Pulsar](messaging-systems/apache-pulsar.md)** | Event Streaming | Multi-tenant, geo-replication | Yes (Built-in) | Multi-format support |
 | **[NATS](messaging-systems/nats.md)** | Lightweight Messaging | Cloud-native, microservices | No | JetStream features |
 | **[Redis](messaging-systems/redis.md)** | In-Memory | Caching, real-time features | No | Pub/Sub capabilities |

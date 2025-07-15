@@ -122,6 +122,7 @@ nav:
   - Messaging Systems Covered:
     - Apache Kafka: messaging-systems/apache-kafka.md
     - RabbitMQ: messaging-systems/rabbitmq.md
+    - Apache ActiveMQ: messaging-systems/apache-activemq.md
     - Apache Pulsar: messaging-systems/apache-pulsar.md
     - NATS: messaging-systems/nats.md
     - Redis: messaging-systems/redis.md
