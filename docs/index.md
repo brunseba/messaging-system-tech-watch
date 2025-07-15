@@ -4,7 +4,7 @@
     This guide helps business units systematically choose the right messaging system based on their specific requirements, technical constraints, and business goals.
 
 !!! note "Version Information"
-    **Version:** 2.2.1 | **License:** MIT | **Last Updated:** July 2025
+    **Version:** 2.3.0 | **License:** MIT | **Last Updated:** July 2025
 
 ## Overview
 
@@ -89,25 +89,25 @@ mindmap
       Timeline
 ```
 
-## What's New in Version 2.2.0
+## What's New in Version 2.3.0
 
 !!! success "Major Enhancements"
     **✨ New Features Added:**
     
-    - **Apache ActiveMQ Documentation** - Comprehensive guide covering architecture, deployment, and best practices
-    - **Enhanced Product Comparison** - Updated comparison matrix with ActiveMQ capabilities
-    - **Multi-Protocol Support Analysis** - Detailed analysis of protocol diversity in messaging systems
-    - **Enterprise Integration Patterns** - Expanded coverage of legacy system integration
-    - **JMS Implementation Guide** - Java Message Service patterns and best practices
-    - **Network of Brokers Architecture** - Detailed ActiveMQ clustering and federation patterns
+    - **Interactive Mermaid Decision Tree** - Replaced text-based business decision tree with visual flowchart
+    - **RabbitMQ Strategic Positioning** - Added RabbitMQ to business decision tree in three key positions
+    - **Enhanced IoT Integration** - Moved IoT filtering to requirements definition for better decision flow
+    - **Bank Assurance Use Case** - Added comprehensive bank assurance scenario to Quick Reference Guide
+    - **Decision Node Visualization** - Color-coded decision nodes for better user experience
+    - **Strategic Business Drivers** - Enhanced decision paths for cost, growth, advantage, risk, and innovation
 
 !!! info "Key Improvements"
     **🔧 Enhanced Sections:**
     
-    - **Messaging Systems Covered** - Added Apache ActiveMQ with comprehensive documentation
-    - **Product Comparison** - Updated with ActiveMQ capabilities and use cases
-    - **Integration Scenarios** - Enhanced enterprise integration patterns
-    - **Architecture Diagrams** - Added detailed ActiveMQ deployment architectures
+    - **Business Decision Tree** - Interactive Mermaid flowchart with decision criteria
+    - **Quick Reference Guide** - Added Bank Assurance with IBM MQ + ActiveMQ recommendation
+    - **Decision Framework** - Better integration of IoT requirements and general messaging fallback
+    - **RabbitMQ Positioning** - Strategic placement for open source preference, moderate expertise, and reliable solutions
 
 !!! tip "Best Practices"
     - Start with our **Requirements Assessment Template** for structured evaluation
@@ -153,6 +153,6 @@ New to messaging systems? Follow this path:
 
 | **Version** | **License** | **Last Updated** | **Contributors** |
 |-------------|-------------|------------------|------------------|
-| 2.2.0 | [MIT License](https://github.com/your-org/messaging-system-guide/blob/main/LICENSE) | July 2025 | Business Technology Team |
+|| 2.3.0 | [MIT License](https://github.com/your-org/messaging-system-guide/blob/main/LICENSE) | July 2025 | Business Technology Team |
 
 *This guide is designed to be practical and actionable. Each section builds upon the previous one to provide a comprehensive selection framework.*
