@@ -79,7 +79,7 @@ extra:
   version:
     provider: mike
     default: latest
-    current: 2.2.0
+    current: 2.2.1
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/brunseba/messaging-system-tech-watch
