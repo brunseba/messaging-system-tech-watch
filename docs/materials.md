@@ -143,7 +143,7 @@ graph TB
 ```
 
 <!-- For complex diagrams (exported from Draw.io) -->
-![Architecture Diagram](../output/architecture-diagram.png)
+![Architecture Diagram](exported-diagram.png)
 ```
 
 ## Contributing
