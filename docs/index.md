@@ -4,7 +4,7 @@
     This guide helps business units systematically choose the right messaging system based on their specific requirements, technical constraints, and business goals.
 
 !!! note "Version Information"
-    **Version:** 2.3.0 | **License:** MIT | **Last Updated:** July 2025
+    **Version:** 2.3.1 | **License:** MIT | **Last Updated:** July 2025
 
 ## Overview
 
@@ -153,6 +153,6 @@ New to messaging systems? Follow this path:
 
 | **Version** | **License** | **Last Updated** | **Contributors** |
 |-------------|-------------|------------------|------------------|
-|| 2.3.0 | [MIT License](https://github.com/your-org/messaging-system-guide/blob/main/LICENSE) | July 2025 | Business Technology Team |
+|| 2.3.1 | [MIT License](https://github.com/your-org/messaging-system-guide/blob/main/LICENSE) | July 2025 | Business Technology Team |
 
 *This guide is designed to be practical and actionable. Each section builds upon the previous one to provide a comprehensive selection framework.*
