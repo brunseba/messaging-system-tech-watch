@@ -19,9 +19,11 @@ All diagrams in this documentation are created using [Draw.io](https://app.diagr
 |------|-------------|---------|
 | **[index_diagrams.drawio](../output/index_diagrams.drawio)** | Main overview diagrams | [Home](../index.md) |
 | **[decision-tree_diagrams.drawio](../output/decision-tree_diagrams.drawio)** | Decision tree flowcharts | [Decision Tree](../decision-framework/decision-tree.md) |
+| **[selection-criteria_diagrams.drawio](../output/selection-criteria_diagrams.drawio)** | Selection criteria flowcharts | [Selection Criteria](../decision-framework/selection-criteria.md) |
 | **[architecture-overview_diagrams.drawio](../output/architecture-overview_diagrams.drawio)** | Architecture patterns | [Architecture Overview](../solutions/architecture-overview.md) |
 | **[message-format-standards_diagrams.drawio](../output/message-format-standards_diagrams.drawio)** | Message format schemas | [Message Format Standards](../implementation/message-format-standards.md) |
 | **[deployment-guide_diagrams.drawio](../output/deployment-guide_diagrams.drawio)** | Deployment architectures | [Deployment Guide](../implementation/deployment-guide.md) |
+| **[materials_diagrams.drawio](../output/materials_diagrams.drawio)** | Material and resource diagrams | [Materials](../reference/materials.md) |
 
 ### 🛠️ **Messaging Systems Diagrams**
 
