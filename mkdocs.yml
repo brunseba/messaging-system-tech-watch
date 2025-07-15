@@ -79,7 +79,7 @@ extra:
   version:
     provider: mike
     default: latest
-    current: 2.1.0
+    current: 2.2.0
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/brunseba/messaging-system-tech-watch
@@ -93,7 +93,7 @@ extra:
     url: https://github.com/brunseba/messaging-system-tech-watch/blob/main/LICENSE
   project:
     name: Messaging System Tech Watch
-    version: 2.1.0
+    version: 2.2.0
 
 copyright: Copyright &copy; 2025 Business Technology Team | Licensed under MIT License
 

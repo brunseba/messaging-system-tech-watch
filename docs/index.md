@@ -4,7 +4,7 @@
     This guide helps business units systematically choose the right messaging system based on their specific requirements, technical constraints, and business goals.
 
 !!! note "Version Information"
-    **Version:** 2.1.0 | **License:** MIT | **Last Updated:** July 2025
+    **Version:** 2.2.0 | **License:** MIT | **Last Updated:** July 2025
 
 ## Overview
 
@@ -89,25 +89,25 @@ mindmap
       Timeline
 ```
 
-## What's New in Version 2.1.0
+## What's New in Version 2.2.0
 
 !!! success "Major Enhancements"
     **✨ New Features Added:**
     
-    - **Enhanced Business Decision Framework** - Comprehensive business value assessment with ROI analysis
-    - **Message Format Standards Guide** - Complete guide to schema registries and interoperability
-    - **Requirements Assessment Template** - Structured template for systematic evaluation
-    - **Persona-Based Guidance** - Tailored recommendations for different stakeholder roles
-    - **Updated Architecture** - Kafka moved to KRaft, RabbitMQ enhanced data model
-    - **Schema Registry Support Matrix** - Detailed comparison of schema support across systems
+    - **Apache ActiveMQ Documentation** - Comprehensive guide covering architecture, deployment, and best practices
+    - **Enhanced Product Comparison** - Updated comparison matrix with ActiveMQ capabilities
+    - **Multi-Protocol Support Analysis** - Detailed analysis of protocol diversity in messaging systems
+    - **Enterprise Integration Patterns** - Expanded coverage of legacy system integration
+    - **JMS Implementation Guide** - Java Message Service patterns and best practices
+    - **Network of Brokers Architecture** - Detailed ActiveMQ clustering and federation patterns
 
 !!! info "Key Improvements"
     **🔧 Enhanced Sections:**
     
-    - **Decision Framework** - Added business impact analysis and TCO calculations
-    - **Requirements Analysis** - Real-world scenarios and detailed trade-off analysis
-    - **Messaging Systems** - Updated with latest architectural changes and features
-    - **Implementation Guidelines** - Added best practices for schema management
+    - **Messaging Systems Covered** - Added Apache ActiveMQ with comprehensive documentation
+    - **Product Comparison** - Updated with ActiveMQ capabilities and use cases
+    - **Integration Scenarios** - Enhanced enterprise integration patterns
+    - **Architecture Diagrams** - Added detailed ActiveMQ deployment architectures
 
 !!! tip "Best Practices"
     - Start with our **Requirements Assessment Template** for structured evaluation
@@ -153,6 +153,6 @@ New to messaging systems? Follow this path:
 
 | **Version** | **License** | **Last Updated** | **Contributors** |
 |-------------|-------------|------------------|------------------|
-| 2.1.0 | [MIT License](https://github.com/your-org/messaging-system-guide/blob/main/LICENSE) | July 2025 | Business Technology Team |
+| 2.2.0 | [MIT License](https://github.com/your-org/messaging-system-guide/blob/main/LICENSE) | July 2025 | Business Technology Team |
 
 *This guide is designed to be practical and actionable. Each section builds upon the previous one to provide a comprehensive selection framework.*
