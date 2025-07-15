@@ -411,6 +411,13 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-5-bank-assurance-firm-business-decision-maker">
+<span class="md-ellipsis">
+      Example 5: Bank Assurance Firm (Business Decision Maker)
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -426,13 +433,6 @@
 <a class="md-nav__link" href="#decision-shortcuts-by-use-case">
 <span class="md-ellipsis">
       Decision Shortcuts by Use Case
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#red-flags-when-not-to-use">
-<span class="md-ellipsis">
-      Red Flags - When NOT to Use
     </span>
 </a>
 </li>
@@ -863,6 +863,13 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-5-bank-assurance-firm-business-decision-maker">
+<span class="md-ellipsis">
+      Example 5: Bank Assurance Firm (Business Decision Maker)
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -878,13 +885,6 @@
 <a class="md-nav__link" href="#decision-shortcuts-by-use-case">
 <span class="md-ellipsis">
       Decision Shortcuts by Use Case
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#red-flags-when-not-to-use">
-<span class="md-ellipsis">
-      Red Flags - When NOT to Use
     </span>
 </a>
 </li>
@@ -933,6 +933,10 @@
         B1:::decision
         B2["Publish-Subscribe - one sender to many receivers?"]
         B2:::decision
+        B3["Targeting IoT or constrained devices?"]
+        B3:::decision
+        B4["MQTT, NATS"]
+        B4:::leaf
     end
 
     %% Subgroup: Point-to-Point Options
@@ -949,7 +953,7 @@
     subgraph Pub_Sub["Publish Subscribe Messaging"]
         D1["High throughput and scalability needed?"]
         D1:::decision
-        D2["Kafka, Pulsar, Kinesis"]
+        D2["Kafka, Pulsar, AWS Kinesis"]
         D2:::leaf
         D3["RabbitMQ, MQTT, Google Pub/Sub"]
         D3:::leaf
@@ -961,14 +965,8 @@
         E1:::decision
         E2["AWS SNS SQS, Azure Service Bus, Google Pub/Sub"]
         E2:::leaf
-        E3["On-premise or self-hosted: RabbitMQ, Kafka, IBM MQ"]
+        E3["On-premise/self-hosted: RabbitMQ (queues), Kafka (streams), IBM MQ (enterprise), NATS (lightweight), ActiveMQ (JMS)"]
         E3:::leaf
-        F1["Targeting IoT or constrained devices?"]
-        F1:::decision
-        F2["MQTT, NATS"]
-        F2:::leaf
-        F3["General messaging system"]
-        F3:::leaf
     end
 
     %% Subgroup: Non-Functional
@@ -990,6 +988,11 @@
     C1 -- "No" --&gt; C3
     B2 -- "Yes" --&gt; D1
     B2 -- "No" --&gt; D3
+    A1 -- "Yes" --&gt; B3
+    B3 -- "Yes" --&gt; B4
+    B3 -- "No" --&gt; B1
+    D1 -- "Yes" --&gt; D2
+    D1 -- "No" --&gt; D3
 
     D2 --&gt; E1
     D3 --&gt; E1
@@ -999,13 +1002,10 @@
     E1 -- "Yes" --&gt; E2
     E1 -- "No" --&gt; E3
 
-    E2 --&gt; F1
-    E3 --&gt; F1
-    F1 -- "Yes" --&gt; F2
-    F1 -- "No" --&gt; F3
+    B4 --&gt; G1
 
-    F2 --&gt; G1
-    F3 --&gt; G1
+    E2 --&gt; G1
+    E3 --&gt; G1
     G1 -- "Yes" --&gt; G2
     G1 -- "No" --&gt; G3
 
@@ -1037,11 +1037,11 @@
 <h2 id="how-to-use">How to Use<a class="headerlink" href="#how-to-use" title="Permanent link">¶</a></h2>
 <ol>
 <li><strong>Start at the Top</strong>: Determine if real-time delivery is needed.</li>
+<li><strong>IoT/Constrained Devices</strong>: Early check for IoT-specific requirements.</li>
 <li><strong>Message Pattern</strong>: Decide between point-to-point or pub-sub.</li>
 <li><strong>Point-to-Point Messaging</strong>: Assess the durability requirements.</li>
 <li><strong>Pub-Sub Messaging</strong>: Evaluate throughput and scalability needs.</li>
-<li><strong>Integration  Environment</strong>: Choose between cloud-native or on-premises.</li>
-<li><strong>Specialized Needs</strong>: Consider IoT or specialized message handling.</li>
+<li><strong>Integration &amp; Environment</strong>: Choose between cloud-native or on-premises.</li>
 <li><strong>Non-Functional Requirements</strong>: Focus on low latency or reliability needs.</li>
 </ol>
 <p>This revised structure offers a detailed decision-making path to ensure alignment with both technical and business needs.</p>
@@ -1092,6 +1092,22 @@
 - Guaranteed delivery semantics
 - Ultra-low latency capabilities
 - Strong schema management</p>
+<h3 id="example-5-bank-assurance-firm-business-decision-maker">Example 5: Bank Assurance Firm (Business Decision Maker)<a class="headerlink" href="#example-5-bank-assurance-firm-business-decision-maker" title="Permanent link">¶</a></h3>
+<p><strong>Starting Point</strong>: Core banking system integration with regulatory compliance requirements</p>
+<p><strong>Decision Path</strong>:
+1. <strong>Real-time required?</strong> → Yes (transaction processing)
+2. <strong>IoT/constrained devices?</strong> → No (enterprise systems)
+3. <strong>Message pattern?</strong> → Point-to-point (transaction processing)
+4. <strong>Message durability critical?</strong> → Yes (financial transactions)
+5. <strong>Cloud-native preferred?</strong> → No (regulatory compliance requires on-premise)
+6. <strong>Recommended</strong>: IBM MQ + Apache ActiveMQ</p>
+<p><strong>Business Justification</strong>:
+- <strong>Regulatory Compliance</strong>: Built-in features for financial regulations (SOX, Basel III, GDPR)
+- <strong>Risk Mitigation</strong>: Enterprise-grade solutions with proven track record in banking
+- <strong>Legacy Integration</strong>: IBM MQ excels at mainframe and COBOL system integration
+- <strong>Audit Requirements</strong>: Comprehensive logging and monitoring capabilities
+- <strong>Vendor Support</strong>: Long-term enterprise support and partnership
+- <strong>Dual Strategy</strong>: IBM MQ for legacy systems, ActiveMQ for modern Java applications</p>
 <h2 id="quick-reference-guide">Quick Reference Guide<a class="headerlink" href="#quick-reference-guide" title="Permanent link">¶</a></h2>
 <h3 id="decision-shortcuts-by-use-case">Decision Shortcuts by Use Case<a class="headerlink" href="#decision-shortcuts-by-use-case" title="Permanent link">¶</a></h3>
 <table>
@@ -1129,20 +1145,31 @@
 <td>Ultra-low latency, enterprise features</td>
 </tr>
 <tr>
+<td></td>
+<td><strong>Bank Assurance</strong></td>
+<td>Compliance + Legacy Integration</td>
+<td>IBM MQ + ActiveMQ</td>
+</tr>
+<tr>
+<td></td>
 <td><strong>Analytics Pipeline</strong></td>
 <td>Throughput + Processing</td>
 <td>Apache Kafka + Kafka Streams</td>
-<td>Stream processing, exactly-once semantics</td>
 </tr>
 <tr>
+<td></td>
 <td><strong>Notification System</strong></td>
 <td>Cost + Simplicity</td>
 <td>AWS SNS/SQS</td>
-<td>Serverless, pay-per-use</td>
+</tr>
+<tr>
+<td>### Red Flags - When NOT to Use</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<h3 id="red-flags-when-not-to-use">Red Flags - When NOT to Use<a class="headerlink" href="#red-flags-when-not-to-use" title="Permanent link">¶</a></h3>
 <p><strong>Don't Use Apache Kafka if</strong>:
 - You have &lt; 1000 messages/day
 - You need ultra-simple setup
@@ -1191,7 +1218,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.path", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips", "header.autohide"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"current": "2.2.1", "default": "latest", "provider": "mike"}}</script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.path", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips", "header.autohide"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"current": "2.3.3", "default": "latest", "provider": "mike"}}</script>
 <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
 </body>
 </html>

@@ -1,10 +1,10 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.4 Chrome/138.0.7204.97 Electron/37.2.1 Safari/537.36" version="28.0.4" pages="3">
-  <diagram id="78b98828258b4bc3" name="Service Bus Graph Td">
+  <diagram id="5c88566b70c84c08" name="Service Bus Graph Td">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD \n    A[CRM System] --&gt;|Customer Data| SB[Service Bus]\n    B[ERP System] --&gt;|Order Data| SB\n    C[HR System] --&gt;|Employee Data| SB\n    D[Analytics Platform] --&gt;|Report Requests| SB\n    \n    SB --&gt;|Notifications| E[Email Service]\n    SB --&gt;|Data Sync| F[Data Warehouse]\n    SB --&gt;|Events| G[Audit System]\n    SB --&gt;|Alerts| H[Monitoring System]&quot;}" id="b063aa5836cf42a5">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD \n    A[CRM System] --&gt;|Customer Data| SB[Service Bus]\n    B[ERP System] --&gt;|Order Data| SB\n    C[HR System] --&gt;|Employee Data| SB\n    D[Analytics Platform] --&gt;|Report Requests| SB\n    \n    SB --&gt;|Notifications| E[Email Service]\n    SB --&gt;|Data Sync| F[Data Warehouse]\n    SB --&gt;|Events| G[Audit System]\n    SB --&gt;|Alerts| H[Monitoring System]&quot;}" id="7639572c14304441">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>
@@ -12,12 +12,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="2ea31799abf04339" name="Service Bus Graph Lr">
+  <diagram id="ebbc5807bd2d437e" name="Service Bus Graph Lr">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph LR\n    subgraph \&quot;Legacy Systems\&quot;\n        L1[Mainframe]\n        L2[Legacy Database]\n        L3[File-based System]\n    end\n    \n    subgraph \&quot;Service Bus Layer\&quot;\n        SB[Service Bus]\n        A[Adapters]\n        T[Transformers]\n    end\n    \n    subgraph \&quot;Modern Applications\&quot;\n        M1[Web Services]\n        M2[Mobile Apps]\n        M3[Cloud Services]\n    end\n    \n    L1 --&gt; A\n    L2 --&gt; A\n    L3 --&gt; A\n    A --&gt; SB\n    SB --&gt; T\n    T --&gt; M1\n    T --&gt; M2\n    T --&gt; M3&quot;}" id="e2618cc5ae0149f2">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph LR\n    subgraph \&quot;Legacy Systems\&quot;\n        L1[Mainframe]\n        L2[Legacy Database]\n        L3[File-based System]\n    end\n    \n    subgraph \&quot;Service Bus Layer\&quot;\n        SB[Service Bus]\n        A[Adapters]\n        T[Transformers]\n    end\n    \n    subgraph \&quot;Modern Applications\&quot;\n        M1[Web Services]\n        M2[Mobile Apps]\n        M3[Cloud Services]\n    end\n    \n    L1 --&gt; A\n    L2 --&gt; A\n    L3 --&gt; A\n    A --&gt; SB\n    SB --&gt; T\n    T --&gt; M1\n    T --&gt; M2\n    T --&gt; M3&quot;}" id="cfb6a8e17a9841dd">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>
@@ -25,12 +25,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="bad615446a5c402e" name="Service Bus Sequencediagram">
+  <diagram id="7718019809324d06" name="Service Bus Sequencediagram">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;sequenceDiagram\n    participant O as Order System\n    participant SB as Service Bus\n    participant I as Inventory\n    participant P as Payment\n    participant S as Shipping\n    participant N as Notification\n    \n    O-&gt;&gt;SB: Order Created Event\n    SB-&gt;&gt;I: Check Inventory\n    I-&gt;&gt;SB: Inventory Reserved\n    SB-&gt;&gt;P: Process Payment\n    P-&gt;&gt;SB: Payment Confirmed\n    SB-&gt;&gt;S: Ship Order\n    S-&gt;&gt;SB: Order Shipped\n    SB-&gt;&gt;N: Send Notifications&quot;}" id="3dcdedf8bd774232">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;sequenceDiagram\n    participant O as Order System\n    participant SB as Service Bus\n    participant I as Inventory\n    participant P as Payment\n    participant S as Shipping\n    participant N as Notification\n    \n    O-&gt;&gt;SB: Order Created Event\n    SB-&gt;&gt;I: Check Inventory\n    I-&gt;&gt;SB: Inventory Reserved\n    SB-&gt;&gt;P: Process Payment\n    P-&gt;&gt;SB: Payment Confirmed\n    SB-&gt;&gt;S: Ship Order\n    S-&gt;&gt;SB: Order Shipped\n    SB-&gt;&gt;N: Send Notifications&quot;}" id="cde73fe1a1eb4780">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>
