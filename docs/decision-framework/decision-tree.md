@@ -212,6 +212,26 @@ This revised structure offers a detailed decision-making path to ensure alignmen
 - Ultra-low latency capabilities
 - Strong schema management
 
+### Example 5: Bank Assurance Firm (Business Decision Maker)
+
+**Starting Point**: Core banking system integration with regulatory compliance requirements
+
+**Decision Path**:
+1. **Real-time required?** → Yes (transaction processing)
+2. **IoT/constrained devices?** → No (enterprise systems)
+3. **Message pattern?** → Point-to-point (transaction processing)
+4. **Message durability critical?** → Yes (financial transactions)
+5. **Cloud-native preferred?** → No (regulatory compliance requires on-premise)
+6. **Recommended**: IBM MQ + Apache ActiveMQ
+
+**Business Justification**:
+- **Regulatory Compliance**: Built-in features for financial regulations (SOX, Basel III, GDPR)
+- **Risk Mitigation**: Enterprise-grade solutions with proven track record in banking
+- **Legacy Integration**: IBM MQ excels at mainframe and COBOL system integration
+- **Audit Requirements**: Comprehensive logging and monitoring capabilities
+- **Vendor Support**: Long-term enterprise support and partnership
+- **Dual Strategy**: IBM MQ for legacy systems, ActiveMQ for modern Java applications
+
 ## Quick Reference Guide
 
 ### Decision Shortcuts by Use Case
@@ -222,9 +242,9 @@ This revised structure offers a detailed decision-making path to ensure alignmen
 | **IoT/Sensors** | Efficiency + Scale | MQTT + Kafka | Lightweight protocol, powerful backend |
 | **Microservices** | Simplicity + Integration | RabbitMQ or AWS SQS | Easy setup, flexible routing |
 | **Financial Trading** | Latency + Compliance | Solace | Ultra-low latency, enterprise features |
-| **Analytics Pipeline** | Throughput + Processing | Apache Kafka + Kafka Streams | Stream processing, exactly-once semantics |
-| **Notification System** | Cost + Simplicity | AWS SNS/SQS | Serverless, pay-per-use |
-
+|| **Bank Assurance** | Compliance + Legacy Integration | IBM MQ + ActiveMQ | Regulatory compliance, enterprise support |
+|| **Analytics Pipeline** | Throughput + Processing | Apache Kafka + Kafka Streams | Stream processing, exactly-once semantics |
+|| **Notification System** | Cost + Simplicity | AWS SNS/SQS | Serverless, pay-per-use |
 ### Red Flags - When NOT to Use
 
 **Don't Use Apache Kafka if**:

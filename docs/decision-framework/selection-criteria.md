@@ -227,18 +227,53 @@ This document provides comprehensive guidance for selecting the right messaging 
 
 #### 7. **Business Decision Tree**
 
-```
-Start Here: What's your primary business driver?
-    ↓
-[Cost Minimization] → AWS SQS/SNS → Minimal upfront investment
-    ↓
-[Growth/Scalability] → Confluent Cloud → Scales with business
-    ↓
-[Competitive Advantage] → Apache Kafka → Performance & flexibility
-    ↓
-[Risk Mitigation] → Solace/IBM MQ → Enterprise reliability
-    ↓
-[Innovation/Differentiation] → Apache Pulsar → Cutting-edge features
+```mermaid
+flowchart TD
+    A["Start Here: What's your primary business driver?"] --> B["Cost Minimization"]
+    A --> C["Growth/Scalability"]
+    A --> D["Competitive Advantage"]
+    A --> E["Risk Mitigation"]
+    A --> F["Innovation/Differentiation"]
+    
+    %% Cost Minimization Path
+    B --> B0{"Preference for managed services?"}
+    B0 -->|Yes| B1["AWS SQS/SNS"]
+    B0 -->|No| B3["RabbitMQ"]
+    B1 --> B2["Minimal upfront investment"]
+    B3 --> B4["Open source cost control"]
+    
+    %% Growth/Scalability Path
+    C --> C0{"Current team expertise?"}
+    C0 -->|Limited| C1["Confluent Cloud"]
+    C0 -->|Moderate| C3["RabbitMQ"]
+    C1 --> C2["Scales with business"]
+    C3 --> C4["Balanced growth & simplicity"]
+    
+    %% Competitive Advantage Path
+    D --> D1["Apache Kafka"]
+    D1 --> D2["Performance & flexibility"]
+    
+    %% Risk Mitigation Path
+    E --> E0{"Enterprise support required?"}
+    E0 -->|Yes| E1["Solace/IBM MQ"]
+    E0 -->|No| E3["RabbitMQ"]
+    E1 --> E2["Enterprise reliability"]
+    E3 --> E4["Reliable without enterprise overhead"]
+    
+    %% Innovation/Differentiation Path
+    F --> F1["Apache Pulsar"]
+    F1 --> F2["Cutting-edge features"]
+    
+    classDef driver fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    classDef decision fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef solution fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    classDef benefit fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
+    
+    class A driver
+    class B,C,D,E,F driver
+    class B0,C0,E0 decision
+    class B1,B3,C1,C3,D1,E1,E3,F1 solution
+    class B2,B4,C2,C4,D2,E2,E4,F2 benefit
 ```
 
 #### 8. **Vendor Evaluation Criteria**
@@ -360,6 +395,30 @@ Start Here: What's your primary business driver?
 - Pay-as-you-go pricing model
 - Native cloud integration
 - Rapid time-to-market
+
+### Scenario 6: Bank Assurance Firm
+**Requirements**: Regulatory compliance, data sovereignty, high security, audit trails, integration with legacy systems
+
+**Recommended Solution**: IBM MQ + Apache ActiveMQ (for modern applications)
+
+**Justification**:
+- **Regulatory Compliance**: Built-in compliance features for financial regulations (SOX, Basel III, GDPR)
+- **Data Sovereignty**: On-premise deployment ensures data remains within regulatory boundaries
+- **Security**: Enterprise-grade encryption, authentication, and authorization
+- **Audit Trails**: Comprehensive logging and monitoring for compliance reporting
+- **Legacy Integration**: IBM MQ excels at integrating with mainframe and legacy banking systems
+- **Transactional Integrity**: ACID compliance for financial transactions
+- **High Availability**: Mission-critical uptime requirements for banking operations
+- **Dual Solution Strategy**: 
+  - IBM MQ for core banking systems and legacy integration
+  - ActiveMQ for modern Java-based applications and JMS compliance
+
+**Business Decision Factors**:
+- **Compliance First**: Regulatory requirements drive technology choices
+- **Risk Mitigation**: Proven solutions with enterprise support
+- **Integration Complexity**: Must work with decades-old banking systems
+- **Vendor Relationship**: Long-term partnership with enterprise vendors
+- **Cost Justification**: Higher costs acceptable for compliance and risk reduction
 
 ## Decision Framework Summary
 
