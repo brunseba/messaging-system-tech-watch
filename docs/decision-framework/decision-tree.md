@@ -52,7 +52,7 @@ flowchart TD
     subgraph Pub_Sub["Publish Subscribe Messaging"]
         D1["High throughput and scalability needed?"]
         D1:::decision
-        D2["Kafka, Pulsar, Kinesis"]
+        D2["Kafka, Pulsar, AWS Kinesis"]
         D2:::leaf
         D3["RabbitMQ, MQTT, Google Pub/Sub"]
         D3:::leaf
@@ -93,6 +93,8 @@ flowchart TD
     C1 -- "No" --> C3
     B2 -- "Yes" --> D1
     B2 -- "No" --> D3
+    D1 -- "Yes" --> D2
+    D1 -- "No" --> D3
 
     D2 --> E1
     D3 --> E1
