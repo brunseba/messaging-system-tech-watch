@@ -36,6 +36,10 @@ flowchart TD
         B1:::decision
         B2["Publish-Subscribe - one sender to many receivers?"]
         B2:::decision
+        B3["Targeting IoT or constrained devices?"]
+        B3:::decision
+        B4["MQTT, NATS"]
+        B4:::leaf
     end
 
     %% Subgroup: Point-to-Point Options
@@ -64,14 +68,8 @@ flowchart TD
         E1:::decision
         E2["AWS SNS SQS, Azure Service Bus, Google Pub/Sub"]
         E2:::leaf
-        E3["On-premise or self-hosted: RabbitMQ, Kafka, IBM MQ"]
+        E3["On-premise/self-hosted: RabbitMQ (queues), Kafka (streams), IBM MQ (enterprise), NATS (lightweight), ActiveMQ (JMS)"]
         E3:::leaf
-        F1["Targeting IoT or constrained devices?"]
-        F1:::decision
-        F2["MQTT, NATS"]
-        F2:::leaf
-        F3["General messaging system"]
-        F3:::leaf
     end
 
     %% Subgroup: Non-Functional
@@ -93,6 +91,9 @@ flowchart TD
     C1 -- "No" --> C3
     B2 -- "Yes" --> D1
     B2 -- "No" --> D3
+    A1 -- "Yes" --> B3
+    B3 -- "Yes" --> B4
+    B3 -- "No" --> B1
     D1 -- "Yes" --> D2
     D1 -- "No" --> D3
 
@@ -103,14 +104,11 @@ flowchart TD
 
     E1 -- "Yes" --> E2
     E1 -- "No" --> E3
-
-    E2 --> F1
-    E3 --> F1
-    F1 -- "Yes" --> F2
-    F1 -- "No" --> F3
-
-    F2 --> G1
-    F3 --> G1
+    
+    B4 --> G1
+    
+    E2 --> G1
+    E3 --> G1
     G1 -- "Yes" --> G2
     G1 -- "No" --> G3
 
@@ -141,11 +139,11 @@ flowchart TD
 ## How to Use
 
 1. **Start at the Top**: Determine if real-time delivery is needed.
-2. **Message Pattern**: Decide between point-to-point or pub-sub.
-3. **Point-to-Point Messaging**: Assess the durability requirements.
-4. **Pub-Sub Messaging**: Evaluate throughput and scalability needs.
-5. **Integration  Environment**: Choose between cloud-native or on-premises.
-6. **Specialized Needs**: Consider IoT or specialized message handling.
+2. **IoT/Constrained Devices**: Early check for IoT-specific requirements.
+3. **Message Pattern**: Decide between point-to-point or pub-sub.
+4. **Point-to-Point Messaging**: Assess the durability requirements.
+5. **Pub-Sub Messaging**: Evaluate throughput and scalability needs.
+6. **Integration & Environment**: Choose between cloud-native or on-premises.
 7. **Non-Functional Requirements**: Focus on low latency or reliability needs.
 
 This revised structure offers a detailed decision-making path to ensure alignment with both technical and business needs.
