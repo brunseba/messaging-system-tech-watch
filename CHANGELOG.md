@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.3.3] - 2025-07-15
+
+### Changed
+- Updated materials.md documentation with missing .drawio files
+- Enhanced reference section with complete diagram file listings
+- Improved documentation completeness and consistency
+
+### Technical
+- Minor version bump for documentation updates
+- Updated version information in mkdocs.yml and index.md
+
 ## [2.3.1] - 2025-07-15
 
 ### Changed
