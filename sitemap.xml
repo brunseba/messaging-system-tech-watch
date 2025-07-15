@@ -2,114 +2,118 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://brunseba.github.io/messaging-system-tech-watch/</loc>
-         <lastmod>2025-07-11</lastmod>
+         <lastmod>2025-07-15</lastmod>
     </url>
     <url>
          <loc>https://brunseba.github.io/messaging-system-tech-watch/decision-framework/decision-tree/</loc>
-         <lastmod>2025-07-11</lastmod>
+         <lastmod>2025-07-15</lastmod>
     </url>
     <url>
          <loc>https://brunseba.github.io/messaging-system-tech-watch/decision-framework/selection-criteria/</loc>
-         <lastmod>2025-07-11</lastmod>
+         <lastmod>2025-07-15</lastmod>
     </url>
     <url>
          <loc>https://brunseba.github.io/messaging-system-tech-watch/implementation/best-practices/</loc>
-         <lastmod>2025-07-11</lastmod>
+         <lastmod>2025-07-15</lastmod>
     </url>
     <url>
          <loc>https://brunseba.github.io/messaging-system-tech-watch/implementation/deployment-guide/</loc>
-         <lastmod>2025-07-11</lastmod>
+         <lastmod>2025-07-15</lastmod>
     </url>
     <url>
          <loc>https://brunseba.github.io/messaging-system-tech-watch/implementation/message-format-standards/</loc>
-         <lastmod>2025-07-11</lastmod>
+         <lastmod>2025-07-15</lastmod>
+    </url>
+    <url>
+         <loc>https://brunseba.github.io/messaging-system-tech-watch/messaging-systems/apache-activemq/</loc>
+         <lastmod>2025-07-15</lastmod>
     </url>
     <url>
          <loc>https://brunseba.github.io/messaging-system-tech-watch/messaging-systems/apache-kafka/</loc>
-         <lastmod>2025-07-11</lastmod>
+         <lastmod>2025-07-15</lastmod>
     </url>
     <url>
          <loc>https://brunseba.github.io/messaging-system-tech-watch/messaging-systems/apache-pulsar/</loc>
-         <lastmod>2025-07-11</lastmod>
+         <lastmod>2025-07-15</lastmod>
     </url>
     <url>
          <loc>https://brunseba.github.io/messaging-system-tech-watch/messaging-systems/aws-sqs-sns/</loc>
-         <lastmod>2025-07-11</lastmod>
+         <lastmod>2025-07-15</lastmod>
     </url>
     <url>
          <loc>https://brunseba.github.io/messaging-system-tech-watch/messaging-systems/ibm-mq/</loc>
-         <lastmod>2025-07-11</lastmod>
+         <lastmod>2025-07-15</lastmod>
     </url>
     <url>
          <loc>https://brunseba.github.io/messaging-system-tech-watch/messaging-systems/mqtt/</loc>
-         <lastmod>2025-07-11</lastmod>
+         <lastmod>2025-07-15</lastmod>
     </url>
     <url>
          <loc>https://brunseba.github.io/messaging-system-tech-watch/messaging-systems/nats/</loc>
-         <lastmod>2025-07-11</lastmod>
+         <lastmod>2025-07-15</lastmod>
     </url>
     <url>
          <loc>https://brunseba.github.io/messaging-system-tech-watch/messaging-systems/rabbitmq/</loc>
-         <lastmod>2025-07-11</lastmod>
+         <lastmod>2025-07-15</lastmod>
     </url>
     <url>
          <loc>https://brunseba.github.io/messaging-system-tech-watch/messaging-systems/redis/</loc>
-         <lastmod>2025-07-11</lastmod>
+         <lastmod>2025-07-15</lastmod>
     </url>
     <url>
          <loc>https://brunseba.github.io/messaging-system-tech-watch/messaging-systems/solace/</loc>
-         <lastmod>2025-07-11</lastmod>
+         <lastmod>2025-07-15</lastmod>
     </url>
     <url>
          <loc>https://brunseba.github.io/messaging-system-tech-watch/reference/glossary/</loc>
-         <lastmod>2025-07-11</lastmod>
+         <lastmod>2025-07-15</lastmod>
     </url>
     <url>
          <loc>https://brunseba.github.io/messaging-system-tech-watch/reference/product-links/</loc>
-         <lastmod>2025-07-11</lastmod>
+         <lastmod>2025-07-15</lastmod>
     </url>
     <url>
          <loc>https://brunseba.github.io/messaging-system-tech-watch/requirements/functional-vs-non-functional/</loc>
-         <lastmod>2025-07-11</lastmod>
+         <lastmod>2025-07-15</lastmod>
     </url>
     <url>
          <loc>https://brunseba.github.io/messaging-system-tech-watch/requirements/requirements-assessment-template/</loc>
-         <lastmod>2025-07-11</lastmod>
+         <lastmod>2025-07-15</lastmod>
     </url>
     <url>
          <loc>https://brunseba.github.io/messaging-system-tech-watch/requirements/requirements-mapping/</loc>
-         <lastmod>2025-07-11</lastmod>
+         <lastmod>2025-07-15</lastmod>
     </url>
     <url>
          <loc>https://brunseba.github.io/messaging-system-tech-watch/solutions/architecture-overview/</loc>
-         <lastmod>2025-07-11</lastmod>
+         <lastmod>2025-07-15</lastmod>
     </url>
     <url>
          <loc>https://brunseba.github.io/messaging-system-tech-watch/solutions/developer-guide/</loc>
-         <lastmod>2025-07-11</lastmod>
+         <lastmod>2025-07-15</lastmod>
     </url>
     <url>
          <loc>https://brunseba.github.io/messaging-system-tech-watch/solutions/product-comparison/</loc>
-         <lastmod>2025-07-11</lastmod>
+         <lastmod>2025-07-15</lastmod>
     </url>
     <url>
          <loc>https://brunseba.github.io/messaging-system-tech-watch/use-cases/enterprise-integration/</loc>
-         <lastmod>2025-07-11</lastmod>
+         <lastmod>2025-07-15</lastmod>
     </url>
     <url>
          <loc>https://brunseba.github.io/messaging-system-tech-watch/use-cases/iot-messaging/</loc>
-         <lastmod>2025-07-11</lastmod>
+         <lastmod>2025-07-15</lastmod>
     </url>
     <url>
          <loc>https://brunseba.github.io/messaging-system-tech-watch/use-cases/microservices/</loc>
-         <lastmod>2025-07-11</lastmod>
+         <lastmod>2025-07-15</lastmod>
     </url>
     <url>
          <loc>https://brunseba.github.io/messaging-system-tech-watch/use-cases/real-time-analytics/</loc>
-         <lastmod>2025-07-11</lastmod>
+         <lastmod>2025-07-15</lastmod>
     </url>
     <url>
          <loc>https://brunseba.github.io/messaging-system-tech-watch/use-cases/service-bus/</loc>
-         <lastmod>2025-07-11</lastmod>
+         <lastmod>2025-07-15</lastmod>
     </url>
 </urlset>
