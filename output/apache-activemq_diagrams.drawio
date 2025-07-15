@@ -1,0 +1,41 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.4 Chrome/138.0.7204.97 Electron/37.2.1 Safari/537.36" version="28.0.4" pages="3">
+  <diagram id="86898da6293548d3" name="Apache Activemq Graph Tb">
+    <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TB\n    subgraph \&quot;ActiveMQ Broker\&quot;\n        B[Broker Engine]\n        \n        subgraph \&quot;Destinations\&quot;\n            Q1[Queue: orders]\n            Q2[Queue: notifications]\n            T1[Topic: events]\n            T2[Topic: alerts]\n        end\n        \n        subgraph \&quot;Message Store\&quot;\n            KS[KahaDB Store]\n            JS[JDBC Store]\n            MS[Memory Store]\n        end\n        \n        subgraph \&quot;Transport Connectors\&quot;\n            OW[OpenWire]\n            ST[STOMP]\n            AM[AMQP]\n            MT[MQTT]\n            WS[WebSocket]\n        end\n    end\n    \n    subgraph \&quot;Clients\&quot;\n        PROD[Producers]\n        CONS[Consumers]\n    end\n    \n    PROD --&gt; OW\n    PROD --&gt; ST\n    PROD --&gt; AM\n    \n    OW --&gt; B\n    ST --&gt; B\n    AM --&gt; B\n    MT --&gt; B\n    WS --&gt; B\n    \n    B --&gt; Q1\n    B --&gt; Q2\n    B --&gt; T1\n    B --&gt; T2\n    \n    B --&gt; KS\n    B --&gt; JS\n    B --&gt; MS\n    \n    Q1 --&gt; CONS\n    Q2 --&gt; CONS\n    T1 --&gt; CONS\n    T2 --&gt; CONS&quot;}" id="b135005b7cc545bb">
+          <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
+            <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="6f292dbc10e5441e" name="Apache Activemq Graph Tb 2">
+    <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TB\n    subgraph \&quot;ActiveMQ Broker\&quot;\n        BE[Broker Engine]\n        \n        subgraph \&quot;Message Store\&quot;\n            KDB[KahaDB]\n            IDX[Index Files]\n            LOG[Log Files]\n        end\n        \n        subgraph \&quot;Memory Management\&quot;\n            MC[Message Cache]\n            PC[Producer Cache]\n            CC[Consumer Cache]\n        end\n        \n        subgraph \&quot;Transport Layer\&quot;\n            TCP[TCP Connector]\n            SSL[SSL Connector]\n            HTTP[HTTP Connector]\n        end\n    end\n    \n    subgraph \&quot;Client Applications\&quot;\n        APP1[Application 1]\n        APP2[Application 2]\n        APP3[Application 3]\n    end\n    \n    APP1 --&gt; TCP\n    APP2 --&gt; SSL\n    APP3 --&gt; HTTP\n    \n    TCP --&gt; BE\n    SSL --&gt; BE\n    HTTP --&gt; BE\n    \n    BE --&gt; KDB\n    BE --&gt; MC\n    \n    KDB --&gt; IDX\n    KDB --&gt; LOG&quot;}" id="79531f48d1644029">
+          <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
+            <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="28340c8d72d444f1" name="Apache Activemq Graph Tb 3">
+    <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TB\n    subgraph \&quot;Broker Network\&quot;\n        subgraph \&quot;Broker 1 (Master)\&quot;\n            B1[Broker Engine 1]\n            S1[Storage 1]\n        end\n        \n        subgraph \&quot;Broker 2 (Slave)\&quot;\n            B2[Broker Engine 2]\n            S2[Storage 2]\n        end\n        \n        subgraph \&quot;Broker 3 (Slave)\&quot;\n            B3[Broker Engine 3]\n            S3[Storage 3]\n        end\n        \n        subgraph \&quot;Network Connectors\&quot;\n            NC1[Network Connector 1]\n            NC2[Network Connector 2]\n            NC3[Network Connector 3]\n        end\n    end\n    \n    subgraph \&quot;Load Balancer\&quot;\n        LB[Load Balancer]\n    end\n    \n    subgraph \&quot;Client Applications\&quot;\n        PROD[Producers]\n        CONS[Consumers]\n    end\n    \n    PROD --&gt; LB\n    CONS --&gt; LB\n    \n    LB --&gt; B1\n    LB --&gt; B2\n    LB --&gt; B3\n    \n    B1 --&gt; S1\n    B2 --&gt; S2\n    B3 --&gt; S3\n    \n    B1 --&gt; NC1\n    B2 --&gt; NC2\n    B3 --&gt; NC3\n    \n    NC1 --&gt; B2\n    NC1 --&gt; B3\n    NC2 --&gt; B1\n    NC2 --&gt; B3\n    NC3 --&gt; B1\n    NC3 --&gt; B2&quot;}" id="0e2e50cb5fb04004">
+          <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
+            <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
