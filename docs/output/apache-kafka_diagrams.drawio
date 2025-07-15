@@ -1,0 +1,54 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.4 Chrome/138.0.7204.97 Electron/37.2.1 Safari/537.36" version="28.0.4" pages="4">
+  <diagram id="865063da85a74156" name="Apache Kafka Graph Tb">
+    <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TB\n    subgraph \&quot;Kafka Cluster\&quot;\n        B[Broker 1]\n        B2[Broker 2]\n        B3[Broker 3]\n    end\n    \n    subgraph \&quot;Topic: user-events\&quot;\n        P1[Partition 0]\n        P2[Partition 1]\n        P3[Partition 2]\n    end\n    \n    subgraph \&quot;Consumer Group\&quot;\n        C1[Consumer 1]\n        C2[Consumer 2]\n        C3[Consumer 3]\n    end\n    \n    PROD[Producer] --&gt; B\n    B --&gt; P1\n    B2 --&gt; P2\n    B3 --&gt; P3\n    \n    P1 --&gt; C1\n    P2 --&gt; C2\n    P3 --&gt; C3&quot;}" id="a0b87229a4434cce">
+          <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
+            <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="66da000d229c4cad" name="Apache Kafka Graph Tb 2">
+    <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TB\n    subgraph \&quot;Kafka Broker\&quot;\n        KS[Kafka Server]\n        KRAFT[KRaft Controller]\n        \n        subgraph \&quot;Storage\&quot;\n            L1[Topic A - Partition 0]\n            L2[Topic A - Partition 1]\n            L3[Topic B - Partition 0]\n        end\n        \n        subgraph \&quot;Network Layer\&quot;\n            API[API Requests]\n            REP[Replication]\n        end\n    end\n    \n    PROD[Producers] --&gt; API\n    API --&gt; KS\n    KS --&gt; L1\n    KS --&gt; L2\n    KS --&gt; L3\n    \n    L1 --&gt; CONS1[Consumer Group 1]\n    L2 --&gt; CONS2[Consumer Group 2]\n    L3 --&gt; CONS3[Consumer Group 3]\n    \n    KRAFT --&gt; KS&quot;}" id="9f275347cbb34eed">
+          <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
+            <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="f794b4da70664c02" name="Apache Kafka Graph Tb 3">
+    <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TB\n    subgraph \&quot;Kafka Cluster\&quot;\n        subgraph \&quot;Broker 1 (Leader)\&quot;\n            B1[Kafka Server 1]\n            S1[Storage 1]\n        end\n        \n        subgraph \&quot;Broker 2 (Follower)\&quot;\n            B2[Kafka Server 2]\n            S2[Storage 2]\n        end\n        \n        subgraph \&quot;Broker 3 (Follower)\&quot;\n            B3[Kafka Server 3]\n            S3[Storage 3]\n        end\n        \n        subgraph \&quot;KRaft Controller Cluster\&quot;\n            KRAFT1[KRaft Controller 1]\n            KRAFT2[KRaft Controller 2]\n            KRAFT3[KRaft Controller 3]\n        end\n    end\n    \n    subgraph \&quot;External Systems\&quot;\n        PROD[Producers]\n        CONS[Consumers]\n        CONN[Kafka Connect]\n        STREAMS[Kafka Streams]\n    end\n    \n    PROD --&gt; B1\n    PROD --&gt; B2\n    PROD --&gt; B3\n    \n    B1 --&gt; S1\n    B2 --&gt; S2\n    B3 --&gt; S3\n    \n    S1 -.-&gt; S2\n    S1 -.-&gt; S3\n    \n    KRAFT1 --&gt; B1\n    KRAFT2 --&gt; B2\n    KRAFT3 --&gt; B3\n    \n    B1 --&gt; CONS\n    B2 --&gt; CONS\n    B3 --&gt; CONS\n    \n    B1 --&gt; CONN\n    B1 --&gt; STREAMS&quot;}" id="4e3c55a793bf4148">
+          <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
+            <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="7692cfb7f5864ab8" name="Apache Kafka Graph Tb 4">
+    <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TB\n    subgraph \&quot;Production Cluster\&quot;\n        subgraph \&quot;Availability Zone 1\&quot;\n            B1[Broker 1]\n            KRAFT1[KRaft Controller 1]\n        end\n        \n        subgraph \&quot;Availability Zone 2\&quot;\n            B2[Broker 2]\n            KRAFT2[KRaft Controller 2]\n        end\n        \n        subgraph \&quot;Availability Zone 3\&quot;\n            B3[Broker 3]\n            KRAFT3[KRaft Controller 3]\n        end\n        \n        subgraph \&quot;Monitoring\&quot;\n            PROM[Prometheus]\n            GRAF[Grafana]\n            ALERT[AlertManager]\n        end\n        \n        subgraph \&quot;Management\&quot;\n            MANAGER[Kafka Manager]\n            SCHEMA[Schema Registry]\n        end\n    end\n    \n    subgraph \&quot;Load Balancer\&quot;\n        LB[Load Balancer]\n    end\n    \n    subgraph \&quot;Applications\&quot;\n        APP1[App 1]\n        APP2[App 2]\n        APP3[App 3]\n    end\n    \n    APP1 --&gt; LB\n    APP2 --&gt; LB\n    APP3 --&gt; LB\n    \n    LB --&gt; B1\n    LB --&gt; B2\n    LB --&gt; B3\n    \n    B1 -.-&gt; B2\n    B2 -.-&gt; B3\n    B3 -.-&gt; B1\n    \n    KRAFT1 -.-&gt; KRAFT2\n    KRAFT2 -.-&gt; KRAFT3\n    KRAFT3 -.-&gt; KRAFT1\n    \n    B1 --&gt; PROM\n    B2 --&gt; PROM\n    B3 --&gt; PROM\n    \n    PROM --&gt; GRAF\n    PROM --&gt; ALERT&quot;}" id="1b226c6975d846ff">
+          <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
+            <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

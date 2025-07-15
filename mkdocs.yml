@@ -104,6 +104,7 @@ edit_uri: edit/main/docs/
 
 nav:
   - Home: index.md
+  - Materials: materials.md
   - Requirements Analysis:
     - Functional vs Non-Functional: requirements/functional-vs-non-functional.md
     - Requirements Mapping: requirements/requirements-mapping.md
