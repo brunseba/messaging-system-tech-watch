@@ -4,7 +4,7 @@
     This guide helps business units systematically choose the right messaging system based on their specific requirements, technical constraints, and business goals.
 
 !!! note "Version Information"
-    **Version:** 2.3.3 | **License:** MIT | **Last Updated:** July 2025
+    **Version:** 2.4.0 | **License:** MIT | **Last Updated:** July 2025
 
 ## Overview
 
