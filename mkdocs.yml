@@ -79,7 +79,6 @@ plugins:
       repository: https://github.com/brunseba/messaging-system-tech-watch
       branch: main
       docs_path: docs/
-      enabled: !ENV [GITHUB_TOKEN, false]
   - mermaid2:
       arguments:
         theme: auto
