@@ -18,7 +18,7 @@
         <link rel="prev" href="../deployment-guide/">
       
       
-        <link rel="next" href="../message-format-standards/">
+        <link rel="next" href="../messaging-strategies/">
       
       
       <link rel="icon" href="../../assets/favicon.ico">
@@ -958,6 +958,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#replay-mechanism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Replay Mechanism
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dead-letter-queues-dlq" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dead-Letter Queues (DLQ)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#data-management" class="md-nav__link">
     <span class="md-ellipsis">
       Data Management
@@ -981,6 +999,48 @@
       Compliance and Regulations
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-data-quality-and-schema-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security, Data Quality, and Schema Registry
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security, Data Quality, and Schema Registry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Quality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schema-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema Registry
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1015,6 +1075,52 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../messaging-strategies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Messaging Strategies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security-data-quality-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security, Data Quality & Registry
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1683,6 +1789,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#replay-mechanism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Replay Mechanism
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dead-letter-queues-dlq" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dead-Letter Queues (DLQ)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#data-management" class="md-nav__link">
     <span class="md-ellipsis">
       Data Management
@@ -1706,6 +1830,48 @@
       Compliance and Regulations
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-data-quality-and-schema-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security, Data Quality, and Schema Registry
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security, Data Quality, and Schema Registry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Quality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schema-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema Registry
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1781,6 +1947,18 @@
 <li><strong>Fine-Tune Parameters</strong>: Adjust parameters for queue sizes, timeouts, and retries as per workload.</li>
 <li><strong>Efficient Storage</strong>: Use appropriate storage solutions for durability and speed requirements.</li>
 </ul>
+<h2 id="replay-mechanism">Replay Mechanism<a class="headerlink" href="#replay-mechanism" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Definition</strong>: Allows messages to be replayed from a specific point to recover from errors or reprocess data.</li>
+<li><strong>Use Cases</strong>: Convenient for auditing, debugging, and data analysis.</li>
+<li><strong>Implementation</strong>: Ensure your system supports timestamp or offset-based replay capabilities. Kafka supports this natively.</li>
+</ul>
+<h2 id="dead-letter-queues-dlq">Dead-Letter Queues (DLQ)<a class="headerlink" href="#dead-letter-queues-dlq" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Definition</strong>: A special queue for messages that cannot be processed successfully.</li>
+<li><strong>Purpose</strong>: Prevents message loss by storing unprocessable messages separately, allowing for later review or reprocessing.</li>
+<li><strong>Implementation</strong>: Configure DLQs to handle retries and errors gracefully and ensure monitoring and alerting.</li>
+</ul>
 <h2 id="data-management">Data Management<a class="headerlink" href="#data-management" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Governance</strong>: Implement data governance policies to ensure data privacy and compliance.</li>
@@ -1798,6 +1976,25 @@
 <ul>
 <li><strong>Adhere to Standards</strong>: Follow industry standards and regulations (e.g., GDPR, HIPAA).</li>
 <li><strong>Audit Trails</strong>: Maintain comprehensive audit trails for all system interactions.</li>
+</ul>
+<h2 id="security-data-quality-and-schema-registry">Security, Data Quality, and Schema Registry<a class="headerlink" href="#security-data-quality-and-schema-registry" title="Permanent link">&para;</a></h2>
+<h3 id="security-management">Security Management<a class="headerlink" href="#security-management" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Authentication and Authorization</strong>: Implement robust auth mechanisms using OAuth, JWT, or similar standards.</li>
+<li><strong>Data Encryption</strong>: Enable encryption at rest and in transit using protocols like TLS.</li>
+<li><strong>Access Controls</strong>: Manage access with role-based access controls and ensure minimal privilege principle.</li>
+</ul>
+<h3 id="data-quality">Data Quality<a class="headerlink" href="#data-quality" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Validation</strong>: Ensure all incoming and outgoing messages adhere to defined schemas.</li>
+<li><strong>Monitoring</strong>: Set up monitoring to quickly detect anomalies or inconsistencies in data.</li>
+<li><strong>Error Handling</strong>: Implement retry and compensation mechanisms for error-prone operations.</li>
+</ul>
+<h3 id="schema-registry">Schema Registry<a class="headerlink" href="#schema-registry" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Centralized Schema Management</strong>: Use a schema registry to manage and validate message schemas, ensuring consistent data formats.</li>
+<li><strong>Version Control</strong>: Maintain schemas with versioning to support backward and forward compatibility.</li>
+<li><strong>Integration</strong>: Utilize built-in integrations with messaging systems that support schema registries like Apache Kafka or AWS Glue.</li>
 </ul>
 <h2 id="collaboration-and-training">Collaboration and Training<a class="headerlink" href="#collaboration-and-training" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1848,7 +2045,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2025 Business Technology Team | Licensed under MIT License
+      Copyright © 2025 Business Technology Team | Licensed under MIT License
     </div>
   
   
@@ -1878,7 +2075,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.path", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips", "header.autohide"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"current": "2.3.3", "default": "latest", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.path", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips", "header.autohide"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"current": "2.4.0", "default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
