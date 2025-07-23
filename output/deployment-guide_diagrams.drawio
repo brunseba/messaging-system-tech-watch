@@ -1,10 +1,10 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.4 Chrome/138.0.7204.97 Electron/37.2.1 Safari/537.36" version="28.0.4" pages="9">
-  <diagram id="f8d3bf4c27014682" name="Deployment Guide Graph Td ">
+  <diagram id="f47114bf93784c8d" name="Deployment Guide Graph Td ">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD; \n  Kafka --&gt;|manages| KafkaConnect;\n  Kafka --&gt;|manages| KafkaTopic;\n  Kafka --&gt;|manages| KafkaUser;\n  Kafka --&gt;|manages| KafkaMirrorMaker;\n  Kafka --&gt;|manages| KafkaMirrorMaker2;\n  Kafka --&gt;|manages| KafkaBridge;\n  Kafka --&gt;|manages| KafkaConnector;\n  \n  Kafka --&gt;|configures| KafkaProps[\&quot;replicas&lt;br/&gt;version&lt;br/&gt;listeners&lt;br/&gt;config&lt;br/&gt;storage&lt;br/&gt;resources&lt;br/&gt;jvmOptions&lt;br/&gt;logging\&quot;];\n  KafkaConnect --&gt;|configures| KCProps[\&quot;replicas&lt;br/&gt;version&lt;br/&gt;bootstrapServers&lt;br/&gt;config&lt;br/&gt;resources&lt;br/&gt;authentication&lt;br/&gt;tls\&quot;];\n  KafkaTopic --&gt;|configures| KTProps[\&quot;partitions&lt;br/&gt;replicas&lt;br/&gt;config&lt;br/&gt;topicName\&quot;];\n  KafkaUser --&gt;|configures| KUProps[\&quot;authentication&lt;br/&gt;authorization&lt;br/&gt;quotas&lt;br/&gt;template\&quot;];\n  KafkaMirrorMaker --&gt;|configures| KMMProps[\&quot;replicas&lt;br/&gt;consumer&lt;br/&gt;producer&lt;br/&gt;whitelist\&quot;];\n  KafkaMirrorMaker2 --&gt;|configures| KMM2Props[\&quot;replicas&lt;br/&gt;clusters&lt;br/&gt;mirrors&lt;br/&gt;connectCluster\&quot;];\n  KafkaBridge --&gt;|configures| KBProps[\&quot;replicas&lt;br/&gt;bootstrapServers&lt;br/&gt;http&lt;br/&gt;cors\&quot;];\n  KafkaConnector --&gt;|configures| KCOProps[\&quot;class&lt;br/&gt;config&lt;br/&gt;tasksMax&lt;br/&gt;pause\&quot;];&quot;}" id="3a942a07900146e0">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD; \n  Kafka --&gt;|manages| KafkaConnect;\n  Kafka --&gt;|manages| KafkaTopic;\n  Kafka --&gt;|manages| KafkaUser;\n  Kafka --&gt;|manages| KafkaMirrorMaker;\n  Kafka --&gt;|manages| KafkaMirrorMaker2;\n  Kafka --&gt;|manages| KafkaBridge;\n  Kafka --&gt;|manages| KafkaConnector;\n  \n  Kafka --&gt;|configures| KafkaProps[\&quot;replicas&lt;br/&gt;version&lt;br/&gt;listeners&lt;br/&gt;config&lt;br/&gt;storage&lt;br/&gt;resources&lt;br/&gt;jvmOptions&lt;br/&gt;logging\&quot;];\n  KafkaConnect --&gt;|configures| KCProps[\&quot;replicas&lt;br/&gt;version&lt;br/&gt;bootstrapServers&lt;br/&gt;config&lt;br/&gt;resources&lt;br/&gt;authentication&lt;br/&gt;tls\&quot;];\n  KafkaTopic --&gt;|configures| KTProps[\&quot;partitions&lt;br/&gt;replicas&lt;br/&gt;config&lt;br/&gt;topicName\&quot;];\n  KafkaUser --&gt;|configures| KUProps[\&quot;authentication&lt;br/&gt;authorization&lt;br/&gt;quotas&lt;br/&gt;template\&quot;];\n  KafkaMirrorMaker --&gt;|configures| KMMProps[\&quot;replicas&lt;br/&gt;consumer&lt;br/&gt;producer&lt;br/&gt;whitelist\&quot;];\n  KafkaMirrorMaker2 --&gt;|configures| KMM2Props[\&quot;replicas&lt;br/&gt;clusters&lt;br/&gt;mirrors&lt;br/&gt;connectCluster\&quot;];\n  KafkaBridge --&gt;|configures| KBProps[\&quot;replicas&lt;br/&gt;bootstrapServers&lt;br/&gt;http&lt;br/&gt;cors\&quot;];\n  KafkaConnector --&gt;|configures| KCOProps[\&quot;class&lt;br/&gt;config&lt;br/&gt;tasksMax&lt;br/&gt;pause\&quot;];&quot;}" id="b0611556da214f0a">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>
@@ -12,12 +12,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="5f0e1df24db9464a" name="Deployment Guide Graph Td  2">
+  <diagram id="96f0dcf6da90424c" name="Deployment Guide Graph Td  2">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD;\n  ConfluentPlatform --&gt;|includes| SchemaRegistry;\n  ConfluentPlatform --&gt;|includes| KafkaTopic;\n  ConfluentPlatform --&gt;|includes| KafkaRestProxy;\n  ConfluentPlatform --&gt;|includes| Connect;\n  ConfluentPlatform --&gt;|includes| KsqlDB;\n  ConfluentPlatform --&gt;|includes| ControlCenter;\n  \n  ConfluentPlatform --&gt;|configures| CPProps[\&quot;kafka&lt;br/&gt;zookeeper&lt;br/&gt;schemaRegistry&lt;br/&gt;connect&lt;br/&gt;ksqldb&lt;br/&gt;controlCenter&lt;br/&gt;dependencies\&quot;];\n  SchemaRegistry --&gt;|configures| SRProps[\&quot;replicas&lt;br/&gt;image&lt;br/&gt;authentication&lt;br/&gt;authorization&lt;br/&gt;tls&lt;br/&gt;dependencies\&quot;];\n  KafkaTopic --&gt;|configures| KTProps[\&quot;partitions&lt;br/&gt;replicas&lt;br/&gt;configs&lt;br/&gt;kafkaClusterRef\&quot;];\n  KafkaRestProxy --&gt;|configures| KRPProps[\&quot;replicas&lt;br/&gt;image&lt;br/&gt;kafkaClusterRef&lt;br/&gt;schemaRegistryRef\&quot;];\n  Connect --&gt;|configures| CProps[\&quot;replicas&lt;br/&gt;image&lt;br/&gt;kafkaClusterRef&lt;br/&gt;schemaRegistryRef&lt;br/&gt;dependencies\&quot;];\n  KsqlDB --&gt;|configures| KSProps[\&quot;replicas&lt;br/&gt;image&lt;br/&gt;kafkaClusterRef&lt;br/&gt;schemaRegistryRef&lt;br/&gt;dependencies\&quot;];\n  ControlCenter --&gt;|configures| CCProps[\&quot;replicas&lt;br/&gt;image&lt;br/&gt;kafkaClusterRef&lt;br/&gt;schemaRegistryRef&lt;br/&gt;dependencies\&quot;];&quot;}" id="6a241a8bd35a4670">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD;\n  ConfluentPlatform --&gt;|includes| SchemaRegistry;\n  ConfluentPlatform --&gt;|includes| KafkaTopic;\n  ConfluentPlatform --&gt;|includes| KafkaRestProxy;\n  ConfluentPlatform --&gt;|includes| Connect;\n  ConfluentPlatform --&gt;|includes| KsqlDB;\n  ConfluentPlatform --&gt;|includes| ControlCenter;\n  \n  ConfluentPlatform --&gt;|configures| CPProps[\&quot;kafka&lt;br/&gt;zookeeper&lt;br/&gt;schemaRegistry&lt;br/&gt;connect&lt;br/&gt;ksqldb&lt;br/&gt;controlCenter&lt;br/&gt;dependencies\&quot;];\n  SchemaRegistry --&gt;|configures| SRProps[\&quot;replicas&lt;br/&gt;image&lt;br/&gt;authentication&lt;br/&gt;authorization&lt;br/&gt;tls&lt;br/&gt;dependencies\&quot;];\n  KafkaTopic --&gt;|configures| KTProps[\&quot;partitions&lt;br/&gt;replicas&lt;br/&gt;configs&lt;br/&gt;kafkaClusterRef\&quot;];\n  KafkaRestProxy --&gt;|configures| KRPProps[\&quot;replicas&lt;br/&gt;image&lt;br/&gt;kafkaClusterRef&lt;br/&gt;schemaRegistryRef\&quot;];\n  Connect --&gt;|configures| CProps[\&quot;replicas&lt;br/&gt;image&lt;br/&gt;kafkaClusterRef&lt;br/&gt;schemaRegistryRef&lt;br/&gt;dependencies\&quot;];\n  KsqlDB --&gt;|configures| KSProps[\&quot;replicas&lt;br/&gt;image&lt;br/&gt;kafkaClusterRef&lt;br/&gt;schemaRegistryRef&lt;br/&gt;dependencies\&quot;];\n  ControlCenter --&gt;|configures| CCProps[\&quot;replicas&lt;br/&gt;image&lt;br/&gt;kafkaClusterRef&lt;br/&gt;schemaRegistryRef&lt;br/&gt;dependencies\&quot;];&quot;}" id="59085e253eb344c8">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>
@@ -25,12 +25,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="4b4a960a7d2c487b" name="Deployment Guide Graph Td  3">
+  <diagram id="a643fa962301479c" name="Deployment Guide Graph Td  3">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD;\n  RabbitmqCluster --&gt;|manages| User;\n  RabbitmqCluster --&gt;|manages| Vhost;\n  RabbitmqCluster --&gt;|manages| Queue;\n  RabbitmqCluster --&gt;|manages| Exchange;\n  RabbitmqCluster --&gt;|manages| Binding;\n  RabbitmqCluster --&gt;|manages| Policy;\n  RabbitmqCluster --&gt;|manages| Permission;\n  RabbitmqCluster --&gt;|manages| SchemaReplication;\n  RabbitmqCluster --&gt;|manages| Shovel;\n  RabbitmqCluster --&gt;|manages| Federation;\n  RabbitmqCluster --&gt;|manages| TopicOperator;\n  RabbitmqCluster --&gt;|manages| Operator;\n  \n  RabbitmqCluster --&gt;|configures| RCProps[\&quot;replicas&lt;br/&gt;image&lt;br/&gt;service&lt;br/&gt;persistence&lt;br/&gt;resources&lt;br/&gt;rabbitmq&lt;br/&gt;tls&lt;br/&gt;override\&quot;];\n  User --&gt;|configures| UProps[\&quot;username&lt;br/&gt;password&lt;br/&gt;passwordHash&lt;br/&gt;tags&lt;br/&gt;rabbitmqClusterReference\&quot;];\n  Vhost --&gt;|configures| VProps[\&quot;name&lt;br/&gt;defaultQueueType&lt;br/&gt;tags&lt;br/&gt;tracing&lt;br/&gt;rabbitmqClusterReference\&quot;];\n  Queue --&gt;|configures| QProps[\&quot;name&lt;br/&gt;vhost&lt;br/&gt;type&lt;br/&gt;durable&lt;br/&gt;autoDelete&lt;br/&gt;arguments&lt;br/&gt;rabbitmqClusterReference\&quot;];\n  Exchange --&gt;|configures| EProps[\&quot;name&lt;br/&gt;vhost&lt;br/&gt;type&lt;br/&gt;durable&lt;br/&gt;autoDelete&lt;br/&gt;arguments&lt;br/&gt;rabbitmqClusterReference\&quot;];\n  Binding --&gt;|configures| BProps[\&quot;source&lt;br/&gt;destination&lt;br/&gt;destinationType&lt;br/&gt;routingKey&lt;br/&gt;arguments&lt;br/&gt;vhost&lt;br/&gt;rabbitmqClusterReference\&quot;];\n  Policy --&gt;|configures| PProps[\&quot;name&lt;br/&gt;vhost&lt;br/&gt;pattern&lt;br/&gt;applyTo&lt;br/&gt;definition&lt;br/&gt;priority&lt;br/&gt;rabbitmqClusterReference\&quot;];\n  Permission --&gt;|configures| PermProps[\&quot;user&lt;br/&gt;vhost&lt;br/&gt;permissions&lt;br/&gt;rabbitmqClusterReference\&quot;];\n  SchemaReplication --&gt;|configures| SRProps[\&quot;name&lt;br/&gt;endpoints&lt;br/&gt;upstreamSet&lt;br/&gt;ackMode&lt;br/&gt;rabbitmqClusterReference\&quot;];\n  Shovel --&gt;|configures| ShProps[\&quot;name&lt;br/&gt;vhost&lt;br/&gt;uriSecret&lt;br/&gt;sourceQueue&lt;br/&gt;destQueue&lt;br/&gt;rabbitmqClusterReference\&quot;];\n  Federation --&gt;|configures| FProps[\&quot;name&lt;br/&gt;vhost&lt;br/&gt;uriSecret&lt;br/&gt;expires&lt;br/&gt;messageTTL&lt;br/&gt;rabbitmqClusterReference\&quot;];\n  TopicOperator --&gt;|configures| TOProps[\&quot;name&lt;br/&gt;vhost&lt;br/&gt;config&lt;br/&gt;bindings&lt;br/&gt;rabbitmqClusterReference\&quot;];\n  Operator --&gt;|configures| OpProps[\&quot;name&lt;br/&gt;config&lt;br/&gt;permissions&lt;br/&gt;rabbitmqClusterReference\&quot;];&quot;}" id="e813a0f6d46a4f92">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD;\n  RabbitmqCluster --&gt;|manages| User;\n  RabbitmqCluster --&gt;|manages| Vhost;\n  RabbitmqCluster --&gt;|manages| Queue;\n  RabbitmqCluster --&gt;|manages| Exchange;\n  RabbitmqCluster --&gt;|manages| Binding;\n  RabbitmqCluster --&gt;|manages| Policy;\n  RabbitmqCluster --&gt;|manages| Permission;\n  RabbitmqCluster --&gt;|manages| SchemaReplication;\n  RabbitmqCluster --&gt;|manages| Shovel;\n  RabbitmqCluster --&gt;|manages| Federation;\n  RabbitmqCluster --&gt;|manages| TopicOperator;\n  RabbitmqCluster --&gt;|manages| Operator;\n  \n  RabbitmqCluster --&gt;|configures| RCProps[\&quot;replicas&lt;br/&gt;image&lt;br/&gt;service&lt;br/&gt;persistence&lt;br/&gt;resources&lt;br/&gt;rabbitmq&lt;br/&gt;tls&lt;br/&gt;override\&quot;];\n  User --&gt;|configures| UProps[\&quot;username&lt;br/&gt;password&lt;br/&gt;passwordHash&lt;br/&gt;tags&lt;br/&gt;rabbitmqClusterReference\&quot;];\n  Vhost --&gt;|configures| VProps[\&quot;name&lt;br/&gt;defaultQueueType&lt;br/&gt;tags&lt;br/&gt;tracing&lt;br/&gt;rabbitmqClusterReference\&quot;];\n  Queue --&gt;|configures| QProps[\&quot;name&lt;br/&gt;vhost&lt;br/&gt;type&lt;br/&gt;durable&lt;br/&gt;autoDelete&lt;br/&gt;arguments&lt;br/&gt;rabbitmqClusterReference\&quot;];\n  Exchange --&gt;|configures| EProps[\&quot;name&lt;br/&gt;vhost&lt;br/&gt;type&lt;br/&gt;durable&lt;br/&gt;autoDelete&lt;br/&gt;arguments&lt;br/&gt;rabbitmqClusterReference\&quot;];\n  Binding --&gt;|configures| BProps[\&quot;source&lt;br/&gt;destination&lt;br/&gt;destinationType&lt;br/&gt;routingKey&lt;br/&gt;arguments&lt;br/&gt;vhost&lt;br/&gt;rabbitmqClusterReference\&quot;];\n  Policy --&gt;|configures| PProps[\&quot;name&lt;br/&gt;vhost&lt;br/&gt;pattern&lt;br/&gt;applyTo&lt;br/&gt;definition&lt;br/&gt;priority&lt;br/&gt;rabbitmqClusterReference\&quot;];\n  Permission --&gt;|configures| PermProps[\&quot;user&lt;br/&gt;vhost&lt;br/&gt;permissions&lt;br/&gt;rabbitmqClusterReference\&quot;];\n  SchemaReplication --&gt;|configures| SRProps[\&quot;name&lt;br/&gt;endpoints&lt;br/&gt;upstreamSet&lt;br/&gt;ackMode&lt;br/&gt;rabbitmqClusterReference\&quot;];\n  Shovel --&gt;|configures| ShProps[\&quot;name&lt;br/&gt;vhost&lt;br/&gt;uriSecret&lt;br/&gt;sourceQueue&lt;br/&gt;destQueue&lt;br/&gt;rabbitmqClusterReference\&quot;];\n  Federation --&gt;|configures| FProps[\&quot;name&lt;br/&gt;vhost&lt;br/&gt;uriSecret&lt;br/&gt;expires&lt;br/&gt;messageTTL&lt;br/&gt;rabbitmqClusterReference\&quot;];\n  TopicOperator --&gt;|configures| TOProps[\&quot;name&lt;br/&gt;vhost&lt;br/&gt;config&lt;br/&gt;bindings&lt;br/&gt;rabbitmqClusterReference\&quot;];\n  Operator --&gt;|configures| OpProps[\&quot;name&lt;br/&gt;config&lt;br/&gt;permissions&lt;br/&gt;rabbitmqClusterReference\&quot;];&quot;}" id="0043e2a9c06a45c6">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>
@@ -38,12 +38,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="25bc7f627d5848d9" name="Deployment Guide Graph Td  4">
+  <diagram id="eba7ee740a854e44" name="Deployment Guide Graph Td  4">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD;\n  PulsarCluster --&gt;|manages| PulsarTenant;\n  PulsarTenant --&gt;|includes| PulsarNamespace;\n  PulsarCluster --&gt;|configures| Properties1[Property1, Property2];\n  PulsarTenant --&gt;|configures| Properties2[Property3, Property4];\n  PulsarNamespace --&gt;|configures| Properties3[Property5, Property6];&quot;}" id="a9176a52790f4102">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD;\n  PulsarCluster --&gt;|manages| PulsarTenant;\n  PulsarTenant --&gt;|includes| PulsarNamespace;\n  PulsarCluster --&gt;|configures| Properties1[Property1, Property2];\n  PulsarTenant --&gt;|configures| Properties2[Property3, Property4];\n  PulsarNamespace --&gt;|configures| Properties3[Property5, Property6];&quot;}" id="79ebc67f0973474d">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>
@@ -51,12 +51,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="438ee527525945d5" name="Deployment Guide Graph Td  5">
+  <diagram id="e9fda430d4164fad" name="Deployment Guide Graph Td  5">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD;\n  NatsCluster --&gt;|manages| NatsServiceRole;\n  NatsCluster --&gt;|configures| Properties1[Property1, Property2];\n  NatsServiceRole --&gt;|configures| Properties2[Property3, Property4];&quot;}" id="2d1eb0128bf44122">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD;\n  NatsCluster --&gt;|manages| NatsServiceRole;\n  NatsCluster --&gt;|configures| Properties1[Property1, Property2];\n  NatsServiceRole --&gt;|configures| Properties2[Property3, Property4];&quot;}" id="4a54e66d5f204bed">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>
@@ -64,12 +64,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="c3d102eabf70414c" name="Deployment Guide Graph Td  6">
+  <diagram id="16630d1e10e94052" name="Deployment Guide Graph Td  6">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD;\n  RedisEnterpriseCluster --&gt;|configures| Properties1[Property1, Property2, Property3];&quot;}" id="160bd7d6c44b44d9">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD;\n  RedisEnterpriseCluster --&gt;|configures| Properties1[Property1, Property2, Property3];&quot;}" id="8bcdc883f9814450">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>
@@ -77,12 +77,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="5c1d148654804b6e" name="Deployment Guide Graph Td  7">
+  <diagram id="ca7a405d4aef4551" name="Deployment Guide Graph Td  7">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD;\n  MQQueueManager --&gt;|configures| Properties1[Property1, Property2];&quot;}" id="9946101f337f4a24">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD;\n  MQQueueManager --&gt;|configures| Properties1[Property1, Property2];&quot;}" id="9d511ae5b3b146c0">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>
@@ -90,12 +90,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="be119e3d502b4d3e" name="Deployment Guide Graph Td  8">
+  <diagram id="4ab4ea6ecc7a4160" name="Deployment Guide Graph Td  8">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD;\n  SolacePubSub --&gt;|configures| Properties1[Property1, Property2, Property3];&quot;}" id="3f1ee1f6e942467b">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD;\n  SolacePubSub --&gt;|configures| Properties1[Property1, Property2, Property3];&quot;}" id="38de5f9388ba4c6d">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>
@@ -103,12 +103,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="868cf7db80de4b92" name="Deployment Guide Graph Td  9">
+  <diagram id="f996672e90184cba" name="Deployment Guide Graph Td  9">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD;\n  EMQX --&gt;|configures| Properties1[Property1, Property2, Property3, Property4];&quot;}" id="407a1343d40e496a">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD;\n  EMQX --&gt;|configures| Properties1[Property1, Property2, Property3, Property4];&quot;}" id="0c553fc61d8d4afe">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>

@@ -1,10 +1,10 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.4 Chrome/138.0.7204.97 Electron/37.2.1 Safari/537.36" version="28.0.4" pages="3">
-  <diagram id="c1e3b69fcaaa48f1" name="Solace Graph Tb">
+  <diagram id="b286804a17fd408d" name="Solace Graph Tb">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TB\n    subgraph \&quot;Solace Message Broker\&quot;\n        LL[Line Layer]\n        VLAN[Virtual LAN]\n        QNET[Queue Network]\n        QUEUES[Queues]\n    end\n    \n    subgraph \&quot;Protocols\&quot;\n        AMQP[AMQP 1.0]\n        MQTT[MQTT 3.1.1]\n        REST[HTTP REST]\n        WS[WebSocket]\n        JMS[JMS]\n    end\n\n    subgraph \&quot;Publishers\&quot;\n        PUB[Publishers]\n    end\n\n    subgraph \&quot;Subscribers\&quot;\n        SUB[Subscribers]\n    end\n\n    PUB --\\ AMQP 1.0, MQTT 3.1.1, REST, HTTP, JMS --\\ LL\n    LL --\\ VLAN\n    VLAN --\\ QNET\n    QUEUES --\\ SUB&quot;}" id="b0ee0ebfcff642f6">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TB\n    subgraph \&quot;Solace Message Broker\&quot;\n        LL[Line Layer]\n        VLAN[Virtual LAN]\n        QNET[Queue Network]\n        QUEUES[Queues]\n    end\n    \n    subgraph \&quot;Protocols\&quot;\n        AMQP[AMQP 1.0]\n        MQTT[MQTT 3.1.1]\n        REST[HTTP REST]\n        WS[WebSocket]\n        JMS[JMS]\n    end\n\n    subgraph \&quot;Publishers\&quot;\n        PUB[Publishers]\n    end\n\n    subgraph \&quot;Subscribers\&quot;\n        SUB[Subscribers]\n    end\n\n    PUB --\\ AMQP 1.0, MQTT 3.1.1, REST, HTTP, JMS --\\ LL\n    LL --\\ VLAN\n    VLAN --\\ QNET\n    QUEUES --\\ SUB&quot;}" id="bca4407e4aa04fdd">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>
@@ -12,12 +12,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="8905076997704a5a" name="Solace Graph Tb 2">
+  <diagram id="d6e35d9e23de4728" name="Solace Graph Tb 2">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TB\n   subgraph \&quot;Solace Broker\&quot;\n      ROUTER[Message Router]\n      VIRT[Virtual Routers]\n      PROXY[Proxy Services]\n      TENANT[Multi-Tenant Nats]\n   end\n\n   subgraph \&quot;Edge Services\&quot;\n      MQTT[MQTT Gateways]\n      AMQP[AMQP Gateways]\n      REST[HTTP Gateways]\n   end\n\n   ROUTER -- \\ VIRT\n   PROXY --\\ VIRT\n   TENANT --\\ VIRT\n\n   MQTT --\\ ROUTER\n   AMQP --\\ ROUTER\n   REST --\\ ROUTER&quot;}" id="e8256a731716402b">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TB\n   subgraph \&quot;Solace Broker\&quot;\n      ROUTER[Message Router]\n      VIRT[Virtual Routers]\n      PROXY[Proxy Services]\n      TENANT[Multi-Tenant Nats]\n   end\n\n   subgraph \&quot;Edge Services\&quot;\n      MQTT[MQTT Gateways]\n      AMQP[AMQP Gateways]\n      REST[HTTP Gateways]\n   end\n\n   ROUTER -- \\ VIRT\n   PROXY --\\ VIRT\n   TENANT --\\ VIRT\n\n   MQTT --\\ ROUTER\n   AMQP --\\ ROUTER\n   REST --\\ ROUTER&quot;}" id="c02a6aee8d9f4aaf">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>
@@ -25,12 +25,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="b3ac5ec9c28c440f" name="Solace Graph Tb 3">
+  <diagram id="db40a52451474879" name="Solace Graph Tb 3">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TB\n    subgraph \&quot;Region 1\&quot;\n        R1[Solace Instance 1]\n        LB[Load Balancer]\n    end\n\n    subgraph \&quot;Region 2\&quot;\n        R2[Solace Instance 2]\n    end\n    \n    subgraph \&quot;Region 3\&quot;\n        R3[Solace Instance 3]\n    end\n\n    R1 --| replication |-- R2\n    R2 --| replication |-- R3\n    R3 --| replication |-- R1\n\n    LB --| traffic |-- R1\n    LB --| traffic |-- R2\n    LB --| traffic |-- R3&quot;}" id="37b451f0b4584bcb">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TB\n    subgraph \&quot;Region 1\&quot;\n        R1[Solace Instance 1]\n        LB[Load Balancer]\n    end\n\n    subgraph \&quot;Region 2\&quot;\n        R2[Solace Instance 2]\n    end\n    \n    subgraph \&quot;Region 3\&quot;\n        R3[Solace Instance 3]\n    end\n\n    R1 --| replication |-- R2\n    R2 --| replication |-- R3\n    R3 --| replication |-- R1\n\n    LB --| traffic |-- R1\n    LB --| traffic |-- R2\n    LB --| traffic |-- R3&quot;}" id="bea78a919f8e4b1a">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>
