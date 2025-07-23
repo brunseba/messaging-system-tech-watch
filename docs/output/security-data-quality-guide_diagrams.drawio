@@ -1,10 +1,10 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.4 Chrome/138.0.7204.97 Electron/37.2.1 Safari/537.36" version="28.0.4" pages="4">
-  <diagram id="144fba137edf4da7" name="Microservices Graph Td">
+  <diagram id="6921f524b5f146e5" name="Security Data Quality Guide Graph Tb">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD \n    A[User Service] --&gt;|Event| MB[Message Broker]\n    B[Order Service] --&gt;|Event| MB\n    C[Payment Service] --&gt;|Event| MB\n    D[Inventory Service] --&gt;|Event| MB\n    \n    MB --&gt;|Event| A\n    MB --&gt;|Event| B\n    MB --&gt;|Event| C\n    MB --&gt;|Event| D\n    \n    MB --&gt;|Event| E[Notification Service]\n    MB --&gt;|Event| F[Analytics Service]&quot;}" id="906b86ec9d294d2d">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TB\n    subgraph \&quot;Authentication Layers\&quot;\n        A1[API Gateway Authentication]\n        A2[Message Broker Authentication]\n        A3[Application-Level Authentication]\n    end\n    \n    subgraph \&quot;Authorization Layers\&quot;\n        B1[Topic/Queue Permissions]\n        B2[Resource-Based Access Control]\n        B3[Role-Based Access Control]\n    end\n    \n    CLIENT[Client Application] --&gt; A1\n    A1 --&gt; A2\n    A2 --&gt; A3\n    A3 --&gt; B1\n    B1 --&gt; B2\n    B2 --&gt; B3\n    B3 --&gt; BROKER[Message Broker]&quot;}" id="8ee98e166be643f9">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>
@@ -12,12 +12,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="e148bf60173c4c43" name="Microservices Sequencediagram">
+  <diagram id="02b4b0144f9d406d" name="Security Data Quality Guide Graph Lr">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;sequenceDiagram\n    participant Order as Order Service\n    participant Broker as Message Broker\n    participant Payment as Payment Service\n    participant Inventory as Inventory Service\n    \n    Order-&gt;&gt;Broker: OrderCreated Event\n    Broker-&gt;&gt;Payment: OrderCreated Event\n    Broker-&gt;&gt;Inventory: OrderCreated Event\n    Payment-&gt;&gt;Broker: PaymentProcessed Event\n    Inventory-&gt;&gt;Broker: InventoryReserved Event&quot;}" id="42f806be118643e4">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph LR\n    subgraph \&quot;Producer Side\&quot;\n        P[Producer] --&gt; SV[Schema Validation]\n        SV --&gt; SR[Schema Registry]\n        SV --&gt; E[Encode/Serialize]\n        E --&gt; MB[Message Broker]\n    end\n    \n    subgraph \&quot;Consumer Side\&quot;\n        MB --&gt; D[Decode/Deserialize]\n        D --&gt; SV2[Schema Validation]\n        SV2 --&gt; SR\n        SV2 --&gt; C[Consumer]\n        SV2 --&gt; DLQ[Dead Letter Queue]\n    end\n    \n    SV2 --&gt;|Validation Failed| DLQ\n    SV2 --&gt;|Validation Passed| C&quot;}" id="72403d07de8148b2">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>
@@ -25,12 +25,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="a988c4a5ec12426a" name="Microservices Sequencediagram 2">
+  <diagram id="91074c430c674e89" name="Security Data Quality Guide Graph Tb 2">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;sequenceDiagram\n    participant Client as Client Service\n    participant Broker as Message Broker\n    participant Server as Server Service\n    \n    Client-&gt;&gt;Broker: Request\n    Broker-&gt;&gt;Server: Request\n    Server-&gt;&gt;Broker: Reply\n    Broker-&gt;&gt;Client: Reply&quot;}" id="867ac9174c9e417a">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TB\n    subgraph \&quot;Schema Registry Cluster\&quot;\n        SR1[Schema Registry 1]\n        SR2[Schema Registry 2]\n        SR3[Schema Registry 3]\n        LB[Load Balancer]\n    end\n    \n    subgraph \&quot;Message Brokers\&quot;\n        K1[Kafka Cluster 1]\n        K2[Kafka Cluster 2]\n        P1[Pulsar Cluster]\n    end\n    \n    subgraph \&quot;Applications\&quot;\n        APP1[Microservice A]\n        APP2[Microservice B]\n        APP3[Analytics Service]\n    end\n    \n    LB --&gt; SR1\n    LB --&gt; SR2\n    LB --&gt; SR3\n    \n    APP1 --&gt; LB\n    APP2 --&gt; LB\n    APP3 --&gt; LB\n    \n    SR1 -.-&gt; K1\n    SR2 -.-&gt; K2\n    SR3 -.-&gt; P1&quot;}" id="45087c443e1545aa">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>
@@ -38,12 +38,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="834c8189429842de" name="Microservices Graph Td 2">
+  <diagram id="916a4960351a45f5" name="Security Data Quality Guide Graph Lr 2">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TD\n    Start([Start Transaction]) --&gt; S1[Service A]\n    S1 --&gt; S2[Service B]\n    S2 --&gt; S3[Service C]\n    S3 --&gt; End([Complete])\n    \n    S1 --&gt; C1[Compensate A]\n    S2 --&gt; C2[Compensate B]\n    S3 --&gt; C3[Compensate C]&quot;}" id="b0fa6b7465d1495d">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph LR\n    DEV[Development] --&gt; TEST[Testing]\n    TEST --&gt; STAGE[Staging]\n    STAGE --&gt; PROD[Production]\n    \n    subgraph \&quot;Governance Gates\&quot;\n        G1[Schema Review]\n        G2[Compatibility Check]\n        G3[Security Scan]\n        G4[Performance Test]\n    end\n    \n    DEV --&gt; G1\n    G1 --&gt; TEST\n    TEST --&gt; G2\n    G2 --&gt; STAGE\n    STAGE --&gt; G3\n    G3 --&gt; G4\n    G4 --&gt; PROD&quot;}" id="f60f8e7687374d8f">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>

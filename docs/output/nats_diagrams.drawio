@@ -1,10 +1,10 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.4 Chrome/138.0.7204.97 Electron/37.2.1 Safari/537.36" version="28.0.4" pages="4">
-  <diagram id="4112e9a462ad4762" name="Nats Graph Tb">
+  <diagram id="682558c506824f05" name="Nats Graph Tb">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TB\n    subgraph \&quot;NATS Server Cluster\&quot;\n        S1[Server 1]\n        S2[Server 2]\n        S3[Server 3]\n    end\n    \n    PUB[Publisher] --&gt; S1\n    S1 --&gt; S2\n    S2 --&gt; S3\n    \n    subgraph \&quot;Subscribers\&quot;\n        SUB1[Subscriber 1]\n        SUB2[Subscriber N]\n    end\n    \n    S3 --&gt; SUB1\n    S3 --&gt; SUB2&quot;}" id="72e0fd23380d49de">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TB\n    subgraph \&quot;NATS Server Cluster\&quot;\n        S1[Server 1]\n        S2[Server 2]\n        S3[Server 3]\n    end\n    \n    PUB[Publisher] --&gt; S1\n    S1 --&gt; S2\n    S2 --&gt; S3\n    \n    subgraph \&quot;Subscribers\&quot;\n        SUB1[Subscriber 1]\n        SUB2[Subscriber N]\n    end\n    \n    S3 --&gt; SUB1\n    S3 --&gt; SUB2&quot;}" id="a9e3cac6c53d4236">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>
@@ -12,12 +12,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="e692c5168b764a2d" name="Nats Graph Tb 2">
+  <diagram id="40d6d5cc61694bfd" name="Nats Graph Tb 2">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TB\n    SN[NATS Server]\n    \n    PUBS[Publishers] --&gt; SN\n    SUBS[Subscribers] --&gt; SN\n    \n    subgraph \&quot;Storage\&quot;\n        MEM[Memory Based]\n        FILE[File Based]\n    end\n    \n    SN --&gt; MEM&quot;}" id="c0a397038e364fd2">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TB\n    SN[NATS Server]\n    \n    PUBS[Publishers] --&gt; SN\n    SUBS[Subscribers] --&gt; SN\n    \n    subgraph \&quot;Storage\&quot;\n        MEM[Memory Based]\n        FILE[File Based]\n    end\n    \n    SN --&gt; MEM&quot;}" id="7da2c960a2634c7f">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>
@@ -25,12 +25,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="d12346993dda4cdc" name="Nats Graph Tb 3">
+  <diagram id="1002832687494f93" name="Nats Graph Tb 3">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TB\n    subgraph \&quot;NATS Cluster\&quot;\n        S1[Server 1]\n        S2[Server 2]\n        S3[Server 3]\n        LB[Load Balancer]\n    end\n    \n    subgraph \&quot;External Systems\&quot;\n        APP[Applications]\n    end\n    \n    APP --&gt; LB\n    LB --&gt; S1\n    LB --&gt; S2\n    LB --&gt; S3\n    \n    S1 --| gossip |--&gt; S2\n    S2 --| gossip |--&gt; S3\n    S3 --| gossip |--&gt; S1&quot;}" id="8e2051afbc864a92">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TB\n    subgraph \&quot;NATS Cluster\&quot;\n        S1[Server 1]\n        S2[Server 2]\n        S3[Server 3]\n        LB[Load Balancer]\n    end\n    \n    subgraph \&quot;External Systems\&quot;\n        APP[Applications]\n    end\n    \n    APP --&gt; LB\n    LB --&gt; S1\n    LB --&gt; S2\n    LB --&gt; S3\n    \n    S1 --| gossip |--&gt; S2\n    S2 --| gossip |--&gt; S3\n    S3 --| gossip |--&gt; S1&quot;}" id="6a55edc61b814be4">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>
@@ -38,12 +38,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="4bd3df881efe483c" name="Nats Graph Tb 4">
+  <diagram id="5d7b0e1bcbd64d85" name="Nats Graph Tb 4">
     <mxGraphModel dx="706" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TB\n    subgraph \&quot;Distributed NATS\&quot;\n        S1[Server 1]\n        S2[Server 2]\n        S3[Server 3]\n        LB[Load Balancer]\n        GWC[Gateway Connector]\n    end\n    \n    subgraph \&quot;Applications\&quot;\n        APP[Applications]\n    end\n    \n    APP --&gt; LB\n    LB --&gt; S1\n    LB --&gt; S2\n    LB --&gt; S3\n    \n    GWC --&gt; S1\n    GWC --&gt; S2\n    GWC --&gt; S3&quot;}" id="a6be575090cb4f32">
+        <UserObject label="" mermaidData="{&quot;data&quot;:&quot;graph TB\n    subgraph \&quot;Distributed NATS\&quot;\n        S1[Server 1]\n        S2[Server 2]\n        S3[Server 3]\n        LB[Load Balancer]\n        GWC[Gateway Connector]\n    end\n    \n    subgraph \&quot;Applications\&quot;\n        APP[Applications]\n    end\n    \n    APP --&gt; LB\n    LB --&gt; S1\n    LB --&gt; S2\n    LB --&gt; S3\n    \n    GWC --&gt; S1\n    GWC --&gt; S2\n    GWC --&gt; S3&quot;}" id="c4c8d6b1ee944fea">
           <mxCell style="shape=image;noLabel=1;verticalAlign=top;imageAspect=1;image=data:image/svg+xml,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y5ZjlmOSIgc3Ryb2tlPSIjY2NjIi8+PHRleHQgeD0iMTAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMyI+TWVybWFpZCBEaWFncmFtPC90ZXh0Pjwvc3ZnPg==;" vertex="1" parent="1">
             <mxGeometry x="260" y="130" width="200" height="200" as="geometry" />
           </mxCell>
