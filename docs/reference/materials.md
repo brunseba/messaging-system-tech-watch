@@ -138,7 +138,7 @@ Common diagram templates used in this documentation:
 
 These diagrams are referenced in the documentation using:
 
-```markdown
+````markdown
 <!-- For mermaid diagrams (preferred for simple diagrams) -->
 ```mermaid
 graph TB
@@ -147,8 +147,8 @@ graph TB
 ```
 
 <!-- For complex diagrams (exported from Draw.io) -->
-![Architecture Diagram](path/to/your-exported-diagram.png)
-```
+![Architecture Diagram](images/your-diagram.png)
+````
 
 ## Contributing
 
