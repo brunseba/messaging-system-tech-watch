@@ -28,7 +28,9 @@ Selecting the right messaging system is crucial for modern distributed applicati
 
 ### 🚀 Implementation
 - **[Deployment Guide](implementation/deployment-guide.md)** - How to deploy and configure your chosen solution
-- **[Best Practices](implementation/best-practices.md)** - Industry best practices and common pitfalls
+- **[Best Practices](implementation/best-practices.md)** - Industry best practices, replay mechanisms, and dead-letter queues
+- **[Messaging Strategies](implementation/messaging-strategies.md)** - Implementation strategies by message type and application domain
+- **[Security, Data Quality & Registry](implementation/security-data-quality-guide.md)** - Enterprise-grade security, data quality management, and schema registry
 - **[Message Format Standards](implementation/message-format-standards.md)** - Comprehensive guide to message formats, schema registries, and interoperability
 
 ### 🎯 Use Cases
@@ -89,32 +91,34 @@ mindmap
       Timeline
 ```
 
-## What's New in Version 2.3.0
+## What's New in Version 2.4.0
 
 !!! success "Major Enhancements"
-    **✨ New Features Added:**
+    **✨ New Comprehensive Implementation Guides:**
     
-    - **Interactive Mermaid Decision Tree** - Replaced text-based business decision tree with visual flowchart
-    - **RabbitMQ Strategic Positioning** - Added RabbitMQ to business decision tree in three key positions
-    - **Enhanced IoT Integration** - Moved IoT filtering to requirements definition for better decision flow
-    - **Bank Assurance Use Case** - Added comprehensive bank assurance scenario to Quick Reference Guide
-    - **Decision Node Visualization** - Color-coded decision nodes for better user experience
-    - **Strategic Business Drivers** - Enhanced decision paths for cost, growth, advantage, risk, and innovation
+    - **[Security, Data Quality & Schema Registry Guide](implementation/security-data-quality-guide.md)** - Enterprise-grade security patterns, data quality management, and schema governance
+    - **[Messaging Strategies Guide](implementation/messaging-strategies.md)** - Implementation strategies organized by message type and application domain
+    - **Enhanced Best Practices** - Added replay mechanisms and dead-letter queue implementations
+    - **Enterprise Security Framework** - Multi-layered authentication, encryption, and compliance patterns (GDPR, HIPAA)
+    - **Data Quality Framework** - Schema-driven validation, quality metrics, and automated alerting systems
+    - **Battle-tested Patterns** - Real-world implementation examples for command, event, request/response, and document messages
 
-!!! info "Key Improvements"
-    **🔧 Enhanced Sections:**
+!!! info "Key Technical Additions"
+    **🔧 Enterprise Implementation Content:**
     
-    - **Business Decision Tree** - Interactive Mermaid flowchart with decision criteria
-    - **Quick Reference Guide** - Added Bank Assurance with IBM MQ + ActiveMQ recommendation
-    - **Decision Framework** - Better integration of IoT requirements and general messaging fallback
-    - **RabbitMQ Positioning** - Strategic placement for open source preference, moderate expertise, and reliable solutions
+    - **Authentication & Authorization** - OAuth 2.0/JWT, TLS 1.3, RBAC/ABAC with practical configurations
+    - **Message Type Strategies** - Command queuing, event streaming, request/response, and document messaging patterns
+    - **Practical Code Examples** - Over 1000 lines of configuration examples in YAML, JSON, Python, and properties formats
+    - **Visual Architecture Diagrams** - Mermaid diagrams for security layers, validation pipelines, and message flows
+    - **Compliance Frameworks** - Ready-to-use configurations for regulatory compliance requirements
+    - **Quality Management** - Real-time data quality assessment with monitoring and remediation strategies
 
-!!! tip "Best Practices"
-    - Start with our **Requirements Assessment Template** for structured evaluation
-    - Use **persona-based guidance** to focus on your role's priorities
-    - Consider **schema registry support** for data governance requirements
-    - Evaluate **Total Cost of Ownership** using our business framework
-    - Plan for **message format standards** and interoperability from the beginning
+!!! tip "Implementation Guidance"
+    - Start with **[Messaging Strategies](implementation/messaging-strategies.md)** to understand patterns by message type
+    - Use **[Security Guide](implementation/security-data-quality-guide.md)** for enterprise-grade security implementation
+    - Follow **battle-tested patterns** from Fortune 500 implementations
+    - Implement **schema registry governance** for data quality and evolution management
+    - Consider **compliance requirements** early in your architecture design
 
 ## Getting Started by Role
 
@@ -153,6 +157,6 @@ New to messaging systems? Follow this path:
 
 | **Version** | **License** | **Last Updated** | **Contributors** |
 |-------------|-------------|------------------|------------------|
-|| 2.3.3 | [MIT License](https://github.com/your-org/messaging-system-guide/blob/main/LICENSE) | July 2025 | Business Technology Team |
+|| 2.4.0 | [MIT License](https://github.com/brunseba/messaging-system-tech-watch/blob/main/LICENSE) | July 2025 | Business Technology Team |
 
 *This guide is designed to be practical and actionable. Each section builds upon the previous one to provide a comprehensive selection framework.*
