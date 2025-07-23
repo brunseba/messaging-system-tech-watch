@@ -95,7 +95,7 @@ extra:
     name: Messaging System Tech Watch
     version: 2.3.3
 
-copyright: Copyright &copy; 2025 Business Technology Team | Licensed under MIT License
+copyright: Copyright © 2025 Business Technology Team | Licensed under MIT License
 
 # Repository information
 repo_url: https://github.com/brunseba/messaging-system-tech-watch
@@ -118,6 +118,8 @@ nav:
   - Implementation:
     - Deployment Guide: implementation/deployment-guide.md
     - Best Practices: implementation/best-practices.md
+    - Messaging Strategies: implementation/messaging-strategies.md
+    - Security, Data Quality & Registry: implementation/security-data-quality-guide.md
     - Message Format Standards: implementation/message-format-standards.md
   - Messaging Systems Covered:
     - Apache Kafka: messaging-systems/apache-kafka.md
