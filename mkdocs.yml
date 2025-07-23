@@ -75,10 +75,10 @@ plugins:
       locale: en
       fallback_to_build_date: true
       enabled: !ENV [CI, true]
-  - git-committers:
-      repository: https://github.com/brunseba/messaging-system-tech-watch
-      branch: main
-      docs_path: docs/
+  - git-authors:
+      show_contribution: true
+      show_line_count: true
+      count_empty_lines: false
   - mermaid2:
       arguments:
         theme: auto
