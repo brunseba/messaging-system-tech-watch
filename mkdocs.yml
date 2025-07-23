@@ -68,6 +68,18 @@ markdown_extensions:
 plugins:
   - search:
       lang: en
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+      timezone: Europe/Paris
+      locale: en
+      fallback_to_build_date: true
+      enabled: !ENV [CI, true]
+  - git-committers:
+      repository: https://github.com/brunseba/messaging-system-tech-watch
+      branch: main
+      docs_path: docs/
+      enabled: !ENV [GITHUB_TOKEN, false]
   - mermaid2:
       arguments:
         theme: auto
