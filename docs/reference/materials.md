@@ -22,6 +22,8 @@ All diagrams in this documentation are created using [Draw.io](https://app.diagr
 | **[selection-criteria_diagrams.drawio](../output/selection-criteria_diagrams.drawio)** | Selection criteria flowcharts | [Selection Criteria](../decision-framework/selection-criteria.md) |
 | **[architecture-overview_diagrams.drawio](../output/architecture-overview_diagrams.drawio)** | Architecture patterns | [Architecture Overview](../solutions/architecture-overview.md) |
 | **[message-format-standards_diagrams.drawio](../output/message-format-standards_diagrams.drawio)** | Message format schemas | [Message Format Standards](../implementation/message-format-standards.md) |
+| **[messaging-strategies_diagrams.drawio](../output/messaging-strategies_diagrams.drawio)** | Implementation strategy diagrams | [Messaging Strategies](../implementation/messaging-strategies.md) |
+| **[security-data-quality-guide_diagrams.drawio](../output/security-data-quality-guide_diagrams.drawio)** | Security and data quality diagrams | [Security, Data Quality & Registry](../implementation/security-data-quality-guide.md) |
 | **[deployment-guide_diagrams.drawio](../output/deployment-guide_diagrams.drawio)** | Deployment architectures | [Deployment Guide](../implementation/deployment-guide.md) |
 | **[materials_diagrams.drawio](../output/materials_diagrams.drawio)** | Material and resource diagrams | [Materials](../reference/materials.md) |
 
